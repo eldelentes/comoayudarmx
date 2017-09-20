@@ -1,6 +1,5 @@
 Cards = [
   //{title: "Donación Topos", description: "Los Topos son una asociación de rescatistas indepe…tencilios necesarios para el rescate de personas.", type: "Monetaria", location: "Global", link: "https://twitter.com/topos/status/908000616575680512"},
-  {title: "Fundación ChecoPérez", description: "Nuestro objetivo es fortalecer a los grupos vulnerables, específicamente, a los menores de edad, a través del diseño e implementación de programas y proyectos.", type: "Monetaria", location: "Guadalajara, Jalisco", link: "https://twitter.com/FundChecoPerez"},
   {title: "Donación Topos", description: "Los Topos son una asociación de rescatistas independientes. Tu ayuda provee de los utensilios necesarios para el rescate de personas.", type: "Monetaria", location: "Global", link: "https://twitter.com/topos/status/908000616575680512"},
   {title: "Donación Cruz Roja", description: "Dona a la Cruz Roja. Ellos brindan servicio médico gratuito.", type: "Monetaria", location: "Global", link: "https://cruzrojadonaciones.org/"},
   {title: "Donación Unicef", description: "Dona a la UNICEF que apoyará a las personas afectadas por el sismo", type: "Monetaria", location: "Global", link: "https://www.donaunicef.org.mx/landing-terremoto/?utm_source=mpr_ons&utm_campaign=emergency-terremoto-sep17&utm_medium=ons&utm_content=emergency-terremoto-sep17&utm_term=emergency-terremoto-sep17"},
@@ -78,4 +77,5 @@ Cards = [
   {title: "Acopio Aguascalientes", description: "Lista de centros de acopio en Aguascalientes", type: "Víveres", location: "Aguascalientes", link: "http://www.heraldo.mx/centros-de-acopio/"},
   {title: "Acopio McGill University", description: "La universidad de McGill en Montréal Canadá va a realizar una recaudación de fondos el día de mañana Jueves 21 de Septiembre 2017 de las 9 am a las 8 pm.", type: "Varios", location: "Canada", link: "https://www.facebook.com/events/213692225833551/?ti=as"},
   {title: "Apoyo Veterinario", description: "Listado de contactos veterinarios ofreciendo servicio gratuito", type: "Veterinario", location: "CDMX", link: "https://twitter.com/quinielaelgordo/status/910508363733024777"},
+  {title: "Fundación ChecoPérez", description: "Nuestro objetivo es fortalecer a los grupos vulnerables, específicamente, a los menores de edad, a través del diseño e implementación de programas y proyectos.", type: "Monetaria", location: "Global", link: "https://twitter.com/FundChecoPerez"},
 ];
