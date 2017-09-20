@@ -57,9 +57,29 @@ var renderCards = function() {
     return card.type == "Monetaria";
   };
 
+  var translateMonetaryType = function(card) {
+    if (isMonetaryCard(card)) {
+      return "Money";
+    } else {
+      return card.type;
+    }
+  }
+
+  var getTypeForCard = function(card) {
+    if (isWorldPage()) {
+      return translateMonetaryType(card);
+    } else {
+      return card.type;
+    }
+  }
+
+  var typeTemplate = function(card) {
+    return $("<span>" + getTypeForCard(card) + "</span>");
+  }
+
   var renderCard = function(card) {
     var $card = $(template);
-    var $type = $("<span>" + card.type + "</span>");
+    var $type = typeTemplate(card);
     var $location = $("<span>" + card.location + "</span>");
 
     $card.find(".card__title").text(card.title);
