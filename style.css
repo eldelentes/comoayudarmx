@@ -73,8 +73,9 @@ body {
 }
 
 .intro {
-	height: 40vh;
+	min-height: 40vh;
 	padding-top: 4em;
+	padding-bottom: 1em;
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
@@ -320,6 +321,7 @@ body {
 
 	.intro {
 		height: auto;
+		padding-top: 2em;
 	}
 
 	.intro__title {
