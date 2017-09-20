@@ -77,4 +77,5 @@ Cards = [
   {title: "Acopio Aguascalientes", description: "Lista de centros de acopio en Aguascalientes", type: "Víveres", location: "Aguascalientes", link: "http://www.heraldo.mx/centros-de-acopio/"},
   {title: "Acopio McGill University", description: "La universidad de McGill en Montréal Canadá va a realizar una recaudación de fondos el día de mañana Jueves 21 de Septiembre 2017 de las 9 am a las 8 pm.", type: "Varios", location: "Canada", link: "https://www.facebook.com/events/213692225833551/?ti=as"},
   {title: "Apoyo Veterinario", description: "Listado de contactos veterinarios ofreciendo servicio gratuito", type: "Veterinario", location: "CDMX", link: "https://twitter.com/quinielaelgordo/status/910508363733024777"},
+  {title: "Acopio Vonnacher Tae Kwon Do Lomas del Valle", description: "Alimentos no perecederos, latas abre fácil, artículos de higiene personal y para el hogar. No enviar medicamentos, ropa ni agua. Priv Sierra Linda 1113 Col Lomas del Valle.", type: "Víveres", location: "Monterrey", link: "https://www.facebook.com/vonnacherlomasdelvalle/photos/pb.1444420352444698.-2207520000.1505928965./1942028259350569/?type=3&theater"}
 ];
