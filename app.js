@@ -53,18 +53,33 @@ var renderCards = function() {
     return location.pathname.includes("world.html");
   };
 
+  var getCardTypes = function(card) {
+    if (Array.isArray(card.type)) {
+      return card.type;
+    }
+    return [card.type];
+  }
+
   var isMonetaryCard = function(card) {
-    return card.type == "Monetaria";
+    return getCardTypes(card).indexOf("Monetaria") !== -1;
   };
+
+  var renderCardTypes = function($card, types) {
+    var template = $card.find(".card__type h3").clone();
+    $card.find(".card__type h3").remove();
+
+    types.forEach(function(type) {
+      $card.find(".card__type").append(template.clone().append("<span>" + type + "</span>"));
+    });
+  }
 
   var renderCard = function(card) {
     var $card = $(template);
-    var $type = $("<span>" + card.type + "</span>");
     var $location = $("<span>" + card.location + "</span>");
 
     $card.find(".card__title").text(card.title);
     $card.find(".card__desc").text(card.description);
-    $card.find(".card__type h3").append($type);
+    renderCardTypes($card, getCardTypes(card));
     $card.find(".card__location h3").append($location);
     $card.find(".card__button").attr("href", card.link);
     $("#cards_container").append($card);
