@@ -18,7 +18,7 @@ Cards = [
   {title: "Donación Altruista de Sangre", description: "Indicaciones del IMSS para poder donar sangre.", type: "Sangre", location: "CDMX y Morelos", link: "http://www.imss.gob.mx/salud-en-linea/donacion-sangre"},
   {title: "Centro de Acopio Creative Dreams", description: "Colecta de víveres en oficinas de Creative Dreams.", type: "Viveres", location: "Monterrey", link: "https://www.facebook.com/Annah.Mtz/posts/10155750696949878?pnref=story"},
   {title: "Centro de Acopio Crossfit World", description: "Colecta de víveres en Crossfit World.", type: "Viveres", location: "Monterrey", link: "https://www.facebook.com/permalink.php?story_fbid=1295178293926290&id=424423427668452"},
-  {title: "Centro de Acopio Crossfit World", description: "Colecta de víveres en Crossfit World.", type: "Viveres", location: "Monterrey", link: "https://www.facebook.com/permalink.php?story_fbid=1295178293926290&id=424423427668452"},
+  {title: "Página oficial del gobierno de centros de acopio", description: "Página oficial del gobierno de centros de acopio y otra información relevante al sismo", type: "Viveres", location: "CDMX", link: "https://www.gob.mx"},
   {title: "Página con agregados de centros de acopio hecho en google maps", description: "Página con agregados de centros de acopio hecho en google maps.", type: "Viveres", location: "CDMX", link: "https://www.google.com/maps/d/viewer?mid=1_-V97lbdgLFHpx-CtqhLWlJAnYY&ll=19.37785997197382%2C-99.15070127080776&z=14"},
   {title: "Página con agregados de centros de acopio", description: "Página con agregados de centros de acopio.", type: "Viveres", location: "CDMX y Oaxaca", link: "http://www.centrosdeacopio.org.mx"}
   
