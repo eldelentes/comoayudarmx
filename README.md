@@ -80,3 +80,5 @@ Si tienes alguna otra idea de como colaborar por favor contactame.
 - [Alfrobinson](https://github.com/alfrobinson)
 
 - [Carlos medina](https://www.medinnna.com/)
+
+- [Javier Ruiz](https://github.com/javarv87)
