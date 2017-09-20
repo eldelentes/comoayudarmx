@@ -14,15 +14,23 @@ var handleFilterChange = function(e){
     return cardMatchType($card) && cardMatchLocation($card);
   }
 
+  var emptyResults = true;
+  $("#no_results").hide();
+
   $(".card").each(function() {
     var $card = $(this);
 
     if (cardMatchFilters($card)) {
       $card.show();
+      emptyResults = false;
     } else {
       $card.hide();
     }
   })
+
+  if(emptyResults) {
+    $("#no_results").show();
+  }
 }
 
 var populateFilters = function(e) {
@@ -48,23 +56,54 @@ var populateFilters = function(e) {
 
 var renderCards = function() {
   var template = $("#card_template").html();
+  var monetaryType = "Monetaria";
 
   var isWorldPage = function() {
     return location.pathname.includes("world.html");
   };
 
   var isMonetaryCard = function(card) {
-    return card.type == "Monetaria";
+    return getCardTypes(card).indexOf(monetaryType) !== -1;
   };
+
+  var getCardTypes = function(card) {
+    if (Array.isArray(card.type)) {
+      return card.type;
+    }
+    return [card.type];
+  }
+
+  var translateMonetaryType = function(type) {
+    if (isWorldPage() && (type == monetaryType)) {
+      return "Monetary";
+    } else {
+      return type;
+    }
+  }
+
+  var renderCardTypes = function($card, types) {
+    var template = $card.find(".card__type h3").clone();
+    $card.find(".card__type h3").remove();
+
+    types.forEach(function(type) {
+      $card.find(".card__type").append(template.clone().append("<span>" + translateMonetaryType(type) + "</span>"));
+    });
+  }
+
+  var renderBadges = function($card, card) {
+    if(card.verified) {
+      $card.find(".card__badges").append('<span class="badge-verified" ><i class="fa fa-check"></i> Fuente Oficial</span>');
+    }
+  }
 
   var renderCard = function(card) {
     var $card = $(template);
-    var $type = $("<span>" + card.type + "</span>");
     var $location = $("<span>" + card.location + "</span>");
 
     $card.find(".card__title").text(card.title);
+    renderBadges($card, card);
     $card.find(".card__desc").text(card.description);
-    $card.find(".card__type h3").append($type);
+    renderCardTypes($card, getCardTypes(card));
     $card.find(".card__location h3").append($location);
     $card.find(".card__button").attr("href", card.link);
     $("#cards_container").append($card);
