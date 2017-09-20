@@ -1,6 +1,6 @@
 # Como Ayudar México
 
-======
+---
 
 ### ¿Qué es Cómo Ayudar?
 
@@ -42,11 +42,11 @@ Actualmente éxisten 2 formas de participar.
 
 3.- Crea un Pull Request.
 
-======
+---
 
 Si tienes alguna otra idea de como colaborar por favor contactame.
 
-======
+---
 
 ### Colaboradores
 [@eldelentes](https://twitter.com/eldelentes)
