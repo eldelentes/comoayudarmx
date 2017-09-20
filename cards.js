@@ -7,4 +7,5 @@ Cards = [
   {title: "Voluntarios y Brigadas Universidad Panamericana", description: "Centro de Acopio en la Universidad Panamericana", type: "Varia", location: "CDMX", link: "https://facebook.com/UPMexico"},
   {title: "Paypal Cruz Roja Mexicana", description: "Pagina oficial para donar a la Cruz Roja Mexicana por medio de Paypal", type: "Monetaria", location: "Todo el Mundo.", link: "https://www.paypal.com/mx/webapps/mpp/donar/institution?name=redCross"},
   {title: "Centros de Acopio Dolores Hidalgo", description: "Centros de acopio en Guanajuato", type: "Varia", location: "Guanajuato", link: "http://comoayudar.mx/img/hidalgo.jpg"},
+  {title: "Centro de Acopio en Torreón", description: "Centros de Acopio en Torreón Coahuila.", type: "Viveres/Varios", location: "Torreón", link: "https://twitter.com/AnaMaciasAnaya/status/910349434315268096"}
 ];
