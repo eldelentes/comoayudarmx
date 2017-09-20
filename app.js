@@ -49,7 +49,15 @@ var populateFilters = function(e) {
 var renderCards = function() {
   var template = $("#card_template").html();
 
-  Cards.forEach(function(card) {
+  var isWorldPage = function() {
+    return location.pathname.includes("world.html");
+  };
+
+  var isMonetaryCard = function(card) {
+    return card.type == "Monetaria";
+  };
+
+  var renderCard = function(card) {
     var $card = $(template);
     var $type = $("<span>" + card.type + "</span>");
     var $location = $("<span>" + card.location + "</span>");
@@ -60,7 +68,13 @@ var renderCards = function() {
     $card.find(".card__location h3").append($location);
     $card.find(".card__button").attr("href", card.link);
     $("#cards_container").append($card);
-  });
+  };
+
+  if (isWorldPage()) {
+    Cards.filter(isMonetaryCard).forEach(renderCard);
+  } else {
+    Cards.forEach(renderCard);
+  }
 }
 
 $(document).on("change", "#donation_type", handleFilterChange);
