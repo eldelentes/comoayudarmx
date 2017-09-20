@@ -71,5 +71,5 @@ Cards = [
   {title: "Apoyo Psicológico", description: "Apoyo psicológico gratuito en la Asociación Psicoanalítica Mexicana: atención telefónica brigadas en campo, atención personal y capacitación para manejo de crisis.", type: "Psicológico", location: "CDMX", link: "https://www.facebook.com/APM.Online/posts/1916503575032878"},
   {title: "Acopio Aguascalientes", description: "Lista de centros de acopio en Aguascalientes", type: "Víveres", location: "Aguascalientes", link: "http://www.heraldo.mx/centros-de-acopio/"},
   {title: "Acopio McGill University", description: "La universidad de McGill en Montréal Canadá va a realizar una recaudación de fondos el día de mañana Jueves 21 de Septiembre 2017 de las 9 am a las 8 pm.", type: "Varios", location: "Canada", link: "https://www.facebook.com/events/213692225833551/?ti=as"},
-
+  {title: "Apoyo Veterinario", description: "Listado de contactos veterinarios ofreciendo servicio gratuito", type: "Veterinario", location: "CDMX", link: "https://twitter.com/quinielaelgordo/status/910508363733024777"},
 ];
