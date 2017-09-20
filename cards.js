@@ -44,9 +44,10 @@ Cards = [
   {title: "Acopio Condesa", description: "Colecta de víveres en Condesa / CDMX.", type: "Varios", location: "CDMX", link: "https://twitter.com/geo_leon/status/910441969842655233"},
   {title: "Una Mano por México", description: "Fondo de apoyo para las personas damnificadas en una primera etapa y posteriormente para trabajos de reconstrucción.", type: "Monetaria", location: "Todo el mundo.", link: "https://donadora.mx/projects/una-mano-a-mexico-levantemos-juntos-la-ciudad"},
   {title: "Donación desde Reino Unido (justgiving)", description: "Donaciones en libras, para quienes están en Reino Unido. Van dirigidas a grupo 'topos'", type: "Monetaria", location: "Reino Unido", link: "https://www.justgiving.com/crowdfunding/letshelpmexicouk"},
-  {title: "Acopio Hermossillo", description: "Donaciones de víveres, medicamentos y utensilios en Hermossillo sonora.", type: "Varia", location: "Hermossillo", link: "https://twitter.com/delvallecolosio/status/910498620318744576"},
+  {title: "Acopio Hermosillo", description: "Donaciones de víveres, medicamentos y utensilios en Hermossillo sonora.", type: "Varia", location: "Hermossillo", link: "https://twitter.com/delvallecolosio/status/910498620318744576"},
   {title: "Acopio Puebla", description: "Donaciones de víveres, medicamentos y utensilios en Cholula, Puebla.", type: "Varia", location: "Puebla", link: "https://www.facebook.com/CholulaDIF/posts/1951410691778618"},
   {title: "Revisión de Infraestructura", description: "Se buscan Arquitectos, Ingenieros Civiles, Esutrucritas y personal con maquinaria para revisión.", type: "Asesoría", location: "CDMX", link: "https://twitter.com/MImediomaraton/status/910502011161821185"},
   {title: "Acopio Playa del Carmen", description: "Centro de acopio en Playa del Carmen", type: "Viveres", location: "Playa del Carmen", link: "https://twitter.com/delitogomx/status/910503792789086210"},
   {title: "Acopio Cuernavaca", description: "Centro de acopio en Cuernavaca", type: "Varios", location: "Cuernavaca", link: "https://twitter.com/BuzzFeedMexico/status/910509340871626752"},
+  {title: "Help Us Help Mexico", description: "GoFundMe fundraising campaign", type: "Monetaria", location: "Todo el mundo.", link: "https://www.gofundme.com/helpushelpmexico"},
 ];
