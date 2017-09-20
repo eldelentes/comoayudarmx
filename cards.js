@@ -79,4 +79,5 @@ Cards = [
   {title: "Acopio Aguascalientes", description: "Lista de centros de acopio en Aguascalientes", type: "Víveres", location: "Aguascalientes", link: "http://www.heraldo.mx/centros-de-acopio/"},
   {title: "Acopio McGill University", description: "La universidad de McGill en Montréal Canadá va a realizar una recaudación de fondos el día de mañana Jueves 21 de Septiembre 2017 de las 9 am a las 8 pm.", type: "Varios", location: "Canada", link: "https://www.facebook.com/events/213692225833551/?ti=as"},
   {title: "Apoyo Veterinario", description: "Listado de contactos veterinarios ofreciendo servicio gratuito", type: "Veterinario", location: "CDMX", link: "https://twitter.com/quinielaelgordo/status/910508363733024777"},
+  {title: "Cruz Roja Wish List Amazon", description: "Hemos abierto una Wish List en Amazon.com.mx para facilitar el acopio y la entrega a la Cruz Roja Mexicana de productos que son muy necesarios para hacer frente a la emergencia. ", type: "Víveres/Monetario", location: "Global", link: "https://www.amazon.com.mx/b?ie=UTF8&node=17290014011&pf_rd_p=f0aeab75-03f7-49aa-8b87-a4c78e1f0f04&pf_rd_r=4NATA9KJ5N92DMVCV5WE"}
 ];
