@@ -18,4 +18,7 @@ Cards = [
   {title: "Donación Altruista de Sangre", description: "Indicaciones del IMSS para poder donar sangre.", type: "Sangre", location: "CDMX, Pue, Mor, Oax, EdoMex y Gro", link: "http://www.imss.gob.mx/salud-en-linea/donacion-sangre"},
   {title: "Centro de acopio Coyoacán", description: "Centro de acopio de Coyoacán en el kiosko de la alameda sur.", type: "Viveres, medicina", location: "CDMX", link: "https://twitter.com/Del_Coyoacan/status/910345167332413443"},
   {title: "Albergues en Coyoacán, CDMX", description: "Existen tres albergues en la delegación Coyoacán: La Casa de las Letras, la Territorial Culhuacanes y el CDC de Bombas.", type: "Albergue", location: "CDMX", link: "https://twitter.com/Del_Coyoacan/status/910346089001299969"},
+  {title: "Donación Altruista de Sangre", description: "Indicaciones del IMSS para poder donar sangre.", type: "Sangre", location: "CDMX y Morelos", link: "http://www.imss.gob.mx/salud-en-linea/donacion-sangre"},
+  {title: "Centro de Acopio Creative Dreams", description: "Colecta de víveres en oficinas de Creative Dreams.", type: "Viveres", location: "Monterrey", link: "https://www.facebook.com/Annah.Mtz/posts/10155750696949878?pnref=story"},
+  {title: "Centro de Acopio Crossfit World", description: "Colecta de víveres en Crossfit World.", type: "Viveres", location: "Monterrey", link: "https://www.facebook.com/permalink.php?story_fbid=1295178293926290&id=424423427668452"},
 ];
