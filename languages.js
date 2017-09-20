@@ -5,6 +5,9 @@ var languagesModule = (function() {
 	
 	var languageDefinitions = {
 		es: {
+			text_close: "Cerrar",
+			text_or: "o",
+			text_contact_us: "Contáctanos",
 			nav_about: "Acerca de",
 			nav_contact: "Contactos de Emergencia",
 			nav_volunteer: "Voluntarios",
@@ -15,8 +18,7 @@ var languagesModule = (function() {
 			intro_button2: "Publicar",
 			card_intro1: "¿Cómo ayudar a los afectados del Sismo?",
 			card_intro2: "A continuación encontrarás diferentes organizaciones, centros de acopio o formas de ayudar a los afectados o rescatistas del sismo.",
-			card_intro3: "Si conoces alguna otra forma de ayudar Contáctanos",
-			card_intro4: "Contáctanos",
+			card_intro3: "Si conoces alguna otra forma de ayudar",
 			filter_type: "Filtrar por tipo de donación",
 			filter_type_select: "Selecciona una opción",
 			filter_all: "Todas",
@@ -31,10 +33,13 @@ var languagesModule = (function() {
 			modal1_text3: " Sí lo que deseas es agregar un método de ayuda por favor envíanos la información pertinente a:",
 			modal2_title: "Públicar Forma de Ayuda",
 			modal2_text: "Envía la información del método de ayuda con toda la información pertinente como: A quién se ayuda, Desde dónde se puede ayudar, que tipo de ayuda necesitan. desde los siguientes medios de contacto:",
-			text_close: "Cerrar",
-			text_or: "o"
+			contact_text1: "A continuación encontrarás una lista de contactos que te podrán ser útiles si te encuentras en un área afectada por el sismo.",
+			contact_text2: "Si conoces algun otro contacto importante",
 		},
 		en: {
+			text_close: "Close",
+			text_or: "or",
+			text_contact_us: "Contact us",
 			nav_about: "About",
 			nav_contact: "Emergency Contacts",
 			nav_volunteer: "Volunteers",
@@ -44,9 +49,8 @@ var languagesModule = (function() {
 			intro_button1: "How Can You Help?",
 			intro_button2: "Publish",
 			card_intro1: "Emergency Contacts",
-			card_intro2: "Here is a contact list that can help you if you are in an area affected by the earthquake.",
-			card_intro3: "If you know any other important contact information",
-			card_intro4: "Contact us",
+			card_intro2: "Here is a list of different organizations, help centers, or different ways in which you can help the rescuers and those affected by the earthquakes.",
+			card_intro3: "If you know any other useful resource",
 			filter_type: "Filter by Donation Type",
 			filter_type_select: "Select an option",
 			filter_all: "All",
@@ -61,8 +65,8 @@ var languagesModule = (function() {
 			modal1_text3: " If you wish to add a Helping Source, please contact us here:",
 			modal2_title: "Publish a Helping Source",
 			modal2_text: "Send us the information about a Helping Source with all the applicable information: Who are you helping, location, type of help. You can send us the information using the following methods:",
-			text_close: "Close",
-			text_or: "or"
+			contact_text1: "Here is a contact list that can help you if you are in an area affected by the earthquake.",
+			contact_text2: "If you know any other important contact information",
 		},
 	};
 	
