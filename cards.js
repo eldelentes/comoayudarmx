@@ -5,5 +5,6 @@ Cards = [
   {title: "Ayuda Medicinas Monterrey", description: "Ayuda con elementos de curación como alcohol, gasas, cubre bocas, agua oxigenada, solución salina, baterías.", type: "Médicina", location: "Monterrey.", link: "https://twitter.com/vovimayhem/status/910371427248984065"},
   {title: "Ayuda Arquitectos o Ingenieros Virtualmente", description: "Ayuda virtual apra hacer evaluaciones estructurales.", type: "Ayuda/Asesoría", location: "Todo el Mundo.", link: "https://twitter.com/YONOFUI/status/910381253144309761"},
   {title: "Voluntarios y Brigadas Universidad Panamericana", description: "Centro de Acopio en la Universidad Panamericana", type: "Varia", location: "CDMX", link: "https://facebook.com/UPMexico"},
-  {title: "Paypal Cruz Roja Mexicana", description: "Pagina oficial para donar a la Cruz Roja Mexicana por medio de Paypal", type: "Varia", location: "CDMX", link: "https://www.paypal.com/mx/webapps/mpp/donar/institution?name=redCross"},
+  {title: "Paypal Cruz Roja Mexicana", description: "Pagina oficial para donar a la Cruz Roja Mexicana por medio de Paypal", type: "Monetaria", location: "Todo el Mundo.", link: "https://www.paypal.com/mx/webapps/mpp/donar/institution?name=redCross"},
+  {title: "Centros de Acopio Dolores Hidalgo", description: "Centros de acopio en Guanajuato", type: "Varia", location: "Guanajuato", link: "http://comoayudar.mx/img/hidalgo.jpg"},
 ];
