@@ -50,4 +50,5 @@ Cards = [
   {title: "Donaciones Internacionales par México", description: "Diferentes donaciones para fondos o ayuda directa a los afetcados del sismo en el sitio de Donadora.", type: "Monetaria", location: "Todo el Mundo.", link: "https://donadora.mx/actuopormexico"},
   {title: "Acopio Tigres UANL", description: "Centro de acopio en Estadio Universitario", type: "Viveres", location: "Monterrey", link: "https://twitter.com/TigresOficial/status/910368221315944450"},
   {title: "Acopio Cuernavaca", description: "Centro de acopio en Cuernavaca", type: "Varios", location: "Cuernavaca", link: "https://twitter.com/BuzzFeedMexico/status/910509340871626752"},
+  {title: "Donativos Banorte", description: "Por cada peso que dones Fundación Banorte aportará otro.", type: "Monetaria", location: "Todo México", link: "https://twitter.com/Banorte_mx/status/910323398487748608"},
 ];
