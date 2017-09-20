@@ -7,5 +7,7 @@ Cards = [
   {title: "Voluntarios y Brigadas Universidad Panamericana", description: "Centro de Acopio en la Universidad Panamericana", type: "Varia", location: "CDMX", link: "https://facebook.com/UPMexico"},
   {title: "Paypal Cruz Roja Mexicana", description: "Pagina oficial para donar a la Cruz Roja Mexicana por medio de Paypal", type: "Monetaria", location: "Todo el Mundo.", link: "https://www.paypal.com/mx/webapps/mpp/donar/institution?name=redCross"},
   {title: "Centros de Acopio Dolores Hidalgo", description: "Centros de acopio en Guanajuato", type: "Varia", location: "Guanajuato", link: "http://comoayudar.mx/img/hidalgo.jpg"},
+  {title: "Nuhda Team Donations", description: "NUHDA TEAM will be collecting all in kind donations at NUHDA TI:ME Montecillo Wednesday and Thursday from 12 PM to 6 PM. All items will be delivered in Juarez during the weekend to send to Mexico City.", type: "Viveres", location: "El Paso, Texas", link: "https://www.facebook.com/permalink.php?story_fbid=243962466127294&id=138796859977189"},
+  {title: "Centro de Acopio Aztlán Bar", description: "Colecta de víveres para las personas afectadas por el sismo en la CDMX. Horarios de 11 AM a 8 PM", type: "Viveres", location: "CDMX", link: "https://www.facebook.com/aztlanrb/posts/1424117287677919"},
   {title: "Centro de Acopio en Torreón", description: "Centros de Acopio en Torreón Coahuila.", type: "Viveres/Varios", location: "Torreón", link: "https://twitter.com/AnaMaciasAnaya/status/910349434315268096"}
 ];
