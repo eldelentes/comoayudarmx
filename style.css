@@ -270,6 +270,10 @@ body {
 		font-size: 0.9em;
 	}
 
+	.hide-mobile.hide-mobile {
+		display: none;
+	}
+
 	.intro {
 		height: auto;
 	}
