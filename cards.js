@@ -15,4 +15,7 @@ Cards = [
   {title: "Centro de Acopio Mexicali", description: "Centro de acopio en Méxicalí B.C.", type: "Viveres", location: "Mexicali", link: "https://twitter.com/claumeely/status/910396891640225793"},
   {title: "Acopio Carnicerías Ramos", description: "20 de septiembre a partir de las 8 de la mañana, TODAS las sucursales Ramos funcionarán como centro de acopio. ", type: "Kit Médico", location: "Monterrey", link: "https://www.facebook.com/CarnesRamos/posts/1569495539739254"},
   {title: "Aloja personas damnificadas a través de Airbnb México", description: "Ayuda a los damnificados que necesitan un lugar donde dormir a través de Airbnb México", type: "Alojamiento", location: "CDMX", link: "https://www.airbnb.com/welcome/evacuees/terremotoenmexico"},
+  {title: "Donación Altruista de Sangre", description: "Indicaciones del IMSS para poder donar sangre.", type: "Sangre", location: "CDMX, Pue, Mor, Oax, EdoMex y Gro", link: "http://www.imss.gob.mx/salud-en-linea/donacion-sangre"},
+  {title: "Centro de acopio Coyoacán", description: "Centro de acopio de Coyoacán en el kiosko de la alameda sur.", type: "Viveres, medicina", location: "CDMX", link: "https://twitter.com/Del_Coyoacan/status/910345167332413443"},
+  {title: "Albergues en Coyoacán, CDMX", description: "Existen tres albergues en la delegación Coyoacán: La Casa de las Letras, la Territorial Culhuacanes y el CDC de Bombas.", type: "Albergue", location: "CDMX", link: "https://twitter.com/Del_Coyoacan/status/910346089001299969"},
 ];
