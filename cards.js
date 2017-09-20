@@ -54,7 +54,7 @@ Cards = [
   {title: "Acopio Condesa", description: "Colecta de víveres en Condesa / CDMX.", type: "Víveres", location: "CDMX", link: "https://twitter.com/geo_leon/status/910441969842655233"},
   {title: "Una Mano por México", description: "Fondo de apoyo para las personas damnificadas en una primera etapa y posteriormente para trabajos de reconstrucción.", type: "Monetaria", location: "Global", link: "https://donadora.mx/projects/una-mano-a-mexico-levantemos-juntos-la-ciudad"},
   {title: "Donación desde Reino Unido (justgiving)", description: "Donaciones en libras, para quienes están en Reino Unido. Van dirigidas a grupo 'topos'", type: "Monetaria", location: "Reino Unido", link: "https://www.justgiving.com/crowdfunding/letshelpmexicouk"},
-  {title: "Acopio Hermossillo", description: "Donaciones de víveres, medicamentos y utensilios en Hermossillo sonora.", type: "Varia", location: "Hermosillo", link: "https://twitter.com/delvallecolosio/status/910498620318744576"},
+  {title: "Acopio Hermosillo", description: "Donaciones de víveres, medicamentos y utensilios en Hermosillo sonora.", type: "Varia", location: "Hermosillo", link: "https://twitter.com/delvallecolosio/status/910498620318744576"},
   {title: "Acopio Puebla", description: "Donaciones de víveres, medicamentos y utensilios en Cholula, Puebla.", type: "Varia", location: "Puebla", link: "https://www.facebook.com/CholulaDIF/posts/1951410691778618"},
   {title: "Revisión de Infraestructura", description: "Se buscan Arquitectos, Ingenieros Civiles, Esutrucritas y personal con maquinaria para revisión.", type: "Asesoría", location: "CDMX", link: "https://twitter.com/MImediomaraton/status/910502011161821185"},
   {title: "Acopio Playa del Carmen", description: "Centro de acopio en Playa del Carmen", type: "Víveres", location: "Playa del Carmen", link: "https://twitter.com/delitogomx/status/910503792789086210"},
@@ -71,5 +71,7 @@ Cards = [
   {title: "Apoyo Psicológico", description: "Apoyo psicológico gratuito en la Asociación Psicoanalítica Mexicana: atención telefónica brigadas en campo, atención personal y capacitación para manejo de crisis.", type: "Psicológico", location: "CDMX", link: "https://www.facebook.com/APM.Online/posts/1916503575032878"},
   {title: "Acopio Aguascalientes", description: "Lista de centros de acopio en Aguascalientes", type: "Víveres", location: "Aguascalientes", link: "http://www.heraldo.mx/centros-de-acopio/"},
   {title: "Acopio McGill University", description: "La universidad de McGill en Montréal Canadá va a realizar una recaudación de fondos el día de mañana Jueves 21 de Septiembre 2017 de las 9 am a las 8 pm.", type: "Varios", location: "Canada", link: "https://www.facebook.com/events/213692225833551/?ti=as"},
+  {title: "Acopio Tecnológico de Monterrey Morelia", description: "Centro de acopio Tecnológico de Monterrey campus Morelia, Centro de Acopio Puerta 2  (Av. Montaña Monarca #1340 Col. Ejido Jesus del Monte)  del Tecnológico de Monterrey en Morelia", type: "Víveres/Varios", location: "Morelia", link: "https://donar.tec.mx/"},
+  {title: "Acopio Instituto Julia García Retana", description: "Centro de acopio ubicado en Pirul del Valle 505 Colonia Valle de León Horario:12 hrs - 20 hrs", type: "Víveres/Varios", location: "Leon", link: "https://comoayudarmx.com/img/INSTITUTOJULIARETANA.png"},
 
 ];
