@@ -278,6 +278,21 @@ body {
 	font-size: 1.2em;
 }
 
+.map-container {
+	width: 100%;
+}
+
+.map-container iframe{
+	width: 100%;
+	display: block;
+	pointer-events: none;
+	position: relative;
+}
+
+.map-container iframe.clicked{
+	pointer-events: auto;
+}
+
 @media screen and (max-width: 700px) {
 	.card {
 		width: 100%;
