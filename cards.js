@@ -43,4 +43,5 @@ Cards = [
   {title: "Centro de Acopio Creative Dreams", description: "Colecta de víveres en oficinas de Creative Dreams.", type: "Víveres", location: "Monterrey", link: "https://www.facebook.com/Annah.Mtz/posts/10155750696949878?pnref=story"},
   {title: "Centro de Acopio Crossfit World", description: "Colecta de víveres en Crossfit World.", type: "Víveres", location: "Monterrey", link: "https://www.facebook.com/permalink.php?story_fbid=1295178293926290&id=424423427668452"},
   {title: "Acopio Condesa", description: "Colecta de víveres en Condesa / CDMX.", type: "Varios", location: "CDMX", link: "https://twitter.com/geo_leon/status/910441969842655233"},
+  {title: "Una Mano por México", description: "Fondo de apoyo para las personas damnificadas en una primera etapa y posteriormente para trabajos de reconstrucción.", type: "Monetaria", location: "Todo el mundo.", link: "https://donadora.mx/projects/una-mano-a-mexico-levantemos-juntos-la-ciudad"},
 ];
