@@ -19,6 +19,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700|Roboto:400,500" rel="stylesheet">
 
@@ -26,17 +28,28 @@
 
   </head>
   <body>
-    <header class="mainHeader">
+    <nav class="navbar navbar-default navbar-fixed-top">
       <div class="container">
-        <h2 class="logo"><a href="index.html">¿Como Ayudar?</a></h2>
-        <nav class="mainNav">
-          <a class="modal__link" href="#" data-modal="about">Acerca de</a>
-          <a class="hide-mobile" href="voluntarios.html">Voluntarios</a>
-          <a href="world.html">English</a>
-          <a class="hide-mobile" href="https://github.com/eldelentes/comoayudarmx" target="_blank">Contribuir <i class="fa fa-github"></i></a>
-        </nav>
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">¿Cómo ayudar?</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a class="modal__link" href="index.html" data-modal="about">Acerca de</a></li>
+            <li><a href="contactos.html">Contactos de Emergencia</a></li>
+            <li><a href="voluntarios.html">Voluntarios</a></li>
+            <li><a href="world.html">English</a></li>
+            <li><a href="https://github.com/eldelentes/comoayudarmx" target="_blank">Contribuir <i class="fa fa-github"></i></a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
       </div>
-    </header>
+    </nav>
     <section class="intro">
       <div>
         <h2 class="intro__title">Ayuda Sismo 19 de Septiembre</h2>
