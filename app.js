@@ -47,11 +47,15 @@ var populateFilters = function(e) {
       if (!$select.text().includes(option)) {
         $select.append($option);
       }
+
     });
   }
 
   populateFilter(".card__type h3", "#donation_type");
   populateFilter(".card__location h3", "#location");
+
+  $('select#donation_type').chosen()
+  $('select#location').chosen()
 }
 
 var renderCards = function() {
