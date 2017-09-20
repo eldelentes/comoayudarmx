@@ -99,6 +99,7 @@
   {title: "Rescate animal", description: "Asociación Civil sin fines de lucro (A.C.) Rescatamos personas, salvamos animales.", type: "Veterinario", location: "Global", link: "http://www.somosrescateanimal.org/como_ayudar.html"},
   {title: "Acopio Puebla Animales", description: "Centro de acopio para animales en Puebla.", type: "Veterinario", location: "Puebla", link: "https://www.facebook.com/protectoradeanimalesmexico/posts/1600794509972182"},
   {title: "Cruz Roja Chile", description: "La Cruz Roja de Chile en coordinación con la Embajada de México en Chile, ha habilitado una cuenta de donación disponible del día 20 al 30 de septiembre.", type: "Monetaria", location: "Chile", link: "https://www.facebook.com/201958359902746/photos/pb.201958359902746.-2207520000.1505936105./1373623076069596/"},
- {title: "Del. Cuauhtémoc", description: "Seguimos recibiendo su ayuda en nuestro Centro De Acopio, ahora necesitamos insumos para empaquetar y distribuir.", type: "Víveres/Varios", location: "CDMX", link: "https://twitter.com/DelCuauhtemoc/status/910611696149946368"},
+  {title: "Del. Cuauhtémoc", description: "Seguimos recibiendo su ayuda en nuestro Centro De Acopio, ahora necesitamos insumos para empaquetar y distribuir.", type: "Víveres/Varios", location: "CDMX", link: "https://twitter.com/DelCuauhtemoc/status/910611696149946368"},
+  {title: "Requerimiento de ingenieros CIVILES ", description: "La #CDMX necesita de tus conocimientos sobre protección civil e ingeniería. Asiste a las oficinas de @SPCCDMX para apoyar en revisiones #mm", type: "Trabajo Voluntario", location: "CDMX", link: "https://twitter.com/ManceraMiguelMX/status/910564728069488641"},
  ];
 
