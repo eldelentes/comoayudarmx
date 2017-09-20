@@ -53,7 +53,7 @@ var languagesModule = (function() {
 			filter_location: "Location",
 			filter_location_select: "Select an option",
 			card_type: "Donation type:",
-			card_location: "You can help from:",
+			card_location: "Location:",
 			more_info: "More Information",
 			modal1_title: "About Como Ayudar",
 			modal1_text1: "This volunteer project is an effort to centralize all information regarding assistance and distribution to help those affected by the earthquake in Mexico on September 19, 2017.",
