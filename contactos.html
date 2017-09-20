@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Cómo Ayudar MX | Información de Contactos</title>
+    <meta name="description" content="Repositorio de información para ayudar a los afectados del sismo." />
+
+    <!-- Twitter Card data -->
+    <meta name="twitter:card" value="summary">
+
+    <!-- Open Graph data -->
+    <meta property="og:title" content="Ayuda a los afectados del sismo." />
+    <meta property="og:type" content="web" />
+    <meta property="og:url" content="http://comoayudar.mx/" />
+    <meta property="og:image" content="facebook.jpg" />
+    <meta property="og:description" content="Ayuda a los afectados del sismo. Información de como ayudar." />
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700|Roboto:400,500" rel="stylesheet">
+
+    <link rel="icon" href="favicon.png" type="image/x-icon" />
+
+  </head>
+  <body>
+    <header class="mainHeader">
+      <div class="container">
+        <h2 class="logo">¿Como Ayudar?</h2>
+        <nav class="mainNav">
+          <a href="index.html" data-modal="contactos">Inicio</a>
+          <a class="modal__link" href="#" data-modal="about">Acerca de</a>
+          <a href="https://github.com/eldelentes/comoayudarmx" target="_blank">Contribuir <i class="fa fa-github"></i></a>
+        </nav>
+      </div>
+    </header>
+    <section class="intro">
+      <div>
+        <h2 class="intro__title">Ayuda Sismo 19 de Septiembre</h2>
+        <h4 class="intro__location"><i class="fa fa-globe"></i>CDMX, Puebla</h4>
+        <div class="buttons">
+          <a class="button" href="#cards">¿Cómo ayudar?</a>
+          <a class="button modal__link" href="#" data-modal="new">Públicar <i class="fa fa-edit"></i></a>
+        </div>
+      </div>
+    </section>
+    <section class="cards" id="cards">
+      <div class="cards__intro">
+        <h3>Contactos de Emergencia</h3>
+        <p>A continuación encontrarás una lista de contactos que te podrán ser útiles si te encuentras en un área afectada por el sismo.</p>
+        <p>Si cónoces algun otro contacto importante <a class="modal__link" data-modal="new" href="#">Contáctanos</a></p>
+      </div>
+      <div class="container">
+        <!-- Aquí se agregan las tarjetas -->
+        <!-- Por favor, no modifiques el markup/html de las tarjetas, solamente remplaza la información. -->
+
+        <article class="card">
+          <h2 class="card__title">Protección Civil CDMX</h2>
+          <!-- Agrega una pequeña descripción -->
+          <div class="card__info">
+             <div class="card__type">
+               <h4>Teléfono de Emergencia:</h4>
+               <!-- Especifica si la ayuda es en especie, monetaria, ayuda, etc. -->
+               <h3><a href="tel:5683-2222"><i class="fa fa-phone"></i>5683-2222 </a></h3>
+             </div>
+             <div class="card__location">
+               <h4>Puedes contactar desde:</h4>
+               <!-- Especifica si se puede ayudar desde una parte o en todo México -->
+               <h3><i class="fa fa-globe"></i>CDMX</h3>
+             </div>
+          </div>
+          <!-- Link al contacto, imágen, correo o información -->
+          <a class="card__button" target="__blank" href="http://www.proteccioncivil.cdmx.gob.mx/">Más Información</a>
+        </article>
+
+        <article class="card">
+          <h2 class="card__title">Emergencias</h2>
+          <!-- Agrega una pequeña descripción -->
+          <div class="card__info">
+             <div class="card__type">
+               <h4>Teléfono de Emergencia:</h4>
+               <!-- Especifica si la ayuda es en especie, monetaria, ayuda, etc. -->
+               <h3><a href="tel:911"><i class="fa fa-phone"></i>911</a></h3>
+             </div>
+             <div class="card__location">
+               <h4>Puedes contactar desde:</h4>
+               <!-- Especifica si se puede ayudar desde una parte o en todo México -->
+               <h3><i class="fa fa-globe"></i>Todo México</h3>
+             </div>
+          </div>
+          <!-- Link al contacto, imágen, correo o información -->
+          <a class="card__button" target="__blank" href="https://www.gob.mx/911">Más Información</a>
+        </article>
+
+        <article class="card">
+          <h2 class="card__title">Locatel CDMX</h2>
+          <!-- Agrega una pequeña descripción -->
+          <div class="card__info">
+             <div class="card__type">
+               <h4>Teléfono de Emergencia:</h4>
+               <!-- Especifica si la ayuda es en especie, monetaria, ayuda, etc. -->
+               <h3><a href="tel:5658-1111"><i class="fa fa-phone"></i>5658-1111</a></h3>
+             </div>
+             <div class="card__location">
+               <h4>Puedes contactar desde:</h4>
+               <!-- Especifica si se puede ayudar desde una parte o en todo México -->
+               <h3><i class="fa fa-globe"></i>CDMX</h3>
+             </div>
+          </div>
+          <!-- Link al contacto, imágen, correo o información -->
+          <a class="card__button" target="__blank" href="http://locatel.cdmx.gob.mx/">Más Información</a>
+        </article>
+
+    <section class="modal" data-modal="about">
+      <a href="#" class="modal__close">Cerrar</a>
+      <div class="modal__container">
+        <h2>Acerca de Como Ayudar</h2>
+        <p>Este proyecto sin fines de lucro busca crear un repositorio de información para centralizar el apoyo y la rápida distribución de ayuda.</p>
+        <p>Si deseas ayudar y tienes conocimientos de programación colabora con nosotros en <a href="https://github.com/eldelentes/comoayudarmx"><i class="fa fa-github"></i>Github</a></p>
+        <hr>
+        <p> Sí lo que deseas es agregar un método de ayuda por favor envíanos la información pertinente a:</p>
+        <a href="https://twitter.com/comoayudarmx" target="_blank" class="modal__button"><i class="fa fa-twitter"></i>@comoayudarmx</a> o <a class="modal__email" href="mailto:comoayudarmx@gmail.com">comoayudarmx@gmail.com</a>
+      </div>
+    </section>
+
+    <section class="modal" data-modal="new">
+      <a href="#" class="modal__close">Cerrar</a>
+      <div class="modal__container">
+        <h2>Públicar Forma de Ayuda</h2>
+        <p>Envía la información del método de ayuda con toda la información pertinente como: A quién se ayuda, Desde dónde se puede ayudar, que tipo de ayuda necesitan. desde los siguientes medios de contacto:</p>
+        <a href="https://twitter.com/comoayudarmx" target="_blank" class="modal__button"><i class="fa fa-twitter"></i>@comoayudarmx</a> o <a class="modal__email" href="mailto:comoayudarmx@gmail.com">comoayudarmx@gmail.com</a>
+      </div>
+    </section>
+
+    <script src="app.js" type="text/javascript"></script>
+
