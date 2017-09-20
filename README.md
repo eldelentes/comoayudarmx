@@ -81,4 +81,6 @@ Si tienes alguna otra idea de como colaborar por favor contactame.
 
 - [Carlos medina](https://www.medinnna.com/)
 
+- [Jorge Téllez](https://www.twitter.com/novohispano)
+
 - [Sebastián Osorio](https://github.com/sirgalleto)
