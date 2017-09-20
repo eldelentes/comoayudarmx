@@ -97,4 +97,5 @@
   {title: "Donación Croquetas", description: "El #TerremotoMexico afectó a muchas personas, pero también a muchos animalitos. Dona croquetas en empaque original de 4kgs, para perros y gatos damnificados. Ven a nuestros centros de acopio de 9am a 5pm todos los días, hasta el 24 de Septiembre.", type: "Veterinario", location: "CDMX", link: "https://www.facebook.com/pnamexico/posts/10155700077848948:0"},
   {title: "Rescate animal", description: "Asociación Civil sin fines de lucro (A.C.) Rescatamos personas, salvamos animales.", type: "Veterinario", location: "Global", link: "http://www.somosrescateanimal.org/como_ayudar.html"},
   {title: "Acopio Puebla Animales", description: "Centro de acopio para animales en Puebla.", type: "Veterinario", location: "Puebla", link: "https://www.facebook.com/protectoradeanimalesmexico/posts/1600794509972182"},
+  {title: "Voluntarios para ayudar a la Cruz Roja - GDL", description: "La Cruz Roja necesita voluntarios que apoyen a empacar despensas, en Parque Morelos", type: "Trabajo Voluntario", location: "Guadalajara", link: "https://twitter.com/CruzRojaGDL/status/910460085159157761"},
 ];
