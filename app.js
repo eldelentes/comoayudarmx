@@ -101,5 +101,4 @@ var renderCards = function() {
 
 $(document).on("change", "#donation_type", handleFilterChange);
 $(document).on("change", "#location", handleFilterChange);
-$(document).ready(renderCards);
 $(document).ready(populateFilters);

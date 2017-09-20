@@ -128,7 +128,6 @@
       </div>
     </section>
 
-    <script src="cards.js" type="text/javascript"></script>
     <script src="app.js" type="text/javascript"></script>
     <script src="modals.js" type="text/javascript"></script>
 
@@ -138,8 +137,12 @@
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments)};
       gtag('js', new Date());
-
       gtag('config', 'UA-106793072-1');
+      var Cards;
+      $.getJSON('cards.json', function( data) {
+        Cards = data;
+        $(document).ready(renderCards);
+      });
     </script>
   </body>
 </html>
