@@ -51,17 +51,16 @@
           <a class="button" href="#cards">¿Cómo ayudar?</a>
           <a class="button modal__link" href="#" data-modal="new">Públicar <i class="fa fa-edit"></i></a>
         </div>
+        <div id="languages">
+          <p>Hola: <span data-lang="hola"></span></p>
+          <p>Prueba: <span data-lang="prueba"></span></p>
+          <label for="es"><input id="es" name="language" type="radio" value="es" onchange="loadLanguage('es')" checked>Español</label>
+          <label for="en"><input id="en" name="language" type="radio" value="en" onchange="loadLanguage('en')">Inglés</label>
+          <label for="jp"><input id="jp" name="language" type="radio" value="jp" onchange="loadLanguage('jp')">Japonés</label>
+        </div>
       </div>
     </section>
     <section class="cards" id="cards">
-      <div style="position:relative">
-        <p>Hola: <span data-lang="hola"></span></p>
-        <p>Prueba: <span data-lang="prueba"></span></p>
-        <button type="button" ng-click="vm.changeLang()">Cambiar Idioma</button>
-        <label for="es"><input id="es" name="language" type="radio" value="es" onchange="loadLanguage('es')" checked>Español</label>
-        <label for="en"><input id="en" name="language" type="radio" value="en" onchange="loadLanguage('en')">Inglés</label>
-        <label for="jp"><input id="jp" name="language" type="radio" value="jp" onchange="loadLanguage('jp')">Japonés</label>
-      </div>
       <div class="cards__intro">
         <h3>¿Cómo ayudar a los afectados del Sismo?</h3>
         <p>A continuación encontrarás diferentes organizaciones, centros de acopio o formas de ayudar a los afectados o rescatistas del sismo.</p>
