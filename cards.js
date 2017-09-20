@@ -15,4 +15,6 @@ Cards = [
   {title: "Centro de Acopio Mexicali", description: "Centro de acopio en Méxicalí B.C.", type: "Viveres", location: "Mexicali", link: "https://twitter.com/claumeely/status/910396891640225793"},
   {title: "Acopio Carnicerías Ramos", description: "20 de septiembre a partir de las 8 de la mañana, TODAS las sucursales Ramos funcionarán como centro de acopio. ", type: "Kit Médico", location: "Monterrey", link: "https://www.facebook.com/CarnesRamos/posts/1569495539739254"},
   {title: "Aloja personas damnificadas a través de Airbnb México", description: "Ayuda a los damnificados que necesitan un lugar donde dormir a través de Airbnb México", type: "Alojamiento", location: "CDMX", link: "https://www.airbnb.com/welcome/evacuees/terremotoenmexico"},
+  {title: "Centro de Acopio Creative Dreams", description: "Colecta de víveres en oficinas de Creative Dreams.", type: "Viveres", location: "Monterrey", link: "https://www.facebook.com/Annah.Mtz/posts/10155750696949878?pnref=story"},
+  {title: "Centro de Acopio Crossfit World", description: "Colecta de víveres en Crossfit World.", type: "Viveres", location: "Monterrey", link: "https://www.facebook.com/permalink.php?story_fbid=1295178293926290&id=424423427668452"},
 ];
