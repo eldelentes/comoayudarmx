@@ -348,3 +348,7 @@ body {
 .filter {
   margin-right: 1em;
 }
+
+.badge-verified {
+	color: green;
+}
