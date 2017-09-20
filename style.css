@@ -134,6 +134,7 @@ body {
 	display: inline-block;
 	width: 33%;
 	margin: 0.2em 0;
+	vertical-align: top;
 }
 
 .card__title {
