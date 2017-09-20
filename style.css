@@ -297,6 +297,10 @@ body {
 	pointer-events: auto;
 }
 
+.hide-lang {
+	display: none !important;
+}
+
 @media screen and (max-width: 700px) {
 	.card {
 		width: 100%;
