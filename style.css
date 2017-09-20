@@ -166,6 +166,7 @@ body {
 .card__location h3{
 	padding: 0.5em 0;
 	text-decoration: underline;
+	font-size: 1em;
 }
 
 .card__info .fa {
