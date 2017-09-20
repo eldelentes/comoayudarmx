@@ -78,4 +78,5 @@ Cards = [
   {title: "Acopio Aguascalientes", description: "Lista de centros de acopio en Aguascalientes", type: "Víveres", location: "Aguascalientes", link: "http://www.heraldo.mx/centros-de-acopio/"},
   {title: "Acopio McGill University", description: "La universidad de McGill en Montréal Canadá va a realizar una recaudación de fondos el día de mañana Jueves 21 de Septiembre 2017 de las 9 am a las 8 pm.", type: "Varios", location: "Canada", link: "https://www.facebook.com/events/213692225833551/?ti=as"},
   {title: "Apoyo Veterinario", description: "Listado de contactos veterinarios ofreciendo servicio gratuito", type: "Veterinario", location: "CDMX", link: "https://twitter.com/quinielaelgordo/status/910508363733024777"},
+  {title: "Acopio Universidad Anáhuac Campus México Norte", description: "Acopio de víveres, material de curación, artículos para armar botiquines y herramientas. 7:00 am a 22:00 hrs. Acceso puerta A. Gente de la zona de La Herradura, Interlomas, Bosques, etc. pueden ayudar aquí.", type: "Víveres", location: "Estado de México", link: "https://twitter.com/anahuac/status/910299422122061824"},
 ];
