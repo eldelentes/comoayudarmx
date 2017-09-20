@@ -63,7 +63,7 @@ var renderCards = function() {
     var $location = $("<span>" + card.location + "</span>");
 
     $card.find(".card__title").text(card.title);
-    $card.find(".card__description").text(card.description);
+    $card.find(".card__desc").text(card.description);
     $card.find(".card__type h3").append($type);
     $card.find(".card__location h3").append($location);
     $card.find(".card__button").attr("href", card.link);
