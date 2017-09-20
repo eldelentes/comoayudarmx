@@ -54,7 +54,7 @@ var renderCards = function() {
   };
 
   var getCardTypes = function(card) {
-     if (Array.isArray(card.type)) {
+    if (Array.isArray(card.type)) {
       return card.type;
     }
     return [card.type];
