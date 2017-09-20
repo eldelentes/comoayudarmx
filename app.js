@@ -1,18 +1,49 @@
 var handleFilterChange = function(e){
-  var type = $("#donation_type").val()
-  var location = $("#location").val()
+  var type = $("#donation_type").val();
+  var location = $("#location").val();
+  var state = {type: type, location: location};
+  filterCards(state);
+  history.replaceState(state, "", "?" + $.param(state));
+}
 
-  var cardMatchType = function($card) {
-    return (!type || $card.find(".card__type").text().includes(type) || type == "all")
-  }
+var getUrlParameter = function(param) {
+  var pageUrl = decodeURIComponent(window.location.search.substring(1)),
+    urlVariables = pageUrl.split('&'),
+    paramName,
+    i;
 
-  var cardMatchLocation = function($card) {
-    return (!location || $card.find(".card__location").text().includes(location) || location == "all")
+  for (i = 0; i < urlVariables.length; i++) {
+    paramName = urlVariables[i].split('=');
+
+    if (paramName[0] === param) {
+      return paramName[1] === undefined ? true : paramName[1];
+    }
   }
+};
+
+var filterCardFromQueryParams = function() {
+  var state = {type: getUrlParameter("type"), location: getUrlParameter("location")};
+  $("#donation_type").val(state.type).trigger("chosen:updated");;
+  $("#location").val(state.location).trigger("chosen:updated");
+  filterCards(state);
+}
+
+var filterCards = function(state) {
+  var $noResults = $("#no_results");
+
+  var cardMatchFilter = function($card, filter) {
+    return (!state[filter] || $card.find(".card__" + filter).text().includes(state[filter]) || state[filter] == "all")
+  };
 
   var cardMatchFilters = function($card) {
-    return cardMatchType($card) && cardMatchLocation($card);
+    return cardMatchFilter($card, "type") && cardMatchFilter($card, "location");
   }
+
+  var hasResults = function() {
+    return $(".card").is(":visible");
+  }
+
+  $noResults.hide();
 
   $(".card").each(function() {
     var $card = $(this);
@@ -23,6 +54,10 @@ var handleFilterChange = function(e){
       $card.hide();
     }
   })
+
+  if(!hasResults()) {
+    $noResults.show();
+  }
 }
 
 var populateFilters = function(e) {
@@ -48,9 +83,14 @@ var populateFilters = function(e) {
 
 var renderCards = function() {
   var template = $("#card_template").html();
+  var monetaryType = "Monetaria";
 
   var isWorldPage = function() {
     return location.pathname.includes("world.html");
+  };
+
+  var isMonetaryCard = function(card) {
+    return getCardTypes(card).indexOf(monetaryType) !== -1;
   };
 
   var getCardTypes = function(card) {
@@ -60,13 +100,11 @@ var renderCards = function() {
     return [card.type];
   }
 
-  var isMonetaryCard = function(card) {
-    return getCardTypes(card).indexOf("Monetaria") !== -1;
-  };
-
-  var renderBadges = function($card, card) {
-    if(card.verified) {
-      $card.find(".card__badges").append('<span class="badge-verified" ><i class="fa fa-check"></i> Verificada</span>');
+  var translateMonetaryType = function(type) {
+    if (isWorldPage() && (type == monetaryType)) {
+      return "Monetary";
+    } else {
+      return type;
     }
   }
 
@@ -75,8 +113,14 @@ var renderCards = function() {
     $card.find(".card__type h3").remove();
 
     types.forEach(function(type) {
-      $card.find(".card__type").append(template.clone().append("<span>" + type + "</span>"));
+      $card.find(".card__type").append(template.clone().append("<span>" + translateMonetaryType(type) + "</span>"));
     });
+  }
+
+  var renderBadges = function($card, card) {
+    if(card.verified) {
+      $card.find(".card__badges").append('<span class="badge-verified" ><i class="fa fa-check"></i> Fuente Oficial</span>');
+    }
   }
 
   var renderCard = function(card) {
@@ -103,3 +147,4 @@ $(document).on("change", "#donation_type", handleFilterChange);
 $(document).on("change", "#location", handleFilterChange);
 $(document).ready(renderCards);
 $(document).ready(populateFilters);
+$(document).ready(filterCardFromQueryParams);
