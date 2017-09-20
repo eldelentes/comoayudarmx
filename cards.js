@@ -60,7 +60,6 @@ Cards = [
   {title: "Acopio Playa del Carmen", description: "Centro de acopio en Playa del Carmen", type: "Víveres", location: "Playa del Carmen", link: "https://twitter.com/delitogomx/status/910503792789086210"},
   {title: "Donaciones Internacionales par México", description: "Diferentes donaciones para fondos o ayuda directa a los afetcados del sismo en el sitio de Donadora.", type: "Monetaria", location: "Global", link: "https://donadora.mx/actuopormexico"},
   {title: "Acopio Tigres UANL", description: "Centro de acopio en Estadio Universitario", type: "Víveres", location: "Monterrey", link: "https://twitter.com/TigresOficial/status/910368221315944450"},
-  {title: "Acopio Cuernavaca", description: "Centro de acopio en Cuernavaca", type: "Víveres", location: "Cuernavaca", link: "https://twitter.com/BuzzFeedMexico/status/910509340871626752"},
   {title: "Acopio Celaya", description: "Centro de acopio ubicado en estadio de futbol del Club Celaya", type: "Víveres", location: "Celaya", link: "https://twitter.com/TorosCelayaCD/status/910341648541876224"},
   {title: "Donativos Banorte", description: "Por cada peso que dones Fundación Banorte aportará otro.", type: "Monetaria", location: "Todo México", link: "https://twitter.com/Banorte_mx/status/910323398487748608"},
   {title: "Acopio Morelia", description: "Centro de acopio en Morelia organizado por Canal 6", type: "Víveres", location: "Morelia", link: "https://twitter.com/canal6mediaTV/status/910339756432732160"},
@@ -73,5 +72,8 @@ Cards = [
   {title: "Acopio McGill University", description: "La universidad de McGill en Montréal Canadá va a realizar una recaudación de fondos el día de mañana Jueves 21 de Septiembre 2017 de las 9 am a las 8 pm.", type: "Varios", location: "Canada", link: "https://www.facebook.com/events/213692225833551/?ti=as"},
   {title: "Acopio Tecnológico de Monterrey Morelia", description: "Centro de acopio Tecnológico de Monterrey campus Morelia, Centro de Acopio Puerta 2  (Av. Montaña Monarca #1340 Col. Ejido Jesus del Monte)  del Tecnológico de Monterrey en Morelia", type: "Víveres/Varios", location: "Morelia", link: "https://donar.tec.mx/"},
   {title: "Acopio Instituto Julia García Retana", description: "Centro de acopio ubicado en Pirul del Valle 505 Colonia Valle de León Horario:12 hrs - 20 hrs", type: "Víveres/Varios", location: "Leon", link: "https://comoayudarmx.com/img/INSTITUTOJULIARETANA.png"},
+  {title: "Acopio Panificadora el Sol Cuernavaca", description: "Centro de acopio en todas las sucursales en Cuernavaca, Morelos", type: "Víveres/Varios", location: "Cuernavaca", link: "https://www.facebook.com/pandelsol/photos/a.414561605270131.95645.400950563297902/1555448811181399/?type=3&theater"},  
+  {title: "Centro de acopio Estadio Hidalgo", description: "A partir de 20 de septiembre 11am. Alimentos y productos de higiene personal. Los Jugadores estarán recibiendo tu ayuda a las 14 y 16hrs", type: "Víveres/Varios", location: "Hidalgo", link: "https://twitter.com/Tuzos/status/910521314154127360"},  
+      
 
 ];
