@@ -112,4 +112,5 @@
   {title: "Taco Guru", description: "Centro de acopio en San Pedro Garza García, N.L.", type: "Víveres/Varios", location: "Monterrey, Nuevo León", link: "https://www.facebook.com/tacoguru/posts/1519684678078790?pnref=story"},
   {title: "Acopio Cancun", description: "Donaciones de Alimentos, medicamentos y ropa en Cancun, Quintanaroo.", type: "Varia", location: "Cancun", link: "https://twitter.com/rembertoestrada/status/910270614530871297"},
   {title: "Donaciones en Internacionales en Bitcoin", description: "Bitso.com recibe donaciones en criptomonedas para ayudar a las victimas del terremoto por cada $1 donado bitso aportara $.5, lo recaudado sera entregado a la cruz roja y a los rescatistas topos", type: "Monetaria", location: "Global", link: "https://blog-en.bitso.com/bitcoinaidmexico-part-2-381118556cf7"},
+  {title: "Instituto Lomas del Real", description: "El Lomas del Real se une a la causa apoyando como centro de acopio permanente para los damnificados de los terremotos.", type: "Víveres", location: "San Luis Potosí", link: "https://www.facebook.com/166809276691498/photos/a.167901939915565.30748.166809276691498/1562751217097290/?type=3&theater"},
  ];
