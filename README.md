@@ -72,3 +72,9 @@ Si tienes alguna otra idea de como colaborar por favor contactame.
 - [Raúl Salinas](https://github.com/nacapulque)
 
 - [Jorge Rios](https://github.com/jotarios)
+
+- [Isabel Palomar](https://github.com/IsabelPalomar)
+
+- [Pedro Garza](https://github.com/PedroASGarza)
+
+- [Alfrobinson](https://github.com/alfrobinson)
