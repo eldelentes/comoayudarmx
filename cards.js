@@ -47,5 +47,7 @@ Cards = [
   {title: "Acopio Puebla", description: "Donaciones de víveres, medicamentos y utensilios en Cholula, Puebla.", type: "Varia", location: "Puebla", link: "https://www.facebook.com/CholulaDIF/posts/1951410691778618"},
   {title: "Revisión de Infraestructura", description: "Se buscan Arquitectos, Ingenieros Civiles, Esutrucritas y personal con maquinaria para revisión.", type: "Asesoría", location: "CDMX", link: "https://twitter.com/MImediomaraton/status/910502011161821185"},
   {title: "Acopio Playa del Carmen", description: "Centro de acopio en Playa del Carmen", type: "Viveres", location: "Playa del Carmen", link: "https://twitter.com/delitogomx/status/910503792789086210"},
+  {title: "Donaciones Internacionales par México", description: "Diferentes donaciones para fondos o ayuda directa a los afetcados del sismo en el sitio de Donadora.", type: "Monetaria", location: "Todo el Mundo.", link: "https://donadora.mx/actuopormexico"},
+  {title: "Acopio Tigres UANL", description: "Centro de acopio en Estadio Universitario", type: "Viveres", location: "Monterrey", link: "https://twitter.com/TigresOficial/status/910368221315944450"},
   {title: "Acopio Cuernavaca", description: "Centro de acopio en Cuernavaca", type: "Varios", location: "Cuernavaca", link: "https://twitter.com/BuzzFeedMexico/status/910509340871626752"},
 ];
