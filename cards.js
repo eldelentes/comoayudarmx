@@ -119,6 +119,4 @@
   {title: "Alojamiento y acopio Centro Expositor Puebla", description: "El Centro Expositor Puebla ubicado en la zona de Los Fuertes está funcionando como albergue y centro de acopio", type: "Varios", location: "Puebla", link: "https://www.facebook.com/CentroExpositorPuebla/?fref=ts"},
   {title: "Instituto Lomas del Real", description: "El Lomas del Real se une a la causa apoyando como centro de acopio permanente para los damnificados de los terremotos.", type: "Víveres", location: "San Luis Potosí", link: "https://www.facebook.com/166809276691498/photos/a.167901939915565.30748.166809276691498/1562751217097290/?type=3&theater"},
   {title: "Acopio Universidad Autonoma de Guerrero", description: "Diferentes centros de acopio que ofrece la UAGro", type: "Víveres", location: "Guerrero", link: "https://twitter.com/JavSaldana/status/910518061496545280"},
-  {title: "Albergues vacios en CDMX", description: "2 Albergues dispuestos ayudar, con capacidad de 200 y 120 personas", type: "Albergues", location: "CDMX", link: "https://twitter.com/_deMiguel_/status/910562599124824064"},
-  {title: "Atención medica gratuita", description: "Farmacias del Ahorro ofrece atención médica de primer nivel y medicamentos de manera gratuita", type: "Medicamentos", location: "Todo México", link: "https://twitter.com/UniondeMorelos/status/910603568398217216"},
  ];
