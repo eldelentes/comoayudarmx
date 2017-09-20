@@ -104,5 +104,7 @@
   {title: "Requerimiento de ingenieros CIVILES ", description: "La #CDMX necesita de tus conocimientos sobre protección civil e ingeniería. Asiste a las oficinas de @SPCCDMX para apoyar en revisiones #mm", type: "Trabajo Voluntario", location: "CDMX", link: "https://twitter.com/ManceraMiguelMX/status/910564728069488641"},
   {title: "Taco Guru", description: "Centro de acopio en San Pedro Garza García, N.L.", type: "Víveres/Varios", location: "Monterrey, Nuevo León", link: "https://www.facebook.com/tacoguru/posts/1519684678078790?pnref=story"},
   {title: "Donaciones en Internacionales en Bitcoin", description: "Bitso.com recibe donaciones en criptomonedas para ayudar a las victimas del terremoto por cada $1 donado bitso aportara $.5, lo recaudado sera entregado a la cruz roja y a los rescatistas topos", type: "Monetaria", location: "Global", link: "https://blog-en.bitso.com/bitcoinaidmexico-part-2-381118556cf7"},
+{title: "Expo Guadalajara", description: "Donaciones en Expo Abierta de 7am a 24hrs hasta el 1º de Oct", type: "Víveres/Varios", location: "Guadalajara, Jalisco", link: "https://twitter.com/ExpoGuadalajara/status/910595954876735488"},
+{title: "Amor sin raza Donaciones", description: "Recogiendo todo lo que se pueda para los animalitos", type: "Víveres/Varios", location: "CDMX", link: "https://twitter.com/AmorSinRaza/status/910561964539052032"},
  ];
 
