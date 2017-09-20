@@ -82,3 +82,5 @@ Si tienes alguna otra idea de como colaborar por favor contactame.
 - [Carlos medina](https://www.medinnna.com/)
 
 - [Javier Ruiz](https://github.com/javarv87)
+
+- [Jorge Téllez](https://www.twitter.com/novohispano)
