@@ -1,24 +1,30 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>How I can Help | Donations</title>
+    <title>Cómo Ayudar MX | Información para ayudar.</title>
     <meta name="description" content="Repositorio de información para ayudar a los afectados del sismo." />
 
     <!-- Twitter Card data -->
-    <meta name="twitter:card" value="summary">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@comoayudarmx">
+    <meta name="twitter:title" content="Ayuda a los afectados del sismo.">
+    <meta name="twitter:description" content="Sitio para encontrar diferentes organizaciones, centros de acopio o formas de ayudar a los afectados o rescatistas del sismo.">
+    <meta name="twitter:image" content="http://javierivero.com/twitter.png">
 
     <!-- Open Graph data -->
     <meta property="og:title" content="Ayuda a los afectados del sismo." />
     <meta property="og:type" content="web" />
     <meta property="og:url" content="http://comoayudar.mx/" />
     <meta property="og:image" content="facebook.jpg" />
-    <meta property="og:description" content="Ayuda a los afectados del sismo. Información de como ayudar." />
+    <meta property="og:description" content="Ayuda a los afectados del sismo. Información de cómo ayudar." />
 
     <link rel="stylesheet" type="text/css" href="style.min.css">
+    <link rel="stylesheet" type="text/css" href="lib/chosen/chosen.css">
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="lib/chosen/chosen.jquery.min.js" ></script>
 
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700|Roboto:400,500" rel="stylesheet">
 
@@ -52,10 +58,11 @@
         <p>A continuación encontrarás una lista de contactos que te podrán ser útiles si te encuentras en un área afectada por el sismo.</p>
         <p>Si cónoces algun otro contacto importante <a class="modal__link" data-modal="new" href="#">Contáctanos</a></p>
       </div>
-      <div id="cards_container" class="container">
+      <div class="container">
         <!-- Aquí se agregan las tarjetas -->
         <!-- Por favor, no modifiques el markup/html de las tarjetas, solamente remplaza la información. -->
-        <template id="card_template">
+        <div id="#cards_container">
+          <template id="card_template">
           <article class="card">
             <h2 class="card__title"></h2>
             <!-- Agrega una pequeña descripción -->
@@ -75,27 +82,42 @@
             <!-- Link al contacto, imágen, correo o información -->
             <a class="card__button" target="__blank" href="">Más Información</a>
           </article>
-        </template>
+          </template>
+        </div>
       </div>
     <section class="modal" data-modal="about">
-      <a href="#" class="modal__close">Close</a>
+      <a href="#" class="modal__close">Cerrar</a>
       <div class="modal__container">
-        <h2>How to help</h2>
-        <p>This is a non profit project that seeks to create an information repository to centralize support and rapid distribution of aid.</p>
-        <p>If you want to help and you have knowledge of programming, collaborate with us in <a href="https://github.com/eldelentes/comoayudarmx"><i class="fa fa-github"></i>GitHub</a></p>
+        <h2>Acerca de Como Ayudar</h2>
+        <p>Este proyecto sin fines de lucro busca crear un repositorio de información para centralizar el apoyo y la rápida distribución de ayuda.</p>
+        <p>Si deseas ayudar y tienes conocimientos de programación colabora con nosotros en <a href="https://github.com/eldelentes/comoayudarmx"><i class="fa fa-github"></i>Github</a></p>
         <hr>
-        <p>If you would like to add a help method please send us the pertinent information to:</p>
+        <p> Sí lo que deseas es agregar un método de ayuda por favor envíanos la información pertinente a:</p>
         <a href="https://twitter.com/comoayudarmx" target="_blank" class="modal__button"><i class="fa fa-twitter"></i>@comoayudarmx</a> o <a class="modal__email" href="mailto:comoayudarmx@gmail.com">comoayudarmx@gmail.com</a>
       </div>
     </section>
 
     <section class="modal" data-modal="new">
-      <a href="#" class="modal__close">Close</a>
+      <a href="#" class="modal__close">Cerrar</a>
       <div class="modal__container">
-        <h2>Publish form of aid</h2>
-        <p>Send the help method information with all relevant information such as: Who you help, From where you can help, What type of help you need. From the following means of contact:</p>
+        <h2>Públicar Forma de Ayuda</h2>
+        <p>Envía la información del método de ayuda con toda la información pertinente como: A quién se ayuda, Desde dónde se puede ayudar, que tipo de ayuda necesitan. desde los siguientes medios de contacto:</p>
         <a href="https://twitter.com/comoayudarmx" target="_blank" class="modal__button"><i class="fa fa-twitter"></i>@comoayudarmx</a> o <a class="modal__email" href="mailto:comoayudarmx@gmail.com">comoayudarmx@gmail.com</a>
       </div>
     </section>
 
+    <script src="cards.js" type="text/javascript"></script>
+    <script src="app.js" type="text/javascript"></script>
     <script src="modals.js" type="text/javascript"></script>
+
+    <!-- Global Site Tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-106793072-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments)};
+      gtag('js', new Date());
+
+      gtag('config', 'UA-106793072-1');
+    </script>
+  </body>
+</html>
