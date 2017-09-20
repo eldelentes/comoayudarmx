@@ -1,25 +1,13 @@
-$('.modal__link').click(function(e){
-  e.preventDefault();
-  var modal = $(this).data('modal');
-  $('.modal[data-modal="' + modal + '"]').addClass('show');
-})
-
-$('.modal__close').click(function(e){
-  e.preventDefault();
-  $(this).parent().removeClass('show');
-})
-
-
 var handleFilterChange = function(e){
   var type = $("#donation_type").val()
   var location = $("#location").val()
 
   var cardMatchType = function($card) {
-    return (!type || $card.find(".card__type").text().includes(type))
+    return (!type || $card.find(".card__type").text().includes(type) || type == "all")
   }
 
   var cardMatchLocation = function($card) {
-    return (!location || $card.find(".card__location").text().includes(location))
+    return (!location || $card.find(".card__location").text().includes(location) || location == "all")
   }
 
   var cardMatchFilters = function($card) {
@@ -47,11 +35,15 @@ var populateFilters = function(e) {
       if (!$select.text().includes(option)) {
         $select.append($option);
       }
+
     });
   }
 
   populateFilter(".card__type h3", "#donation_type");
   populateFilter(".card__location h3", "#location");
+
+  $('select#donation_type').chosen()
+  $('select#location').chosen()
 }
 
 var renderCards = function() {
