@@ -54,6 +54,24 @@ var populateFilters = function(e) {
   populateFilter(".card__location h3", "#location");
 }
 
+var renderCards = function() {
+  var template = $("#card_template").html();
+
+  Cards.forEach(function(card) {
+    var $card = $(template);
+    var $type = $("<span>" + card.type + "</span>");
+    var $location = $("<span>" + card.location + "</span>");
+
+    $card.find(".card__title").text(card.title);
+    $card.find(".card__description").text(card.description);
+    $card.find(".card__type h3").append($type);
+    $card.find(".card__location h3").append($location);
+    $card.find(".card__button").attr("href", card.link);
+    $("#cards_container").append($card);
+  });
+}
+
 $(document).on("change", "#donation_type", handleFilterChange);
 $(document).on("change", "#location", handleFilterChange);
+$(document).ready(renderCards);
 $(document).ready(populateFilters);
