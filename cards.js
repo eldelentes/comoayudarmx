@@ -78,4 +78,5 @@ Cards = [
   {title: "Acopio Aguascalientes", description: "Lista de centros de acopio en Aguascalientes", type: "Víveres", location: "Aguascalientes", link: "http://www.heraldo.mx/centros-de-acopio/"},
   {title: "Acopio McGill University", description: "La universidad de McGill en Montréal Canadá va a realizar una recaudación de fondos el día de mañana Jueves 21 de Septiembre 2017 de las 9 am a las 8 pm.", type: "Varios", location: "Canada", link: "https://www.facebook.com/events/213692225833551/?ti=as"},
   {title: "Apoyo Veterinario", description: "Listado de contactos veterinarios ofreciendo servicio gratuito", type: "Veterinario", location: "CDMX", link: "https://twitter.com/quinielaelgordo/status/910508363733024777"},
+  {title: "Centro de acopio Skatepark Ciudad Deportiva Monterrey", description: "Centro para recaudar víveres y ayudar a los afectados de los pasados sismos en el centro y sur de nuestro país.", type: "Víveres", location: "Monterrey", link: "https://www.facebook.com/girlscan2/photos/a.1590413624602174.1073741828.1580057592304444/1817467641896770/?type=3&theater"},
 ];
