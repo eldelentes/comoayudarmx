@@ -77,4 +77,7 @@ Cards = [
   {title: "Acopio Aguascalientes", description: "Lista de centros de acopio en Aguascalientes", type: "Víveres", location: "Aguascalientes", link: "http://www.heraldo.mx/centros-de-acopio/"},
   {title: "Acopio McGill University", description: "La universidad de McGill en Montréal Canadá va a realizar una recaudación de fondos el día de mañana Jueves 21 de Septiembre 2017 de las 9 am a las 8 pm.", type: "Varios", location: "Canada", link: "https://www.facebook.com/events/213692225833551/?ti=as"},
   {title: "Apoyo Veterinario", description: "Listado de contactos veterinarios ofreciendo servicio gratuito", type: "Veterinario", location: "CDMX", link: "https://twitter.com/quinielaelgordo/status/910508363733024777"},
+  {title: "Acopio UDEM", description: "Campaña de apoyo para afectados por el sismo y centros de acopio en Universidad de Monterrey", type: "Acopio", location: "Monterrey", link: "https://udem.givepulse.com/event/58899-M%C3%A1s-Manos-por-la-Ciudad-de-M%C3%A9xico"},
+  {title: "Acopio U-ERRE", description: "Centro de acopio en Universidad Regiomontana", type: "Acopio", location: "Monterrey", link: "https://www.facebook.com/URegiomontana/photos/a.195579072432.153739.195287592432/10155676128162433/?type=3&theater"},
+  {title: "Transporte para víveres", description: "Puedes poner tu auto a disposición de quién lo necesite", type: "Varios", location: "CDMX", link: "https://www.facebook.com/CarrotMx/posts/1360440304055297"},
 ];
