@@ -54,17 +54,30 @@ var renderCards = function() {
   };
 
   var isMonetaryCard = function(card) {
+    if (Array.isArray(card.type)) {
+      return card.type.indexOf("Monetaria") !== -1;
+    }
     return card.type == "Monetaria";
   };
 
   var renderCard = function(card) {
     var $card = $(template);
-    var $type = $("<span>" + card.type + "</span>");
     var $location = $("<span>" + card.location + "</span>");
 
     $card.find(".card__title").text(card.title);
     $card.find(".card__desc").text(card.description);
-    $card.find(".card__type h3").append($type);
+
+    if (Array.isArray(card.type)) {
+      var typeTemplate = $card.find(".card__type h3").clone();
+      $card.find(".card__type h3").remove();
+
+      var types = card.type.forEach(function(type) {
+        $card.find(".card__type").append(typeTemplate.clone().append("<span>" + type + "</span>"));
+      });
+    } else {
+      $card.find(".card__type h3").append("<span>" + card.type + "</span>");
+    }
+    
     $card.find(".card__location h3").append($location);
     $card.find(".card__button").attr("href", card.link);
     $("#cards_container").append($card);
