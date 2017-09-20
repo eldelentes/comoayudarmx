@@ -53,12 +53,25 @@ var renderCards = function() {
     return location.pathname.includes("world.html");
   };
 
-  var isMonetaryCard = function(card) {
-    if (Array.isArray(card.type)) {
-      return card.type.indexOf("Monetaria") !== -1;
+  var getCardTypes = function(card) {
+     if (Array.isArray(card.type)) {
+      return card.type;
     }
-    return card.type == "Monetaria";
+    return [card.type];
+  }
+
+  var isMonetaryCard = function(card) {
+    return getCardTypes(card).indexOf("Monetaria") !== -1;
   };
+
+  var renderCardTypes = function(element, types) {
+    var typeTemplate = element.find(".card__type h3").clone();
+    element.find(".card__type h3").remove();
+
+    types.forEach(function(type) {
+      element.find(".card__type").append(typeTemplate.clone().append("<span>" + type + "</span>"));
+    });
+  }
 
   var renderCard = function(card) {
     var $card = $(template);
@@ -67,16 +80,7 @@ var renderCards = function() {
     $card.find(".card__title").text(card.title);
     $card.find(".card__desc").text(card.description);
 
-    if (Array.isArray(card.type)) {
-      var typeTemplate = $card.find(".card__type h3").clone();
-      $card.find(".card__type h3").remove();
-
-      var types = card.type.forEach(function(type) {
-        $card.find(".card__type").append(typeTemplate.clone().append("<span>" + type + "</span>"));
-      });
-    } else {
-      $card.find(".card__type h3").append("<span>" + card.type + "</span>");
-    }
+    renderCardTypes($card, getCardTypes(card));
     
     $card.find(".card__location h3").append($location);
     $card.find(".card__button").attr("href", card.link);
