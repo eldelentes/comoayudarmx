@@ -12,7 +12,7 @@ Actualmente éxisten 3 formas de participar.
 
 - Por la emergencia, el sitio web esta hecho solamente con HTML Y CSS Básico, si eres un desarrollador/programador que quiera ayudar a construir una plataforma más en forma (Con un backend automatizado) por favor contactame en twitter [@eldelentes](https://twitter.com/eldelentes) o por correo eldelentes@gmail.com
 
-- Ayuda agregando tarjetas con información en el sitio, solamente es necesario hacer copy y paste del markup del paso 2 con información que encuentres en twitter (Busca #comoayudar o @comoayudar).
+- Ayuda agregando tarjetas con información en el sitio, solamente es necesario hacer copy y paste del markup del paso 2 con información que encuentres en twitter (Busca #comoayudar o @comoayudarmx).
 
 - Ayuda agregando tarjetas con información de contactos de emergencia relevantes, solamente es necesario hacer copy y paste del markup del
 paso 3 y reemplazar los datos por los de la entidad de atención

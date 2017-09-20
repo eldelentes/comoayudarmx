@@ -12,4 +12,5 @@ Cards = [
   {title: "Centro de Acopio Aztlán Bar", description: "Colecta de víveres para las personas afectadas por el sismo en la CDMX. Horarios de 11 AM a 8 PM", type: "Viveres", location: "CDMX", link: "https://www.facebook.com/aztlanrb/posts/1424117287677919"},
   {title: "Centro de Acopio en Torreón", description: "Centros de Acopio en Torreón Coahuila.", type: "Viveres/Varios", location: "Torreón", link: "https://twitter.com/AnaMaciasAnaya/status/910349434315268096"}
   {title: "Centro de Acopio Parque España", description: "20 de septiembre de 10:00 a 17:00 en la explanada del Parque España de la CDMX.", type: "Viveres/Kit Médico", location: "CDMX", link: "https://www.facebook.com/indiemovradio/photos/pb.1048756795183942.-2207520000.1505889399./1543570285702588/?type=3"}
+  {title: "Acopio Carnicerías Ramos", description: "20 de septiembre a partir de las 8 de la mañana, TODAS las sucursales Ramos funcionarán como centro de acopio. ", type: "Kit Médico", location: "Monterrey", link: "https://www.facebook.com/CarnesRamos/posts/1569495539739254"}
 ];
