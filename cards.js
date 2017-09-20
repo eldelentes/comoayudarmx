@@ -14,4 +14,5 @@ Cards = [
   {title: "Centro de Acopio Parque España", description: "20 de septiembre de 10:00 a 17:00 en la explanada del Parque España de la CDMX.", type: "Viveres/Kit Médico", location: "CDMX", link: "https://www.facebook.com/indiemovradio/photos/pb.1048756795183942.-2207520000.1505889399./1543570285702588/?type=3"},
   {title: "Centro de Acopio Mexicali", description: "Centro de acopio en Méxicalí B.C.", type: "Viveres", location: "Mexicali", link: "https://twitter.com/claumeely/status/910396891640225793"},
   {title: "Acopio Carnicerías Ramos", description: "20 de septiembre a partir de las 8 de la mañana, TODAS las sucursales Ramos funcionarán como centro de acopio. ", type: "Kit Médico", location: "Monterrey", link: "https://www.facebook.com/CarnesRamos/posts/1569495539739254"},
+  {title: "Aloja personas damnificadas a través de Airbnb México", description: "Ayuda a los damnificados que necesitan un lugar donde dormir a través de Airbnb México", type: "Alojamiento", location: "CDMX", link: "https://www.airbnb.com/welcome/evacuees/terremotoenmexico"},
 ];
