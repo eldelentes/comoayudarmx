@@ -77,4 +77,5 @@ Cards = [
   {title: "Acopio Aguascalientes", description: "Lista de centros de acopio en Aguascalientes", type: "Víveres", location: "Aguascalientes", link: "http://www.heraldo.mx/centros-de-acopio/"},
   {title: "Acopio McGill University", description: "La universidad de McGill en Montréal Canadá va a realizar una recaudación de fondos el día de mañana Jueves 21 de Septiembre 2017 de las 9 am a las 8 pm.", type: "Varios", location: "Canada", link: "https://www.facebook.com/events/213692225833551/?ti=as"},
   {title: "Apoyo Veterinario", description: "Listado de contactos veterinarios ofreciendo servicio gratuito", type: "Veterinario", location: "CDMX", link: "https://twitter.com/quinielaelgordo/status/910508363733024777"},
+  {title: "Apoyo Psicológico", description: "Apoyo psicológico gratuito por WhatsApp, pídeme mi número por DM @AnnieCAA (solo tengo internet).", type: "Psicológico", location: "CDMX", link: "https://twitter.com/AnnieCAA"},  
 ];
