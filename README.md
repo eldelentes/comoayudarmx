@@ -81,3 +81,5 @@ Si tienes alguna otra idea de como colaborar por favor contactame.
 - [Héctor Morales](https://github.com/HectorMg)
 
 - [Javier Rivero](http://javierivero.com/)
+
+- [Benito Serna](https://github.com/bhserna)
