@@ -15,11 +15,11 @@ var handleFilterChange = function(e){
   var location = $("#location").val()
 
   var cardMatchType = function($card) {
-    return (!type || $card.find(".card__type").text().includes(type))
+    return (!type || $card.find(".card__type").text().includes(type) || type == "all")
   }
 
   var cardMatchLocation = function($card) {
-    return (!location || $card.find(".card__location").text().includes(location))
+    return (!location || $card.find(".card__location").text().includes(location) || location == "all")
   }
 
   var cardMatchFilters = function($card) {
