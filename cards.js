@@ -67,11 +67,9 @@ Cards = [
   {title: "Cd. Juárez Plaza Trigal", description: "Jueves 21 de septiembre a las 07:00 PM en Homero Studio.", type: "Varia", location: "Cd. Juárez", link: "https://www.facebook.com/photo.php?fbid=726907364160775&set=pcb.726907427494102&type=3&theater"},
   {title: "Cd. Juárez Hnos. Escobar", description: "De martes a domingo de 9 AM a 7 PM. Se recibirá alcohol de curación, gasas, algodón de curación, alimentos no perecederos, artículos de higiene personal, ropa en buen estado, cubetas, linternas con bateria.", type: "Varia", location: "Cd. Juárez", link: "https://www.facebook.com/mimbre.restaurante/photos/a.318079198344524.1073741829.301592946659816/883942391758199/?type=3"},
   {title: "Centros de Acopio en Nuevo León", description: "Mapa con ubicaciones de centros de acopio en locales comerciales del estado.", type: "Varia", location: "Nuevo León", link: "https://goo.gl/LxDGzC"},
-<<<<<<< HEAD
   {title: "Fundraising Campaign Australia", description: "The funds collected will be allocated to local community organisations in Oaxaca. Our family is from Oaxaca, so they will assist us in ensuring the funds turn into food, water, clothing and building materials. We will report back to you and the Australian government on our annual report on where and how the funds were spent.", type: "Monetaria", location: "Global", link: "https://www.gofundme.com/helpushelpmexico"},
   {title: "Apoyo Psicológico", description: "Apoyo psicológico gratuito en la Asociación Psicoanalítica Mexicana: atención telefónica brigadas en campo, atención personal y capacitación para manejo de crisis.", type: "Psicológico", location: "CDMX", link: "https://www.facebook.com/APM.Online/posts/1916503575032878"},
-=======
-  {title: "Apoyo Psicológico", description: "Apoyo psicológico gratuito en la Asociación Psicoanalítica Mexicana: atención telefónica brigadas en campo, atención personal y capacitación para manejo de crisis", type: "Psicológico", location: "CDMX", link: "https://www.facebook.com/APM.Online/posts/1916503575032878"},
+  {title: "Acopio Aguascalientes", description: "Lista de centros de acopio en Aguascalientes", type: "Víveres", location: "Aguascalientes", link: "http://www.heraldo.mx/centros-de-acopio/"},
   {title: "Acopio McGill University", description: "La universidad de McGill en Montréal Canadá va a realizar una recaudación de fondos el día de mañana Jueves 21 de Septiembre 2017 de las 9 am a las 8 pm.", type: "Varios", location: "Canada", link: "https://www.facebook.com/events/213692225833551/?ti=as"},
->>>>>>> 1dac7bc3eb089ab7ea2c22c3750691cf184dbab3
+
 ];
