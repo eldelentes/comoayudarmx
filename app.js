@@ -65,6 +65,16 @@ var renderCards = function() {
     return [card.type];
   }
 
+  var isMonetaryCard = function(card) {
+    return getCardTypes(card).indexOf("Monetaria") !== -1;
+  };
+
+  var renderBadges = function($card, card) {
+    if(card.verified) {
+      $card.find(".card__badges").append('<span class="badge-verified" ><i class="fa fa-check"></i> Fuente Oficial</span>');
+    }
+  }
+
   var translateMonetaryType = function(type) {
     if (isWorldPage() && (type == monetaryType)) {
       return "Monetary";
