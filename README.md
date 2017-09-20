@@ -66,3 +66,9 @@ Si tienes alguna otra idea de como colaborar por favor contactame.
 - [Javier Rivero](http://javierivero.com/)
 
 - [Benito Serna](https://github.com/bhserna)
+
+- [Oscar Barajas](https://github.com/gndx)
+
+- [Raúl Salinas](https://github.com/nacapulque)
+
+- [Jorge Rios](https://github.com/jotarios)
