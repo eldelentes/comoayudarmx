@@ -346,7 +346,7 @@ body {
 }
 
 .filter {
-  margin-right: 1em;
+  	margin-right: 1em;
 }
 
 .badge-verified {
@@ -356,4 +356,12 @@ body {
 	padding: 6px;
 	display: inline-block;
 	border-radius: 100em;
+}
+
+#no_results {
+    display: none;
+    font-size: 20px;
+    text-align: center;
+    padding: 0 0 2em;
+    margin: 1em;
 }
