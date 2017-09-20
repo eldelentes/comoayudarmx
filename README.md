@@ -23,7 +23,7 @@ ciudadana que quieras agregar.
 2.- Abre `cards.js` y agrega tal cual se menciona en el comentario el código con su respectiva información:
 
 ```
- {title: "Donación Topos", description: "Los Topos son una asosiación de rescatistas indepe…tencilios necesarios para el rescate de personas.", type: "Monetaria", location: "Todo el mundo", link: "https://twitter.com/topos/status/908000616575680512"},
+ {title: "Donación Topos", description: "Los Topos son una asosiación de rescatistas indepe…tencilios necesarios para el rescate de personas.", type: "Monetaria", location: "Global", link: "https://twitter.com/topos/status/908000616575680512"},
 ```
 
 3.- Para agregar información de contacto de entidades de atención
