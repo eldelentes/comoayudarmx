@@ -80,4 +80,5 @@ Cards = [
   {title: "Acopio McGill University", description: "La universidad de McGill en Montréal Canadá va a realizar una recaudación de fondos el día de mañana Jueves 21 de Septiembre 2017 de las 9 am a las 8 pm.", type: "Varios", location: "Canada", link: "https://www.facebook.com/events/213692225833551/?ti=as"},
   {title: "Apoyo Veterinario", description: "Listado de contactos veterinarios ofreciendo servicio gratuito", type: "Veterinario", location: "CDMX", link: "https://twitter.com/quinielaelgordo/status/910508363733024777"},
   {title: "Acopio Herramientas Saltillo", description: "Acopio de herramientas en Saltillo, Ramos y Arteaga Coahuila, Blvd Hinojosa #683 Col La Salle - negocio SEIL", type: "Herramientas", location: "Saltillo, Coahuila", link: "https://www.facebook.com/cynthia.villarreallomeli/posts/10159338613115297"},  
+  {title: "Donación Cadena", description: "Comité de Ayuda a Desastres y Emergencias Nacionales o CADENA", type: "Monetaria", location: "Global", link: "https://twitter.com/cadena_ong/status/910248554622369792"},
 ];
