@@ -48,4 +48,5 @@ Cards = [
   {title: "Acopio Hermossillo", description: "Donaciones de víveres, medicamentos y utensilios en Hermossillo sonora.", type: "Varia", location: "Hermossillo", link: "https://twitter.com/delvallecolosio/status/910498620318744576"},
   {title: "Acopio Puebla", description: "Donaciones de víveres, medicamentos y utensilios en Cholula, Puebla.", type: "Varia", location: "Puebla", link: "https://www.facebook.com/CholulaDIF/posts/1951410691778618"},
   {title: "Revisión de Infraestructura", description: "Se buscan Arquitectos, Ingenieros Civiles, Esutrucritas y personal con maquinaria para revisión.", type: "Asesoría", location: "CDMX", link: "https://twitter.com/MImediomaraton/status/910502011161821185"},
+  {title: "Acopio Playa del Carmen", description: "Centro de acopio en Playa del Carmen", type: "Viveres", location: "Playa del Carmen", link: "https://twitter.com/delitogomx/status/910503792789086210"},
 ];
