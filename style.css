@@ -54,7 +54,11 @@ body {
 .logo {
 	font-family: 'Roboto Slab', sans-serif;
 	font-size: 1em;
+}
+
+.logo a {
 	color: #F73535;
+	text-decoration: none;
 }
 
 .mainNav a {
