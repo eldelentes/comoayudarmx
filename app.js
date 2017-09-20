@@ -1,35 +1,62 @@
 var handleFilterChange = function(e){
-  var type = $("#donation_type").val()
-  var location = $("#location").val()
+  var type = $("#donation_type").val();
+  var location = $("#location").val();
+  var state = {type: type, location: location};
+  filterCards(state);
+  history.replaceState(state, "", "?" + $.param(state));
+}
 
-  var cardMatchType = function($card) {
-    return (!type || $card.find(".card__type").text().includes(type) || type == "all")
-  }
+var getUrlParameter = function(param) {
+  var pageUrl = decodeURIComponent(window.location.search.substring(1)),
+    urlVariables = pageUrl.split('&'),
+    paramName,
+    i;
 
-  var cardMatchLocation = function($card) {
-    return (!location || $card.find(".card__location").text().includes(location) || location == "all")
+  for (i = 0; i < urlVariables.length; i++) {
+    paramName = urlVariables[i].split('=');
+
+    if (paramName[0] === param) {
+      return paramName[1] === undefined ? true : paramName[1];
+    }
   }
+};
+
+var filterCardFromQueryParams = function() {
+  var state = {type: getUrlParameter("type"), location: getUrlParameter("location")};
+  $("#donation_type").val(state.type).trigger("chosen:updated");;
+  $("#location").val(state.location).trigger("chosen:updated");
+  filterCards(state);
+}
+
+var filterCards = function(state) {
+  var $noResults = $("#no_results");
+
+  var cardMatchFilter = function($card, filter) {
+    return (!state[filter] || $card.find(".card__" + filter).text().includes(state[filter]) || state[filter] == "all")
+  };
 
   var cardMatchFilters = function($card) {
-    return cardMatchType($card) && cardMatchLocation($card);
+    return cardMatchFilter($card, "type") && cardMatchFilter($card, "location");
   }
 
-  var emptyResults = true;
-  $("#no_results").hide();
+  var hasResults = function() {
+    return $(".card").is(":visible");
+  }
+
+  $noResults.hide();
 
   $(".card").each(function() {
     var $card = $(this);
 
     if (cardMatchFilters($card)) {
       $card.show();
-      emptyResults = false;
     } else {
       $card.hide();
     }
   })
 
-  if(emptyResults) {
-    $("#no_results").show();
+  if(!hasResults()) {
+    $noResults.show();
   }
 }
 
@@ -120,3 +147,4 @@ $(document).on("change", "#donation_type", handleFilterChange);
 $(document).on("change", "#location", handleFilterChange);
 $(document).ready(renderCards);
 $(document).ready(populateFilters);
+$(document).ready(filterCardFromQueryParams);
