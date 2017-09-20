@@ -353,7 +353,7 @@ Cards = [{
 
     {
         title: "Donations in the UL (justgiving)",
-        description: " Donations in pounds for those who reside in the UK. This money will be donated to the Association "Topos". '",
+        description: "Donations in pounds for those who reside in the UK. This money will be donated to the Association Topos",
         type: "Monetary Contribution",
         location: "Reino Unido",
         link: "https://www.justgiving.com/crowdfunding/letshelpmexicouk"

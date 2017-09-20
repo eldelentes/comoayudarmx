@@ -102,7 +102,7 @@ var renderCards = function() {
 
   var translateMonetaryType = function(type) {
     if (isWorldPage() && (type == monetaryType)) {
-      return "Monetary";
+      return "Monetary Contribution";
     } else {
       return type;
     }
