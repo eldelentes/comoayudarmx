@@ -58,6 +58,7 @@
     </div>
 </section>
 <section class="cards" id="cards">
+    <p>Lugares en donde se necesita ayuda</p>
     <div id="mapid"></div>
 </section>
 
@@ -73,24 +74,38 @@
     </div>
 </section>
 
-<section class="modal" data-modal="new">
+<section class="modal ayuda" data-modal="ayuda">
     <a href="#" class="modal__close">Cerrar</a>
     <div class="modal__container">
-        <h2>Públicar Forma de Ayuda</h2>
-        <p>Envía la información del método de ayuda con toda la información pertinente como: A quién se ayuda, Desde dónde se puede ayudar, que tipo de ayuda necesitan. desde los siguientes medios de contacto:</p>
-        <a href="https://twitter.com/comoayudarmx" target="_blank" class="modal__button"><i class="fa fa-twitter"></i>@comoayudarmx</a> o <a class="modal__email" href="mailto:comoayudarmx@gmail.com">comoayudarmx@gmail.com</a>
+        <h2>Que tipo de ayuda necesitas?</h2>
+
+            <select id = "selTipoAyuda" class="col-xs-12">
+                <option value = "1">Voluntarios para rescatar gente</option>
+                <option value = "2">Doctores</option>
+                <option value = "3">Ambulancias o carros grandes</option>
+                <option value = "4">En busqueda de personas en esta area</option>
+                <option value = "5">Herramientas y materiales</option>
+            </select>
+            <p class="col-xs-12">Escribe la descripcion del caso:</p>
+            <textarea id="ayudaDescripcion" class="col-xs-12"></textarea>
+            <button id="saveAyuda" class="col-xs-12">Save</button>
+
+            <p class="col-xs-12">Si el caso ya fue resulto porfavor cierralo para atender otros.</p>
+            <button id="closeAyuda" class="col-xs-12">Cerrar Caso</button>
+
     </div>
 </section>
 
 <script src="cards.js" type="text/javascript"></script>
 <script src="app.js" type="text/javascript"></script>
-<script src="modals.js" type="text/javascript"></script>
 
 <!-- Make sure you put this AFTER Leaflet's CSS Map section -->
 <script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js"
         integrity="sha512-lInM/apFSqyy1o6s89K4iQUKg6ppXEgsVxT35HbzUupEVRh2Eu9Wdl4tHj7dZO0s1uvplcYGmt3498TtHq+log=="
         crossorigin=""></script>
+<script src="modals.js" type="text/javascript"></script>
 <script src="js/mapa.js" type="text/javascript"></script>
+
 
 <!-- Global Site Tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-106793072-1"></script>

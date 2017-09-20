@@ -1,1 +1,3 @@
-#mapid { height: 350px; }
+#mapid { height: 350px; z-index: 0;}
+.ayuda {height: 500px; weight: 500px; z-index: 10;}
+.ayudaDescripcion { height: 100px; width: 350px;}
