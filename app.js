@@ -84,7 +84,7 @@ var renderCards = function() {
 
   var renderBadges = function($card, card) {
     if(card.verified) {
-      $card.find(".card__badges").append('<span class="badge-verified" ><i class="fa fa-check"></i> Verificada</span>');
+      $card.find(".card__badges").append('<span class="badge-verified" ><i class="fa fa-check"></i> Fuente Oficial</span>');
     }
   }
 
