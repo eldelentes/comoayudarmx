@@ -14,15 +14,23 @@ var handleFilterChange = function(e){
     return cardMatchType($card) && cardMatchLocation($card);
   }
 
+  var emptyResults = true;
+  $("#no_results").hide();
+
   $(".card").each(function() {
     var $card = $(this);
 
     if (cardMatchFilters($card)) {
       $card.show();
+      emptyResults = false;
     } else {
       $card.hide();
     }
   })
+
+  if(emptyResults) {
+    $("#no_results").show();
+  }
 }
 
 var populateFilters = function(e) {
