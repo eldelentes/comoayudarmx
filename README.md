@@ -20,27 +20,10 @@ ciudadana que quieras agregar.
 
 1.- Clona el proyecto y crea una branch.
 
-2.- Copia y Pega el siguiente div con la información correspondiente.
+2.- Abre `cards.js` y agrega tal cual se menciona en el comentario el código con su respectiva información:
+
 ```
-<article class="card">
-  <h2 class="card__title">Donación Topos</h2>
-  <!-- Agrega una pequeña descripción -->
-  <p class="card__desc">Los Topos son una asosiación de rescatistas independientes. Tu ayuda provee de los utencilios necesarios para el rescate de personas.</p>
-  <div class="card__info">
-     <div class="card__type">
-       <h4>Tipo de donación:</h4>
-       <!-- Especifica si la ayuda es en especie, monetaria, ayuda, etc. -->
-       <h3><i class="fa fa-money"></i>Monetaria</h3>
-     </div>
-     <div class="card__location">
-       <h4>Puedes ayudar desde:</h4>
-       <!-- Especifica si se puede ayudar desde una parte o en todo México -->
-       <h3><i class="fa fa-globe"></i>Todo el mundo.</h3>
-     </div>
-  </div>
-  <!-- Link al contacto, imágen, correo o información -->
-  <a class="card__button" target="__blank" href="https://twitter.com/topos/status/908000616575680512">Más Información</a>
-</article>
+ {title: "Donación Topos", description: "Los Topos son una asosiación de rescatistas indepe…tencilios necesarios para el rescate de personas.", type: "Monetaria", location: "Todo el mundo.", link: "https://twitter.com/topos/status/908000616575680512"},
 ```
 
 3.- Para agregar información de contacto de entidades de atención
