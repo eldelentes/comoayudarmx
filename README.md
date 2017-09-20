@@ -14,6 +14,10 @@ Actualmente éxisten 2 formas de participar.
 
 - Ayuda agregando tarjetas con información en el sitio, solamente es necesario hacer copy y paste del siguiente markup con información que encuentres en twitter (Busca #comoayudar o @comoayudar).
 
+
+1.- Clona el proyecto y crea una branch.
+
+2.- Copia y Pega el siguiente div con la información correspondiente.
 ```
 <article class="card">
   <h2 class="card__title">Donación Topos</h2>
@@ -35,6 +39,8 @@ Actualmente éxisten 2 formas de participar.
   <a class="card__button" target="__blank" href="https://twitter.com/topos/status/908000616575680512">Más Información</a>
 </article>
 ```
+
+3.- Crea un Pull Request.
 
 ======
 
