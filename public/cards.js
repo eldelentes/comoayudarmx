@@ -90,5 +90,5 @@
   {title: "Colecta Noruega", description: "Colecta nacional Mexicanos En Noruega Por México - Oslo, Bergen, Trondheim y Stavanger", type: "Monetaria", location: "Oslo, Noruega", link: "https://www.facebook.com/events/469767753407604/"},  
   {title: "Acopio Sultanes MTY", description: "Centro de acopio en el estadio del Club Béisbol de Monterrey", type: "Víveres", location: "Monterrey", link: "https://www.facebook.com/SultanesOficial/photos/a.663453196998063.1073741830.203303606346360/1722926647717374"},
   {title: "Centros de Acopio en Matamoros, Tamps", description: "Lugares donde se estarán recaudando víveres", type: "Víveres", location: "Matamoros", link: "https://www.facebook.com/mexnoticias/photos/a.153952118023830.40218.153949021357473/1527348554017506/?type=3&theater"},
-  {title: "Acopio Herramientas Saltillo", description: "Acopio de herramientas en Saltillo, Ramos y Arteaga Coahuila, Blvd Hinojosa #683 Col La Salle - negocio SEIL", type: "Herramientas", location: "Saltillo, Coahuila", link: "https://www.facebook.com/cynthia.villarreallomeli/posts/10159338613115297"},  
-];
+  {title: "Acopio Herramientas Saltillo", description: "Acopio de herramientas en Saltillo, Ramos y Arteaga Coahuila, Blvd Hinojosa #683 Col La Salle - negocio SEIL", type: "Herramientas", location: "Saltillo, Coahuila", link: "https://www.facebook.com/cynthia.villarreallomeli/posts/10159338613115297"}
+ , {title: 'asdasd', description: 'asdasd', type: 'asdasd', location: 'asdasd', link: 'sdasdad'} ]
