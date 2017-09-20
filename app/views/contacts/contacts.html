@@ -1,0 +1,35 @@
+<div class="cards">
+    <div class="cards__intro">
+        <h3>Contactos de Emergencia</h3>
+        <p>A continuación encontrarás una lista de contactos que te podrán ser útiles si te encuentras en un área afectada por
+            el sismo.</p>
+        <p>Si cónoces algun otro contacto importante <a class="modal__link" data-modal="new" href="#">Contáctanos</a></p>
+    </div>
+    <div class="filters">
+        <div class="container">
+            <div class="input-group">
+                <span class="input-group-addon" id="basic-addon1">Busqueda</span>
+                <input type="text" class="form-control" aria-describedby="basic-addon1" ng-model="searchText">
+            </div>
+        </div>
+    </div>
+    <div id="cards_container" class="container">
+        <article class="card" ng-repeat="card in cards | filter: searchText">
+            <h2 class="card__title">{{card.title}}</h2>
+            <div class="card__info">
+                <div class="card__type">
+                    <h4>Teléfono de Emergencia:</h4>
+                    <!-- Especifica si la ayuda es en especie, monetaria, ayuda, etc. -->
+                    <h3><a href="tel:{{card.phone}}"><i class="fa fa-phone"></i>{{card.phone}}</a></h3>
+                </div>
+                <div class="card__location">
+                    <h4>Puedes ayudar desde:</h4>
+                    <!-- Especifica si se puede ayudar desde una parte o en todo México -->
+                    <h3><i class="fa fa-globe"></i>{{card.location}}</h3>
+                </div>
+            </div>
+            <!-- Link al contacto, imágen, correo o información -->
+            <a class="card__button" target="__blank" href="{{card.link}}">Más Información</a>
+        </article>
+    </div>
+</div>
