@@ -1,7 +1,8 @@
 var languagesModule = (function() {
 	var defaultLang = "es",
 		currentLang,
-		currentTag;
+		currentTag,
+		spanishOn = true;
 	
 	var languageDefinitions = {
 		es: {
@@ -110,7 +111,14 @@ var languagesModule = (function() {
 		loadLanguage(chosenLang);
 	}
 
+	function toggleLang() {
+		console.log('hey');
+		spanishOn = !spanishOn;
+		(spanishOn ? loadLanguage('es') : loadLanguage('en'));
+	}
+
 	return {
-		loadLang: publicLoadLanguage
+		loadLang: publicLoadLanguage,
+		toggleLang: toggleLang
 	}
 })();

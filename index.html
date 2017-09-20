@@ -52,9 +52,16 @@
           <a class="button" href="#cards" data-lang="intro_button1">¿Cómo ayudar?</a>
           <a class="button modal__link" href="#" data-modal="new"><span data-lang="intro_button2">Publicar</span> <i class="fa fa-edit"></i></a>
         </div>
-        <div class="language__controls">
+        <!-- Could be useful if more languages are added, but lacks styling -->
+        <!-- <div class="language__controls">
           <label for="es"><input id="es" name="language" type="radio" value="es" onchange="languagesModule.loadLang('es')" checked>Español</label>
           <label for="en"><input id="en" name="language" type="radio" value="en" onchange="languagesModule.loadLang('en')">English</label>
+        </div> -->
+        <div class="switch">
+          <input id="language-toggle" class="check-toggle check-toggle-round-flat" onchange="languagesModule.toggleLang()" type="checkbox">
+          <label for="language-toggle"></label>
+          <span class="on">Español</span>
+          <span class="off">English</span>
         </div>
       </div>
     </section>
