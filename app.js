@@ -64,6 +64,12 @@ var renderCards = function() {
     return getCardTypes(card).indexOf("Monetaria") !== -1;
   };
 
+  var renderBadges = function($card, card) {
+    if(card.verified) {
+      $card.find(".card__badges").append('<span class="badge-verified" ><i class="fa fa-check"></i> Verificada</span>');
+    }
+  }
+
   var renderCardTypes = function($card, types) {
     var template = $card.find(".card__type h3").clone();
     $card.find(".card__type h3").remove();
@@ -78,6 +84,7 @@ var renderCards = function() {
     var $location = $("<span>" + card.location + "</span>");
 
     $card.find(".card__title").text(card.title);
+    renderBadges($card, card);
     $card.find(".card__desc").text(card.description);
     renderCardTypes($card, getCardTypes(card));
     $card.find(".card__location h3").append($location);
