@@ -48,9 +48,14 @@ var populateFilters = function(e) {
 
 var renderCards = function() {
   var template = $("#card_template").html();
+  var monetaryType = "Monetaria";
 
   var isWorldPage = function() {
     return location.pathname.includes("world.html");
+  };
+
+  var isMonetaryCard = function(card) {
+    return getCardTypes(card).indexOf(monetaryType) !== -1;
   };
 
   var getCardTypes = function(card) {
@@ -70,13 +75,27 @@ var renderCards = function() {
     }
   }
 
+  var translateMonetaryType = function(type) {
+    if (isWorldPage() && (type == monetaryType)) {
+      return "Monetary";
+    } else {
+      return type;
+    }
+  }
+
   var renderCardTypes = function($card, types) {
     var template = $card.find(".card__type h3").clone();
     $card.find(".card__type h3").remove();
 
     types.forEach(function(type) {
-      $card.find(".card__type").append(template.clone().append("<span>" + type + "</span>"));
+      $card.find(".card__type").append(template.clone().append("<span>" + translateMonetaryType(type) + "</span>"));
     });
+  }
+
+  var renderBadges = function($card, card) {
+    if(card.verified) {
+      $card.find(".card__badges").append('<span class="badge-verified" ><i class="fa fa-check"></i> Verificada</span>');
+    }
   }
 
   var renderCard = function(card) {
