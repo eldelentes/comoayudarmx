@@ -76,4 +76,8 @@ Si tienes alguna otra idea de como colaborar por favor contactame.
 ---
 
 ### Colaboradores
-[@eldelentes](https://twitter.com/eldelentes)
+- [@eldelentes](https://twitter.com/eldelentes)
+
+- [Héctor Morales](https://github.com/HectorMg)
+
+- [Javier Rivero](http://javierivero.com/)
