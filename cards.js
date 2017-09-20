@@ -80,4 +80,7 @@ Cards = [
   {title: "Acopio UDEM", description: "Campaña de apoyo para afectados por el sismo y centros de acopio en Universidad de Monterrey", type: "Acopio", location: "Monterrey", link: "https://udem.givepulse.com/event/58899-M%C3%A1s-Manos-por-la-Ciudad-de-M%C3%A9xico"},
   {title: "Acopio U-ERRE", description: "Centro de acopio en Universidad Regiomontana", type: "Acopio", location: "Monterrey", link: "https://www.facebook.com/URegiomontana/photos/a.195579072432.153739.195287592432/10155676128162433/?type=3&theater"},
   {title: "Transporte para víveres", description: "Puedes poner tu auto a disposición de quién lo necesite", type: "Varios", location: "CDMX", link: "https://www.facebook.com/CarrotMx/posts/1360440304055297"},
+  {title: "Apoyo psicológico", description: "Se requieren psicólogos voluntarios para afectados del sismo", type: "Psicológico", location: "CDMX", link: "https://www.facebook.com/terapify/photos/a.755596861258566.1073741828.715400535278199/905612982923619"},
+  {title: "Rescatistas o Paramédicos Voluntarios", description: "Si eres Rescatista, Paramedico, Medico o Enfermera y deseas ayudar en las ciudades de México. Cuernavaca o Puebla acude a Taquillas de ETN Turistas", type: "Trabajo Voluntario", location: "CDMX", link: "https://www.facebook.com/etnturistar/photos/a.415243273287.190808.268747683287/10155745835918288"},
+
 ];
