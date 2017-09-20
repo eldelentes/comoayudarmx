@@ -352,3 +352,12 @@ body {
 .filter {
   margin-right: 1em;
 }
+
+.badge-verified {
+	background: #5cceff;
+	color: #fff;
+	font-size: 14px;
+	padding: 6px;
+	display: inline-block;
+	border-radius: 100em;
+}
