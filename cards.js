@@ -116,4 +116,5 @@
   {title: "Amor sin raza Donaciones", description: "Recogiendo todo lo que se pueda para los animalitos", type: "Víveres/Varios", location: "CDMX", link: "https://twitter.com/AmorSinRaza/status/910561964539052032"},
   {title: "Alojamiento y acopio Centro Expositor Puebla", description: "El Centro Expositor Puebla ubicado en la zona de Los Fuertes está funcionando como albergue y centro de acopio", type: "Varios", location: "Puebla", link: "https://www.facebook.com/CentroExpositorPuebla/?fref=ts"},
   {title: "Instituto Lomas del Real", description: "El Lomas del Real se une a la causa apoyando como centro de acopio permanente para los damnificados de los terremotos.", type: "Víveres", location: "San Luis Potosí", link: "https://www.facebook.com/166809276691498/photos/a.167901939915565.30748.166809276691498/1562751217097290/?type=3&theater"},
+{title: "Colegio Enrique Rebsamen", description: "Urgen 15 gatos hidraulicos en la escuela de Enrique Rebsamen.", type: "Varia", location: "CDMX", link: "https://twitter.com/MonicaGonzo/status/910646841712140289"},
  ];
