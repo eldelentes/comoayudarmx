@@ -52,10 +52,30 @@
         <p>A continuación encontrarás una lista de contactos que te podrán ser útiles si te encuentras en un área afectada por el sismo.</p>
         <p>Si cónoces algun otro contacto importante <a class="modal__link" data-modal="new" href="#">Contáctanos</a></p>
       </div>
-      <div class="container">
+      <div id="cards_container" class="container">
         <!-- Aquí se agregan las tarjetas -->
         <!-- Por favor, no modifiques el markup/html de las tarjetas, solamente remplaza la información. -->
-        <div id="#cards_container"></div>
+        <template id="card_template">
+          <article class="card">
+            <h2 class="card__title"></h2>
+            <!-- Agrega una pequeña descripción -->
+            <p class="card__desc"></p>
+            <div class="card__info">
+               <div class="card__type">
+                 <h4>Tipo de donación:</h4>
+                 <!-- Especifica si la ayuda es en especie, monetaria, ayuda, etc. -->
+                 <h3><i class="fa fa-info-circle"></i></h3>
+               </div>
+               <div class="card__location">
+                 <h4>Puedes ayudar desde:</h4>
+                 <!-- Especifica si se puede ayudar desde una parte o en todo México -->
+                 <h3><i class="fa fa-globe"></i></h3>
+               </div>
+            </div>
+            <!-- Link al contacto, imágen, correo o información -->
+            <a class="card__button" target="__blank" href="">Más Información</a>
+          </article>
+        </template>
       </div>
     <section class="modal" data-modal="about">
       <a href="#" class="modal__close">Close</a>
