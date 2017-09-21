@@ -15,7 +15,7 @@
     <meta property="og:image" content="facebook.jpg" />
     <meta property="og:description" content="Ayuda a los afectados del sismo. Información de como ayudar." />
 
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="style.min.css">
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -49,16 +49,18 @@
                 <a class="button modal__link" href="#" data-modal="new"><span data-lang="intro_button2">Publicar</span> <i class="fa fa-edit"></i></a>
             </div>
             <!-- Could be useful if more languages are added, but lacks styling -->
-        <!-- <div class="language__controls">
-          <label for="es"><input id="es" name="language" type="radio" value="es" onchange="languagesModule.loadLang('es')" checked>Español</label>
-          <label for="en"><input id="en" name="language" type="radio" value="en" onchange="languagesModule.loadLang('en')">English</label>
-        </div> -->
-        <div class="switch">
-            <input id="language-toggle" class="check-toggle check-toggle-round-flat" onchange="languagesModule.toggleLang()" type="checkbox">
-            <label for="language-toggle"></label>
-            <span class="on">Español</span>
-            <span class="off">English</span>
-        </div>
+            <!-- <div class="language__controls">
+            <label class="radio-control" for="es"><input id="es" name="language" type="radio" value="es" onchange="languagesModule.loadLang('es')" checked>Español</label>
+            <label class="radio-control" for="en"><input id="en" name="language" type="radio" value="en" onchange="languagesModule.loadLang('en')">English</label>
+            <label class="radio-control" for="fr"><input id="fr" name="language" type="radio" value="fr" onchange="languagesModule.loadLang('fr')">French</label>
+            </div> -->
+            <!-- Remove or comment div.switch if language__controls are enabled -->
+            <div class="switch">
+                <input id="language-toggle" class="check-toggle check-toggle-round-flat" onchange="languagesModule.toggleLang()" type="checkbox">
+                <label for="language-toggle"></label>
+                <span class="on">Español</span>
+                <span class="off">English</span>
+            </div>
         </div>
     </section>
     <section class="cards" id="cards">
