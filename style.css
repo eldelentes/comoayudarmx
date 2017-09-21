@@ -21,10 +21,13 @@ body {
 	background: #fff;
 	display: inline-block;
 	text-decoration: none;
-	border-radius: 0.4em;
-	padding: 1em 2em;
+	border-radius: 0.3em;
+	padding: 1em 1.5em;
 	color: #000;
+	font-size: .8em;
 	font-weight: 500;
+	letter-spacing: 1px;
+	text-transform: uppercase;
 }
 
 .button:hover {
@@ -74,8 +77,8 @@ body {
 
 .intro {
 	min-height: 40vh;
-	padding-top: 4em;
-	padding-bottom: 1em;
+	padding-top: 10em;
+	padding-bottom: 7em;
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
@@ -92,11 +95,26 @@ body {
 .intro__title {
 	color: #fff;
 	font-size: 3em;
+	margin: 0;
+}
+
+.intro__title span:first-child {
+	text-transform: uppercase;
+	font-size: .5em;
+	font-weight: bold;
+	display: inline-block;
+}
+
+.intro__title span:last-child {
+	text-transform: uppercase;
+	font-size: .8em;
+	font-weight: bold;
 }
 
 .intro__location {
 	color: rgba(255,255,255,0.8);
 	font-weight: 400;
+	font-size: 1em;
 	text-decoration: underline;
 }
 
@@ -105,7 +123,11 @@ body {
 }
 
 .buttons {
-	margin: 1em 0;
+	margin-top: 2em;
+}
+
+.buttons .button:first-child {
+	margin-right: 10px;
 }
 
 .cards {
@@ -116,14 +138,28 @@ body {
 	padding: 1em 0;
 }
 
+#cards_container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
 .cards__intro {
 	text-align: center;
-	padding: 2em 0;
+	padding: 3em 0;
 	background: #fff;
 }
 
+.cards__intro h3 {
+	margin: 0;
+	text-transform: uppercase;
+	font-size: 1.2em;
+	font-weight: bold;
+	margin-bottom: 20px
+}
+
 .cards__intro p {
-	margin: 0.5em 0;
+	margin: 0;
 }
 
 .cards__intro a {
@@ -135,23 +171,31 @@ body {
 	background: #fff;
 	-webkit-box-shadow: 0 1em 2em rgba(0,0,0,0.1);
 	        box-shadow: 0 1em 2em rgba(0,0,0,0.1);
-	padding: 1em;
-	border-radius: 0.5em;
+	padding: 2em 1.5em 0;
+	border-radius: .3em;
 	border: 1px solid rgba(0,0,0,0.05);
-	display: inline-block;
-	width: 32%;
-	margin: 0.3em;
-	vertical-align: top;
+	display: flex;
+	flex-direction: column;
+	width: 30%;
+	margin: .3em;
+	margin-bottom: 40px;
+	vertical-align: top
 }
 
 .card__title {
 	color: #F73535;
 	font-family: 'Roboto Slab', sans-serif;
+	font-size: 1.5em;
+	margin: 0;
+	margin-bottom: 20px;
 }
 
 .card__desc {
-	padding: 0.5em 0;
-	min-height: 5em;
+	padding: .5em 0;
+	font-size: .9em;
+	line-height: 1.2;
+	margin-bottom: 20px;
+	flex: 1;
 }
 
 .card__info {
@@ -169,12 +213,25 @@ body {
 	width: 50%;
 }
 
+.card__type h4,
+.card__location h4 {
+	font-size: .8em;
+	text-transform: uppercase;
+	font-weight: bold;
+	margin-bottom: 2px;
+}
+
 .card__type h3,
 .card__location h3{
-	padding: 0.5em 0;
-	text-decoration: underline;
-	font-size: 1em;.button,.mainNav a{text-decoration:none;font-weight:500}
-	margin: 0 !important;
+	margin: 12px 0;
+	line-height: 1.2;
+	font-size: .9em;
+	margin: 10px 0;
+}
+
+.button, .mainNav a {
+	text-decoration: none;
+	font-weight: 500;
 }
 
 .card__info .fa {
@@ -194,6 +251,18 @@ body {
 	        box-shadow: 0 0.2em 0em #C82929;
 	width: 100%;
 	text-align: center;
+}
+
+.card__button {
+	-webkit-box-shadow: none;
+	        box-shadow: none;
+	width: auto;
+	padding: 1.3em 1em;
+	margin: 0 -1.9em;
+	border-radius: 0 0 0.3em 0.3em;
+	font-weight: bold;
+	font-size: .8em;
+	text-transform: uppercase;
 }
 
 .card__button:hover {
@@ -323,10 +392,11 @@ input[type="radio"] {
 	Source: https://codepen.io/vram1980/pen/LGwJE?q=toggle%20checkboxes&limit=all&order=popularity&depth=everything&show_forks=false
 */
 .switch {
-	position: relative;
-	display: inline-block;
+	position: absolute;
+	top: 6em;
+	right: 20px;
 	margin: 0 5px;
-  }
+}
   
 .switch > span {
 	position: absolute;
@@ -342,72 +412,73 @@ input[type="radio"] {
 }
 
 input.check-toggle-round-flat:checked ~ .off {
-color: #fff;
+	color: #fff;
 }
 
 input.check-toggle-round-flat:checked ~ .on {
-color: #000;
+	color: #000;
 }
 
 .switch > span.on {
-left: 0;
-padding-left: 2px;
-color: #fff;
+	left: 0;
+	padding-left: 5px;
+	color: #fff;
 }
 
 .switch > span.off {
-right: 0;
-padding-right: 4px;
-color: #000;
+	right: 0;
+	padding-right: 4px;
+	color: #000;
 }
 
 .check-toggle {
-position: absolute;
-margin-left: -9999px;
-visibility: hidden;
+	position: absolute;
+	margin-left: -9999px;
+	visibility: hidden;
 }
 .check-toggle + label {
-display: block;
-position: relative;
-cursor: pointer;
-outline: none;
-user-select: none;
+	display: block;
+	position: relative;
+	cursor: pointer;
+	outline: none;
+	user-select: none;
 }
 
 input.check-toggle-round-flat + label {
-padding: 2px;
-width: 9.15em;
-height: 34px;
-background-color: #fff;
-border-radius: 60px;
+	padding: 2px;
+	width: 4.5em;
+	height: 34px;
+	background-color: #fff;
+	border-radius: 60px;
 }
+
 input.check-toggle-round-flat + label:before, input.check-toggle-round-flat + label:after {
-display: block;
-position: absolute;
-content: "";
+	display: block;
+	position: absolute;
+	content: "";
 }
 
 input.check-toggle-round-flat + label:before {
-top: 2px;
-left: 2px;
-bottom: 2px;
-right: 2px;
-background-color: #fff;
-border-radius: 60px;
+	top: 2px;
+	left: 2px;
+	bottom: 2px;
+	right: 2px;
+	background-color: #fff;
+	border-radius: 60px;
 }
 
 input.check-toggle-round-flat + label:after {
-top: 4px;
-left: 4px;
-bottom: 4px;
-width: 4.4em;
-background-color: #F73535;
-border-radius: 52px;
-transition: margin 0.2s;
+	top: 4px;
+	left: 4px;
+	bottom: 4px;
+	width: 45%;
+	background-color: #F73535;
+	border-radius: 52px;
+	transition: margin 0.2s;
 }
 
 input.check-toggle-round-flat:checked + label:after {
-margin-left: 4.25em;
+	margin-left: 40%;
 }
 
 @media screen and (max-width: 700px) {
@@ -485,6 +556,7 @@ margin-left: 4.25em;
 	background-color: #fff!important;
 	font-family: 'Roboto Slab',sans-serif;
 	font-size: 1em;
+	padding: 10px 0;
 }
 
 .navbar-brand {
@@ -493,8 +565,9 @@ margin-left: 4.25em;
 }
 
 .navbar-default .navbar-nav>li>a {
-    color: #000!important;
-    font-weight: 500!important;
-    font-family: 'Roboto', sans-serif;
-    font-size: 16px;
+  color: #000!important;
+  font-weight: 500!important;
+  font-family: 'Roboto', sans-serif;
+  font-size: .9em;
+	text-transform: uppercase;
 }
