@@ -33,14 +33,22 @@
   </head>
   <body>
     <header class="mainHeader">
+      <div class="responsive-menu">
+        <a href="index.html" id="responsive-button">
+          <i class="fa fa-bars"></i>
+          <h2 class="responsive-logo">
+            <a href="index.html">¿Como Ayudar?</a>
+          </h2>
+        </a>
+      </div>
       <div class="container">
         <h2 class="logo"><a href="index.html">¿Como Ayudar?</a></h2>
-        <nav class="mainNav">
+        <nav class="hide-mobile mainNav">
           <a class="modal__link" href="#" data-modal="about" data-lang="nav_about">Acerca de</a>
-          <a class="hide-mobile" href="contactos.html" data-lang="nav_contact">Contactos de Emergencia</a>
-          <a class="hide-mobile" href="voluntarios.html" data-lang="nav_volunteer">Voluntarios</a>
+          <a class="" href="contactos.html" data-lang="nav_contact">Contactos de Emergencia</a>
+          <a class="" href="voluntarios.html" data-lang="nav_volunteer">Voluntarios</a>
           <a href="world.html">World Help</a>
-          <a class="hide-mobile" href="https://github.com/eldelentes/comoayudarmx" target="_blank"><span data-lang="nav_contribuir">Contribuir</span> <i class="fa fa-github"></i></a>
+          <a class="" href="https://github.com/eldelentes/comoayudarmx" target="_blank"><span data-lang="nav_contribuir">Contribuir</span> <i class="fa fa-github"></i></a>
         </nav>
       </div>
     </header>
@@ -142,6 +150,20 @@
         <a href="https://twitter.com/comoayudarmx" target="_blank" class="modal__button"><i class="fa fa-twitter"></i>@comoayudarmx</a> <span data-lang="text_or">o</span> <a class="modal__email" href="mailto:comoayudarmx@gmail.com">comoayudarmx@gmail.com</a>
       </div>
     </section>
+
+    <!-- Overlay menú móvil -->
+    <div id="responsive-overlay" class="overlay">
+      <a class="closebtn" id="close-menu">&times;</a>
+      <div class="overlay-content">
+        <ul class="nav navbar-navs lista-menu-movil">
+            <li><a class="modal__link" href="#" data-modal="about" data-lang="nav_about">Acerca de</a></li>
+            <li><a class="item-menu" href="contactos.html" data-lang="nav_contact">Contactos de Emergencia</a></li>
+            <li><a class="item-menu" href="voluntarios.html" data-lang="nav_volunteer">Voluntarios</a></li>
+            <li><a class="item-menu" href="world.html">World Help</a></li>
+            <li><a class="item-menu" href="https://github.com/eldelentes/comoayudarmx" target="_blank"><span data-lang="nav_contribuir">Contribuir</span><i class="fa fa-github"></i></a></li>
+        </ul>
+      </div>
+    </div>
 
     <script src="cards.js" type="text/javascript"></script>
     <script src="app.js" type="text/javascript"></script>
