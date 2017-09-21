@@ -1,0 +1,30 @@
+{
+  "name": "comoayudarmx",
+  "version": "1.0.0",
+  "description": "Sitio para ayudar a la poblacion de Mexico en el terremoto del 19 sept 2017",
+  "main": "index.html",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/eldelentes/comoayudarmx/"
+  },
+  "keywords": [
+    "Terremoto",
+    "Mexico",
+    "2017",
+    "mexico",
+    "earthquake",
+    "2017",
+    "help",
+    "mexico",
+    "ayuda",
+    "a",
+    "mexico"
+  ],
+  "author": "Community",
+  "license": "MIT"
+}
