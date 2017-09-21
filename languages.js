@@ -55,7 +55,7 @@ var languagesModule = (function() {
 			intro_titulo: "Help Needed for Mexico Earthquake",
 			intro_date: "September 7th and 19th, 2017",
 			intro_button1: "How Can You Help?",
-			intro_button2: "Publish",
+			intro_button2: "Send information",
 			card_intro1: "How to help people affected by the earthquakes?",
 			card_intro2: "Here is a list of different organizations, collection centers, or different ways in which you can help the rescuers and people directly affected by the earthquakes.",
 			card_intro3: "If you know any other useful resource",
