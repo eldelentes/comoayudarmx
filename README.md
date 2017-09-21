@@ -78,3 +78,5 @@ Si tienes alguna otra idea de como colaborar por favor contactame.
 - [Alejandro Escobedo](https://www.twitter.com/aalkz)
 
 - [Mario Rodríguez](https://www.twitter.com/mariusbc)
+
+- [Sebastián Osorio](https://github.com/sirgalleto)
