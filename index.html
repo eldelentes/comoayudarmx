@@ -36,45 +36,61 @@
       <div class="container">
         <h2 class="logo"><a href="index.html">¿Como Ayudar?</a></h2>
         <nav class="mainNav">
-          <a class="modal__link" href="#" data-modal="about">Acerca de</a>
-          <a class="hide-mobile"  href="contactos.html">Contactos de Emergencia</a>
-          <a class="hide-mobile" href="voluntarios.html">Voluntarios</a>
-          <a class="hide-mobile" href="world.html">English</a>
-          <a class="hide-mobile" href="https://github.com/eldelentes/comoayudarmx" target="_blank">Contribuir <i class="fa fa-github"></i></a>
+          <a class="modal__link" href="#" data-modal="about" data-lang="nav_about">Acerca de</a>
+          <a class="hide-mobile" href="contactos.html" data-lang="nav_contact">Contactos de Emergencia</a>
+          <a class="hide-mobile" href="voluntarios.html" data-lang="nav_volunteer">Voluntarios</a>
+          <a href="world.html">World Help</a>
+          <a class="hide-mobile" href="https://github.com/eldelentes/comoayudarmx" target="_blank"><span data-lang="nav_contribuir">Contribuir</span> <i class="fa fa-github"></i></a>
         </nav>
       </div>
     </header>
     <section class="intro">
       <div>
-        <h2 class="intro__title">Ayuda Sismo 19 de Septiembre</h2>
-        <h4 class="intro__location"><i class="fa fa-globe"></i>CDMX, Puebla, Morelos</h4>
+        <h2 class="intro__title"><span data-lang="intro_titulo">Ayuda Sismo</span><br /><span data-lang="intro_date">19 de Septiembre</span></h2>
+        <h4 class="intro__location"><i class="fa fa-globe"></i> CDMX, Puebla, Morelos</h4>
         <div class="buttons">
+<<<<<<< HEAD
           <a class="button" href="#cards">¿Cómo ayudar?</a>
           <a class="button modal__link" href="#" data-modal="new">Publicar <i class="fa fa-edit"></i></a>
+=======
+          <a class="button" href="#cards" data-lang="intro_button1">¿Cómo ayudar?</a>
+          <a class="button modal__link" href="#" data-modal="new"><span data-lang="intro_button2">Publicar</span> <i class="fa fa-edit"></i></a>
+        </div>
+        <!-- Could be useful if more languages are added, but lacks styling -->
+        <!-- <div class="language__controls">
+          <label for="es"><input id="es" name="language" type="radio" value="es" onchange="languagesModule.loadLang('es')" checked>Español</label>
+          <label for="en"><input id="en" name="language" type="radio" value="en" onchange="languagesModule.loadLang('en')">English</label>
+        </div> -->
+        <div class="switch">
+          <input id="language-toggle" class="check-toggle check-toggle-round-flat" onchange="languagesModule.toggleLang()" type="checkbox">
+          <label for="language-toggle"></label>
+          <span class="on">Español</span>
+          <span class="off">English</span>
+>>>>>>> master
         </div>
       </div>
     </section>
     <section class="cards" id="cards">
       <div class="cards__intro">
-        <h3>¿Cómo ayudar a los afectados del Sismo?</h3>
-        <p>A continuación encontrarás diferentes organizaciones, centros de acopio o formas de ayudar a los afectados o rescatistas del sismo.</p>
-        <p>Si conoces alguna otra forma de ayudar <a class="modal__link" data-modal="new" href="#">Contáctanos</a></p>
+        <h3 data-lang="card_intro1">¿Cómo ayudar a los afectados del Sismo?</h3>
+        <p data-lang="card_intro2">A continuación encontrarás diferentes organizaciones, centros de acopio o formas de ayudar a los afectados o rescatistas del sismo.</p>
+        <p><span data-lang="card_intro3">Si conoces alguna otra forma de ayudar</span> <a class="modal__link" data-modal="new" href="#" data-lang="text_contact_us">Contáctanos</a></p>
       </div>
       <div class="filters">
         <div class="container">
           <div class="filter">
-            <label for="donation_type">Filtrar por tipo de donación</label>
+            <label for="donation_type" data-lang="filter_type">Filtrar por tipo de donación</label>
             <select class="filter" id="donation_type">
-              <option selected disabled>Selecciona una opción</option>
-              <option value="all">Todas</option>
+              <option selected disabled data-lang="filter_type_select">Selecciona una opción</option>
+              <option value="all" data-lang="filter_all">Todas</option>
             </select>
           </div>
 
           <div class="filter">
-            <label for="location">Filtrar por locación</label>
+            <label for="location" data-lang="filter_location">Filtrar por locación</label>
             <select class="filter" id="location">
-              <option selected disabled>Selecciona una opción</option>
-              <option value="all">Todas</option>
+              <option selected disabled data-lang="filter_location_select">Selecciona una opción</option>
+              <option value="all" data-lang="filter_all">Todas</option>
             </select>
           </div>
         </div>
@@ -85,41 +101,46 @@
         <template id="card_template">
           <article class="card">
             <h2 class="card__title"></h2>
+            <div class="card__badges"></div>
             <!-- Agrega una pequeña descripción -->
             <p class="card__desc"></p>
             <div class="card__info">
                <div class="card__type">
-                 <h4>Tipo de donación:</h4>
+                 <h4 data-lang="card_type">Tipo de donación:</h4>
                  <!-- Especifica si la ayuda es en especie, monetaria, ayuda, etc. -->
-                 <h3><i class="fa fa-info-circle"></i></h3>
+                 <h3><i class="fa fa-info-circle"></i> </h3>
                </div>
                <div class="card__location">
-                 <h4>Puedes ayudar desde:</h4>
+                 <h4 data-lang="card_location">Puedes ayudar desde:</h4>
                  <!-- Especifica si se puede ayudar desde una parte o en todo México -->
-                 <h3><i class="fa fa-globe"></i></h3>
+                 <h3><i class="fa fa-globe"></i> </h3>
                </div>
             </div>
             <!-- Link al contacto, imágen, correo o información -->
-            <a class="card__button" target="__blank" href="">Más Información</a>
+            <a class="card__button" target="__blank" href="" data-lang="more_info">Más Información</a>
           </article>
         </template>
+      </div>
+
+      <div id="no_results" class="container">
+        <i class="fa fa-exclamation-circle" aria-hidden="true"></i> No hay resultados para tu busqueda
       </div>
     </section>
 
     <section class="modal" data-modal="about">
-      <a href="#" class="modal__close">Cerrar</a>
+      <a href="#" class="modal__close" data-lang="text_close">Cerrar</a>
       <div class="modal__container">
-        <h2>Acerca de Como Ayudar</h2>
-        <p>Este proyecto sin fines de lucro busca crear un repositorio de información para centralizar el apoyo y la rápida distribución de ayuda.</p>
-        <p>Si deseas ayudar y tienes conocimientos de programación colabora con nosotros en <a href="https://github.com/eldelentes/comoayudarmx"><i class="fa fa-github"></i>Github</a></p>
+        <h2 data-lang="modal1_title">Acerca de Como Ayudar</h2>
+        <p data-lang="modal1_text1">Este proyecto sin fines de lucro busca crear un repositorio de información para centralizar el apoyo y la rápida distribución de ayuda.</p>
+        <p><span data-lang="modal1_text2">Si deseas ayudar y tienes conocimientos de programación colabora con nosotros en</span> <a href="https://github.com/eldelentes/comoayudarmx"><i class="fa fa-github"></i>Github</a></p>
         <hr>
-        <p> Sí lo que deseas es agregar un método de ayuda por favor envíanos la información pertinente a:</p>
+        <p data-lang="modal1_text3"> Sí lo que deseas es agregar un método de ayuda por favor envíanos la información pertinente a:</p>
         <a href="https://twitter.com/comoayudarmx" target="_blank" class="modal__button"><i class="fa fa-twitter"></i>@comoayudarmx</a> o <a class="modal__email" href="mailto:comoayudarmx@gmail.com">comoayudarmx@gmail.com</a>
       </div>
     </section>
 
     <section class="modal" data-modal="new">
-      <a href="#" class="modal__close">Cerrar</a>
+      <a href="#" class="modal__close" data-lang="text_close">Cerrar</a>
       <div class="modal__container">
         <h2>Publicar Forma de Ayuda</h2>
         <p>Envía la información del método de ayuda con toda la información pertinente como: A quién se ayuda, desde dónde se puede ayudar, qué tipo de ayuda necesitan llenando la siguiente forma:</p>
@@ -131,6 +152,7 @@
 
     <script src="cards.js" type="text/javascript"></script>
     <script src="app.js" type="text/javascript"></script>
+    <script src="languages.js" type="text/javascript"></script>
     <script src="modals.js" type="text/javascript"></script>
 
     <!-- Global Site Tag (gtag.js) - Google Analytics -->
