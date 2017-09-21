@@ -81,7 +81,9 @@ var populateFilters = function(e) {
   $('select#location').chosen()
 }
 
-var renderCards = function() {
+var renderCards = function(cardsFromService) {
+  Cards = Cards.concat(cardsFromService);
+
   var template = $("#card_template").html();
   var monetaryType = "Monetaria";
 
@@ -143,8 +145,52 @@ var renderCards = function() {
   }
 }
 
+var start = function(cards) {
+  renderCards(cards);
+  populateFilters();
+  filterCardFromQueryParams();
+}
+
+var getCards = function() {
+  var getEntryProperty = function(entry, propName) {
+    return entry['gsx$' + propName] && entry['gsx$' + propName]['$t']
+  }
+
+  var formatType = function(type) {
+    var types = type.split(',');
+
+    return types.map(function (type) {
+      return type.trim();
+    });
+  }
+
+  var isApprovedCard = function (card) {
+    return card.approved === 'TRUE';
+  }
+
+  var buildCard = function(entry) {
+    return {
+      timespamp: getEntryProperty(entry, 'timestamp'),
+      title: getEntryProperty(entry, 'formadeayuda'),
+      description: getEntryProperty(entry, 'informaciónadicionaldeayuda'),
+      type: formatType(getEntryProperty(entry, 'tipodedonación')),
+      location: getEntryProperty(entry, 'puedesayudardesde'),
+      link: getEntryProperty(entry, 'fuentedeinformaciónlink'),
+      adicional: getEntryProperty(entry, 'informaciónadicional'),
+      approved: getEntryProperty(entry, 'approved')
+    }
+  }
+
+  $.get(
+    'https://spreadsheets.google.com/feeds/list/1zAFK1sSjIaHurnKzLx-e3GJZNmZ9QWfFSlIZLyYk8IE/1/public/values?alt=json',
+    function (data) {
+      start(
+        data.feed.entry.map(buildCard).filter(isApprovedCard)
+      );
+    },
+  );
+}
+
 $(document).on("change", "#donation_type", handleFilterChange);
 $(document).on("change", "#location", handleFilterChange);
-$(document).ready(renderCards);
-$(document).ready(populateFilters);
-$(document).ready(filterCardFromQueryParams);
+$(document).ready(getCards);

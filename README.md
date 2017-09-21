@@ -8,26 +8,18 @@ Es un proyecto que sirve como repositorio de información para ayudar a recopila
 
 ### ¿Cómo puedo participar?
 
-Actualmente éxisten 3 formas de participar.
+Actualmente existen 3 formas de participar.
 
-- Por la emergencia, el sitio web esta hecho solamente con HTML Y CSS Básico, si eres un desarrollador/programador que quiera ayudar a construir una plataforma más en forma (Con un backend automatizado) por favor contactame en twitter [@eldelentes](https://twitter.com/eldelentes) o por correo eldelentes@gmail.com
+- Entra [aquí](https://docs.google.com/forms/d/e/1FAIpQLSf_kylBvkVQXaJmBAILdpjKCsl6lERlhtnhFfB1_22g43sz4g/viewform) y llena la información necesaria, fíjate primero que no vayas a duplicar información ya existente.
 
-- Ayuda agregando tarjetas con información en el sitio, solamente es necesario hacer copy y paste del markup del paso 2 con información que encuentres en twitter (Busca #comoayudar o @comoayudarmx).
+- Por la emergencia, el sitio web esta hecho solamente con HTML Y CSS Básico, si eres un desarrollador/programador que quiera ayudar a con features nuevos por favor revise los issues y pr existentes.
 
-- Ayuda agregando tarjetas con información de contactos de emergencia relevantes, solamente es necesario hacer copy y paste del markup del
-paso 3 y reemplazar los datos por los de la entidad de atención
-ciudadana que quieras agregar.
+- Ayuda agregando tarjetas con información de contactos de emergencia relevantes, siguiendo los siguientes pasos y reemplazando los datos por los de la entidad de atención ciudadana que quieras agregar.
 
 1.- Clona el proyecto y crea una branch.
 
-2.- Abre `cards.js` y agrega tal cual se menciona en el comentario el código con su respectiva información:
+2.- Copia y pega el siguiente div con la información correspondiente en la página de `contactos.html`.
 
-```
- {title: "Donación Topos", description: "Los Topos son una asosiación de rescatistas indepe…tencilios necesarios para el rescate de personas.", type: "Monetaria", location: "Global", link: "https://twitter.com/topos/status/908000616575680512"},
-```
-
-3.- Para agregar información de contacto de entidades de atención
-ciudadana y emergencias, copia y pega el siguiente div con la información correspondiente en la página de `contactos.html`.
 ```
 <article class="card">
   <h2 class="card__title">Protección Civil CDMX</h2>
@@ -82,3 +74,9 @@ Si tienes alguna otra idea de como colaborar por favor contactame.
 - [Carlos medina](https://www.medinnna.com/)
 
 - [Jorge Téllez](https://www.twitter.com/novohispano)
+
+- [Alejandro Escobedo](https://www.twitter.com/aalkz)
+
+- [Mario Rodríguez](https://www.twitter.com/mariusbc)
+
+- [Sebastián Osorio](https://github.com/sirgalleto)
