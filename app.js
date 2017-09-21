@@ -142,9 +142,22 @@ var renderCards = function() {
     Cards.forEach(renderCard);
   }
 }
+var mobileMenu = function() {
+    $('#responsive-button').on('click', function( e ) {
+        e.preventDefault();
+        $('body').css('overflow-y', 'hidden');
+      $('#responsive-overlay').css('width', '100%');
+    });
+
+    $('#close-menu, .item-menu').on('click', function(evento) {
+        $('body').css('overflow-y', 'scroll');
+        $('#responsive-overlay').css('width', '0%');
+    });
+}
 
 $(document).on("change", "#donation_type", handleFilterChange);
 $(document).on("change", "#location", handleFilterChange);
 $(document).ready(renderCards);
 $(document).ready(populateFilters);
 $(document).ready(filterCardFromQueryParams);
+$(document).ready(mobileMenu);
