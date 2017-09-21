@@ -119,4 +119,5 @@
   {title: "Instituto Lomas del Real", description: "El Lomas del Real se une a la causa apoyando como centro de acopio permanente para los damnificados de los terremotos.", type: "Víveres", location: "San Luis Potosí", link: "https://www.facebook.com/166809276691498/photos/a.167901939915565.30748.166809276691498/1562751217097290/?type=3&theater"},
   {title: "Cruz Roja Puebla", description: "Centro de acopio Cruz Roja Ciudad de Puebla.", type: "Acopio", location: "Puebla", link: "https://www.facebook.com/CruzRoja58Puebla/"},
   {title: "Albergue y centro de acopio CRIT Puebla", description: "Todos los Centros Teletón en el país se convierten en Centros de acopio para los damnificados.", type: ["Albergue", "Acopio"], location: "Puebla", link: "https://twitter.com/CRITPuebla"},
+  {title: "Acopio Poder Judicial del Estado de Puebla", description: "Centro de acopio en el Centro de Justicia Penal del Estado de Puebla", type: "Acopio", location: "Puebla", link: "https://www.facebook.com/PoderJudicialdelEstadodePuebla/photos/a.890875014278992.1073741828.121001381266363/1755161351183683/?type=3&theater"},
  ];
