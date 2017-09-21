@@ -110,12 +110,69 @@ var renderCards = function(cardsFromService) {
     }
   }
 
+
+  var renderIconType= function(type){
+    var code='info-circle';
+
+    switch(type){
+     case"Víveres":
+     case"Especie":
+       code='cutlery';
+        break;
+      case"Monetario":
+      case"Monetaria":
+        code='money';
+        break;
+      case"Albergue":
+      case"Albergues":
+        code='bed';
+        break;
+      case"Trabajo Voluntario":
+        code='users';
+        break;
+      case"Equipo de auxilio médico":
+      case"Medicamentos":
+        code='medkit';
+        break;
+      case"Artículos de limpieza":
+      case"Artículos de aseo personal":
+      case"Limpieza":
+        code='paint-brush';
+        break;
+      case"Equipo de rescate":
+        code='life-ring';
+        break;
+      case"Asesoría":
+      case"Asesoría profesional":
+        code='user-circle';
+        break;
+      case"Herramientas":
+        code='wrench';
+        break;
+      case"Sangre":
+        code='tint';
+        break;
+      case"Veterinario":
+        code='paw';
+        break;
+      case"Transporte":
+        code='truck';
+        break;
+      case"Ropa":
+        code='shopping-bag';
+        break;
+     default:
+    }
+    return '<i class="fa fa-'+code+'"></i>';
+
+  };
+
   var renderCardTypes = function($card, types) {
     var template = $card.find(".card__type h3").clone();
+    template.find('i').remove();
     $card.find(".card__type h3").remove();
-
     types.forEach(function(type) {
-      $card.find(".card__type").append(template.clone().append("<span>" + translateMonetaryType(type) + "</span>"));
+      $card.find(".card__type").append(template.clone().append(renderIconType(type)+"<span>" + translateMonetaryType(type) + "</span>"));
     });
   }
 
