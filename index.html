@@ -2,6 +2,8 @@
 <html>
   <head>
     <title>Cómo Ayudar MX | Información para ayudar.</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Repositorio de información para ayudar a los afectados del sismo." />
 
     <!-- Twitter Card data -->
@@ -18,18 +20,19 @@
     <meta property="og:image" content="facebook.jpg" />
     <meta property="og:description" content="Ayuda a los afectados del sismo. Información de cómo ayudar." />
 
-    <link rel="stylesheet" type="text/css" href="style.min.css">
+    <!-- Styles -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700|Roboto:400,500" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="lib/chosen/chosen.css">
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.min.css">
+    <link rel="icon" href="favicon.png" type="image/x-icon" />
+    
+    <!-- Scripts -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript" src="lib/chosen/chosen.jquery.min.js" ></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700|Roboto:400,500" rel="stylesheet">
-
-    <link rel="icon" href="favicon.png" type="image/x-icon" />
 
   </head>
   <body>
@@ -49,7 +52,6 @@
             <li><a class="modal__link" href="#" data-modal="about">Acerca de</a></li>
             <li><a href="contactos.html">Contactos de Emergencia</a></li>
             <li><a href="voluntarios.html">Voluntarios</a></li>
-            <li><a href="world.html">English</a></li>
             <li><a href="https://github.com/eldelentes/comoayudarmx" target="_blank">Contribuir <i class="fa fa-github"></i></a></li>
           </ul>
         </div><!--/.nav-collapse -->
@@ -68,8 +70,8 @@
         <div class="switch">
           <input id="language-toggle" class="check-toggle check-toggle-round-flat" onchange="languagesModule.toggleLang()" type="checkbox">
           <label for="language-toggle"></label>
-          <span class="on">Español</span>
-          <span class="off">English</span>
+          <span class="on">ES</span>
+          <span class="off">EN</span>
         </div>
       </div>
     </section>
@@ -82,7 +84,7 @@
       <div class="filters">
         <div class="container">
           <div class="filter">
-            <label for="donation_type" data-lang="filter_type">Filtrar por tipo de donación</label>
+            <label for="donation_type" data-lang="filter_type">Tipo de donación</label>
             <select class="filter" id="donation_type">
               <option selected disabled data-lang="filter_type_select">Selecciona una opción</option>
               <option value="all" data-lang="filter_all">Todas</option>
@@ -90,7 +92,7 @@
           </div>
 
           <div class="filter">
-            <label for="location" data-lang="filter_location">Filtrar por locación</label>
+            <label for="location" data-lang="filter_location">Locación</label>
             <select class="filter" id="location">
               <option selected disabled data-lang="filter_location_select">Selecciona una opción</option>
               <option value="all" data-lang="filter_all">Todas</option>

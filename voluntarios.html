@@ -1,33 +1,40 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-    <title>Cómo Ayudar MX | Información de Voluntariado y Derrumbes</title>
+  <head>
+    <title>Cómo Ayudar MX | Información de Voluntariado y Derrumbes.</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Repositorio de información para ayudar a los afectados del sismo." />
 
     <!-- Twitter Card data -->
-    <meta name="twitter:card" value="summary">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@comoayudarmx">
+    <meta name="twitter:title" content="Ayuda a los afectados del sismo.">
+    <meta name="twitter:description" content="Sitio para encontrar diferentes organizaciones, centros de acopio o formas de ayudar a los afectados o rescatistas del sismo.">
+    <meta name="twitter:image" content="http://javierivero.com/twitter.png">
 
     <!-- Open Graph data -->
     <meta property="og:title" content="Ayuda a los afectados del sismo." />
     <meta property="og:type" content="web" />
     <meta property="og:url" content="http://comoayudar.mx/" />
     <meta property="og:image" content="facebook.jpg" />
-    <meta property="og:description" content="Ayuda a los afectados del sismo. Información de como ayudar." />
+    <meta property="og:description" content="Ayuda a los afectados del sismo. Información de cómo ayudar." />
 
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Styles -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700|Roboto:400,500" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="lib/chosen/chosen.css">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="style.min.css">
+    <link rel="icon" href="favicon.png" type="image/x-icon" />
+    
+    <!-- Scripts -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="lib/chosen/chosen.jquery.min.js" ></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700|Roboto:400,500" rel="stylesheet">
-
-    <link rel="icon" href="favicon.png" type="image/x-icon" />
-
-</head>
+  </head>
 
 <body>
     <nav class="navbar navbar-default navbar-fixed-top">
@@ -46,7 +53,6 @@
             <li><a class="modal__link" href="index.html" data-modal="about">Acerca de</a></li>
             <li><a href="contactos.html">Contactos de Emergencia</a></li>
             <li><a href="voluntarios.html">Voluntarios</a></li>
-            <li><a href="world.html">English</a></li>
             <li><a href="https://github.com/eldelentes/comoayudarmx" target="_blank">Contribuir <i class="fa fa-github"></i></a></li>
           </ul>
         </div><!--/.nav-collapse -->
@@ -68,8 +74,8 @@
         <div class="switch">
             <input id="language-toggle" class="check-toggle check-toggle-round-flat" onchange="languagesModule.toggleLang()" type="checkbox">
             <label for="language-toggle"></label>
-            <span class="on">Español</span>
-            <span class="off">English</span>
+            <span class="on">ES</span>
+            <span class="off">EN</span>
         </div>
         </div>
     </section>
