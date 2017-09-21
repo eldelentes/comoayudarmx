@@ -80,23 +80,29 @@ var renderCards = function(cardsFromService) {
 }
 
 var start = function() {
+  var getEntryProperty = function(entry, propName) {
+    return entry['gsx$' + propName] && entry['gsx$' + propName]['$t']
+  }
+
   $.get(
     'https://spreadsheets.google.com/feeds/list/1zAFK1sSjIaHurnKzLx-e3GJZNmZ9QWfFSlIZLyYk8IE/1/public/values?alt=json',
     function (data) {
 
-      const cards = [];
+      var cards = [];
 
-      data.feed.entry.forEach((entry) => {
-        const card = {
-          timespamp: entry['gsx$timestamp'] && entry['gsx$timestamp']['$t'],
-          title: entry['gsx$formadeayuda'] && entry['gsx$formadeayuda']['$t'],
-          description: entry['gsx$informaciónadicionaldeayuda'] && entry['gsx$informaciónadicionaldeayuda']['$t'],
-          type: entry['gsx$tipodedonación'] && entry['gsx$tipodedonación']['$t'],
-          location: entry['gsx$puedesayudardesde'] && entry['gsx$puedesayudardesde']['$t'],
-          link: entry['gsx$fuentedeinformaciónlink'] && entry['gsx$fuentedeinformaciónlink']['$t'],
-          adicional: entry['gsx$informaciónadicional'] && entry['gsx$informaciónadicional']['$t'],
-          approved: entry['gsx$approved'] && entry['gsx$approved']['$t']
+      data.feed.entry.forEach(function(entry) {
+        var card = {
+          timespamp: getEntryProperty(entry, 'timestamp'),
+          title: getEntryProperty(entry, 'formadeayuda'),
+          description: getEntryProperty(entry, 'informaciónadicionaldeayuda'),
+          type: getEntryProperty(entry, 'tipodedonación'),
+          location: getEntryProperty(entry, 'puedesayudardesde'),
+          link: getEntryProperty(entry, 'fuentedeinformaciónlink'),
+          adicional: getEntryProperty(entry, 'informaciónadicional'),
+          approved: getEntryProperty(entry, 'approved')
         }
+
+        console.log(card);
 
         if (card.approved === 'TRUE') {
           cards.push(card);
@@ -104,6 +110,7 @@ var start = function() {
       });
 
       renderCards(cards);
+      populateFilters();
     },
   );
 }
@@ -111,4 +118,3 @@ var start = function() {
 $(document).on("change", "#donation_type", handleFilterChange);
 $(document).on("change", "#location", handleFilterChange);
 $(document).ready(start);
-$(document).ready(populateFilters);
