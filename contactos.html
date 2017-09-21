@@ -71,9 +71,11 @@
        
         <!-- Could be useful if more languages are added, but lacks styling -->
         <!-- <div class="language__controls">
-          <label for="es"><input id="es" name="language" type="radio" value="es" onchange="languagesModule.loadLang('es')" checked>Español</label>
-          <label for="en"><input id="en" name="language" type="radio" value="en" onchange="languagesModule.loadLang('en')">English</label>
+          <label class="radio-control" for="es"><input id="es" name="language" type="radio" value="es" onchange="languagesModule.loadLang('es')" checked>Español</label>
+          <label class="radio-control" for="en"><input id="en" name="language" type="radio" value="en" onchange="languagesModule.loadLang('en')">English</label>
+          <label class="radio-control" for="fr"><input id="fr" name="language" type="radio" value="fr" onchange="languagesModule.loadLang('fr')">French</label>
         </div> -->
+        <!-- Remove or comment div.switch if language__controls are enabled -->
         <div class="switch">
           <input id="language-toggle" class="check-toggle check-toggle-round-flat" onchange="languagesModule.toggleLang()" type="checkbox">
           <label for="language-toggle"></label>
