@@ -8,7 +8,9 @@ Es un proyecto que sirve como repositorio de información para ayudar a recopila
 
 ### ¿Cómo puedo participar?
 
-Actualmente éxisten 3 formas de participar.
+Actualmente existen 4 formas de participar.
+
+- Entra [aquí](https://docs.google.com/forms/d/e/1FAIpQLSf_kylBvkVQXaJmBAILdpjKCsl6lERlhtnhFfB1_22g43sz4g/viewform) y llena la información necesaria, fíjate primero que no vayas a duplicar información ya existente.
 
 - Por la emergencia, el sitio web esta hecho solamente con HTML Y CSS Básico, si eres un desarrollador/programador que quiera ayudar a con features nuevos por favor revise los issues y pr existentes.
 
@@ -82,3 +84,7 @@ Si tienes alguna otra idea de como colaborar por favor contactame.
 - [Carlos medina](https://www.medinnna.com/)
 
 - [Jorge Téllez](https://www.twitter.com/novohispano)
+
+- [Alejandro Escobedo](https://www.twitter.com/aalkz)
+
+- [Mario Rodríguez](https://www.twitter.com/mariusbc)
