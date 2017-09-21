@@ -46,7 +46,9 @@ var populateFilters = function(e) {
   $('select#location').chosen()
 }
 
-var renderCards = function() {
+var renderCards = function(cardsFromService) {
+  Cards = Cards.concat(cardsFromService);
+
   var template = $("#card_template").html();
 
   var isWorldPage = function() {
@@ -77,7 +79,36 @@ var renderCards = function() {
   }
 }
 
+var start = function() {
+  $.get(
+    'https://spreadsheets.google.com/feeds/list/1zAFK1sSjIaHurnKzLx-e3GJZNmZ9QWfFSlIZLyYk8IE/1/public/values?alt=json',
+    function (data) {
+
+      const cards = [];
+
+      data.feed.entry.forEach((entry) => {
+        const card = {
+          timespamp: entry['gsx$timestamp'] && entry['gsx$timestamp']['$t'],
+          title: entry['gsx$formadeayuda'] && entry['gsx$formadeayuda']['$t'],
+          description: entry['gsx$informaciónadicionaldeayuda'] && entry['gsx$informaciónadicionaldeayuda']['$t'],
+          type: entry['gsx$tipodedonación'] && entry['gsx$tipodedonación']['$t'],
+          location: entry['gsx$puedesayudardesde'] && entry['gsx$puedesayudardesde']['$t'],
+          link: entry['gsx$fuentedeinformaciónlink'] && entry['gsx$fuentedeinformaciónlink']['$t'],
+          adicional: entry['gsx$informaciónadicional'] && entry['gsx$informaciónadicional']['$t'],
+          approved: entry['gsx$approved'] && entry['gsx$approved']['$t']
+        }
+
+        if (card.approved === 'TRUE') {
+          cards.push(card);
+        }
+      });
+
+      renderCards(cards);
+    },
+  );
+}
+
 $(document).on("change", "#donation_type", handleFilterChange);
 $(document).on("change", "#location", handleFilterChange);
-$(document).ready(renderCards);
+$(document).ready(start);
 $(document).ready(populateFilters);
