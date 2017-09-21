@@ -162,6 +162,7 @@ body {
 	    -ms-flex-pack: justify;
 	        justify-content: space-between;
 	padding: 1em 0;
+	min-height: 335px;
 }
 
 .card__type,
