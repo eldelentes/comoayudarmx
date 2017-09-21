@@ -7,7 +7,7 @@ var languagesModule = (function() {
 	var languageDefinitions = {
 		es: {
 			text_close: "Cerrar",
-			text_or: "o",
+			text_or: "O desde los siguientes medios de contacto:",
 			text_contact_us: "Contáctanos",
 			nav_about: "Acerca de",
 			nav_contact: "Contactos de Emergencia",
@@ -32,8 +32,9 @@ var languagesModule = (function() {
 			modal1_text1: "Este proyecto sin fines de lucro busca crear un repositorio de información para centralizar el apoyo y la rápida distribución de ayuda.",
 			modal1_text2: "Si deseas ayudar y tienes conocimientos de programación colabora con nosotros en",
 			modal1_text3: " Sí lo que deseas es agregar un método de ayuda por favor envíanos la información pertinente a:",
-			modal2_title: "Públicar Forma de Ayuda",
-			modal2_text: "Envía la información del método de ayuda con toda la información pertinente como: A quién se ayuda, Desde dónde se puede ayudar, que tipo de ayuda necesitan. desde los siguientes medios de contacto:",
+			modal2_title: "Publicar Forma de Ayuda",
+			modal2_text: "Envía la información del método de ayuda con toda la información pertinente como: A quién se ayuda, desde dónde se puede ayudar, qué tipo de ayuda necesitan llenando la siguiente forma:",
+			modal2_formtext: " Enviar registro de ayuda",
 			contact_text1: "A continuación encontrarás una lista de contactos que te podrán ser útiles si te encuentras en un área afectada por el sismo.",
 			contact_text2: "Si conoces algun otro contacto importante",
 			volunteer_text1: "A continuación encontrarás diferentes mapas, con la ubicación de centros de acopio, centros de voluntarios, zonas más afectadas del sismo.",
@@ -72,6 +73,7 @@ var languagesModule = (function() {
 			modal1_text3: " If you wish to add a new Help Resource like a WebSite, please contact us here:",
 			modal2_title: "Publish new Help Resource",
 			modal2_text: "Send us information about the new Help Resource with all the applicable information: Target audience receiving help, target location, the kind of aid being provided. You can send us the information using the following methods:",
+			modal2_formtext: " Send Help Resouce information",
 			contact_text1: "Here is a contact list that can help you if you are in an area affected by the earthquake.",
 			contact_text2: "If you know any other important contact information",
 			volunteer_text1: "Here you will find maps with directions to collection centers, volunteer centers, and zones most affected by the earthquake.",

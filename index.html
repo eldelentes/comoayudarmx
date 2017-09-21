@@ -2,6 +2,8 @@
 <html>
   <head>
     <title>Cómo Ayudar MX | Información para ayudar.</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Repositorio de información para ayudar a los afectados del sismo." />
 
     <!-- Twitter Card data -->
@@ -18,18 +20,19 @@
     <meta property="og:image" content="facebook.jpg" />
     <meta property="og:description" content="Ayuda a los afectados del sismo. Información de cómo ayudar." />
 
-    <link rel="stylesheet" type="text/css" href="style.min.css">
+    <!-- Styles -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700|Roboto:400,500" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="lib/chosen/chosen.css">
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.min.css">
+    <link rel="icon" href="favicon.png" type="image/x-icon" />
+    
+    <!-- Scripts -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript" src="lib/chosen/chosen.jquery.min.js" ></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700|Roboto:400,500" rel="stylesheet">
-
-    <link rel="icon" href="favicon.png" type="image/x-icon" />
 
   </head>
   <body>
@@ -49,7 +52,6 @@
             <li><a class="modal__link" href="#" data-modal="about">Acerca de</a></li>
             <li><a href="contactos.html">Contactos de Emergencia</a></li>
             <li><a href="voluntarios.html">Voluntarios</a></li>
-            <li><a href="world.html">English</a></li>
             <li><a href="https://github.com/eldelentes/comoayudarmx" target="_blank">Contribuir <i class="fa fa-github"></i></a></li>
           </ul>
         </div><!--/.nav-collapse -->
@@ -59,10 +61,7 @@
       <div>
         <h2 class="intro__title"><span data-lang="intro_titulo">Ayuda Sismo</span><br /><span data-lang="intro_date">7 y 19 de Septiembre, 2017</span></h2>
         <h4 class="intro__location"><i class="fa fa-globe"></i>CDMX, Puebla, Morelos, Tlaxcala, Oaxaca, Guerrero y Chiapas</h4>
-        <div class="buttons">
-          <a class="button" href="#cards" data-lang="intro_button1">¿Cómo ayudar?</a>
-          <a class="button modal__link" href="#" data-modal="new"><span data-lang="intro_button2">Publicar</span> <i class="fa fa-edit"></i></a>
-        </div>
+       
         <!-- Could be useful if more languages are added, but lacks styling -->
         <!-- <div class="language__controls">
           <label for="es"><input id="es" name="language" type="radio" value="es" onchange="languagesModule.loadLang('es')" checked>Español</label>
@@ -71,21 +70,21 @@
         <div class="switch">
           <input id="language-toggle" class="check-toggle check-toggle-round-flat" onchange="languagesModule.toggleLang()" type="checkbox">
           <label for="language-toggle"></label>
-          <span class="on">Español</span>
-          <span class="off">English</span>
+          <span class="on">ES</span>
+          <span class="off">EN</span>
         </div>
       </div>
     </section>
     <section class="cards" id="cards">
       <div class="cards__intro">
-        <h3 data-lang="card_intro1">¿Cómo ayudar a los afectados del Sismo?</h3>
-        <p data-lang="card_intro2">A continuación encontrarás diferentes organizaciones, centros de acopio o formas de ayudar a los afectados o rescatistas del sismo.</p>
-        <p><span data-lang="card_intro3">Si conoces alguna otra forma de ayudar</span> <a class="modal__link" data-modal="new" href="#" data-lang="text_contact_us">Contáctanos</a></p>
+        <h3 data-lang="card_intro1">¿Cómo ayudar a los afectados del sismo?</h3>
+        <p data-lang="card_intro2">A continuación encontrarás diferentes formas de ayudar a los afectados y rescatistas del sismo.</p>
+        <p><span data-lang="card_intro3">Si conoces alguna otra forma de ayudar</span> <a target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSf_kylBvkVQXaJmBAILdpjKCsl6lERlhtnhFfB1_22g43sz4g/viewform" data-lang="text_contact_us">Contáctanos</a></p>
       </div>
       <div class="filters">
         <div class="container">
           <div class="filter">
-            <label for="donation_type" data-lang="filter_type">Filtrar por tipo de donación</label>
+            <label for="donation_type" data-lang="filter_type">Tipo de donación</label>
             <select class="filter" id="donation_type">
               <option selected disabled data-lang="filter_type_select">Selecciona una opción</option>
               <option value="all" data-lang="filter_all">Todas</option>
@@ -93,7 +92,7 @@
           </div>
 
           <div class="filter">
-            <label for="location" data-lang="filter_location">Filtrar por locación</label>
+            <label for="location" data-lang="filter_location">Locación</label>
             <select class="filter" id="location">
               <option selected disabled data-lang="filter_location_select">Selecciona una opción</option>
               <option value="all" data-lang="filter_all">Todas</option>
@@ -149,8 +148,10 @@
       <a href="#" class="modal__close" data-lang="text_close">Cerrar</a>
       <div class="modal__container">
         <h2 data-lang="modal2_title">Publicar Forma de Ayuda</h2>
-        <p data-lang="modal2_text">Envía la información del método de ayuda con toda la información pertinente como: A quién se ayuda, Desde dónde se puede ayudar, que tipo de ayuda necesitan. desde los siguientes medios de contacto:</p>
-        <a href="https://twitter.com/comoayudarmx" target="_blank" class="modal__button"><i class="fa fa-twitter"></i>@comoayudarmx</a> <span data-lang="text_or">o</span> <a class="modal__email" href="mailto:comoayudarmx@gmail.com">comoayudarmx@gmail.com</a>
+        <p data-lang="modal2_text">Envía la información del método de ayuda con toda la información pertinente como: A quién se ayuda, desde dónde se puede ayudar, qué tipo de ayuda necesitan llenando la siguiente forma:</p>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSf_kylBvkVQXaJmBAILdpjKCsl6lERlhtnhFfB1_22g43sz4g/viewform" target="_blank" class="modal__button"><i class="fa fa-plus-circle"></i><span data-lang="modal2_formtext"> Enviar registro de ayuda</span></a>
+        <p data-lang="modal2_text2">O desde los siguientes medios de contacto:</p>
+        <a href="https://twitter.com/comoayudarmx" target="_blank" class="modal__button"><i class="fa fa-twitter"></i>@comoayudarmx</a> o <a class="modal__email" href="mailto:comoayudarmx@gmail.com">comoayudarmx@gmail.com</a>
       </div>
     </section>
 
@@ -167,6 +168,18 @@
       gtag('js', new Date());
 
       gtag('config', 'UA-106793072-1');
+    </script>
+    <!-- Google Analytics -->
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    
+      ga('create', 'UA-106793072-1', 'auto');
+      ga('require', 'displayfeatures');
+      ga('send', 'pageview');
+    
     </script>
   </body>
 </html>
