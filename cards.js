@@ -118,4 +118,5 @@
   {title: "Donación DIF Puebla", description: "El Sistema Estatal del Desarrollo Integral de la Familia (SEDIF) se encarga de coordinar y promover el desarrollo de las familias y la comunidad poblana.", type: "Monetaria", location: "Global", link: "https://twitter.com/SEDIFPuebla"},
   {title: "Instituto Lomas del Real", description: "El Lomas del Real se une a la causa apoyando como centro de acopio permanente para los damnificados de los terremotos.", type: "Víveres", location: "San Luis Potosí", link: "https://www.facebook.com/166809276691498/photos/a.167901939915565.30748.166809276691498/1562751217097290/?type=3&theater"},
   {title: "Cruz Roja Puebla", description: "Centro de acopio Cruz Roja Ciudad de Puebla.", type: "Acopio", location: "Puebla", link: "https://www.facebook.com/CruzRoja58Puebla/"},
+  {title: "Albergue y centro de acopio CRIT Puebla", description: "Todos los Centros Teletón en el país se convierten en Centros de acopio para los damnificados.", type: ["Albergue", "Acopio"], location: "Puebla", link: "https://twitter.com/CRITPuebla"},
  ];
