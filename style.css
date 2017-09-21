@@ -307,11 +307,6 @@ body {
 	display: none !important;
 }
 
-input[type="radio"] {
-	margin-right: 1.2em;
-	vertical-align: middle;
-}
-
 .language__controls label + label {
 	margin-left: 1em;
 }
@@ -330,9 +325,11 @@ input[type="radio"] {
 	line-height: 2.8em;
 }
 
-.radio-control input {
+.radio-control input[type="radio"] {
 	cursor: pointer;
 	position: relative;
+	margin: 0 1.2em 0 0;
+	vertical-align: middle;
 }
 
 .radio-control input:before {
