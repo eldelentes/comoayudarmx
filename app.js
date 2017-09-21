@@ -95,14 +95,16 @@ var start = function() {
           timespamp: getEntryProperty(entry, 'timestamp'),
           title: getEntryProperty(entry, 'formadeayuda'),
           description: getEntryProperty(entry, 'informaciónadicionaldeayuda'),
-          type: getEntryProperty(entry, 'tipodedonación'),
+          type: getEntryProperty(entry, 'tipodedonación').split(','),
           location: getEntryProperty(entry, 'puedesayudardesde'),
           link: getEntryProperty(entry, 'fuentedeinformaciónlink'),
           adicional: getEntryProperty(entry, 'informaciónadicional'),
           approved: getEntryProperty(entry, 'approved')
         }
 
-        console.log(card);
+        card.type = card.type.map(function(type) {
+          return type.trim();
+        });
 
         if (card.approved === 'TRUE') {
           cards.push(card);
