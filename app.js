@@ -81,7 +81,7 @@ var populateFilters = function(e) {
   $('select#location').chosen()
 }
 
-var renderCards = function() {
+var renderCards = function(cards) {
   var template = $("#card_template").html();
   var monetaryType = "Monetaria";
 
@@ -137,14 +137,28 @@ var renderCards = function() {
   };
 
   if (isWorldPage()) {
-    Cards.filter(isMonetaryCard).forEach(renderCard);
+    cards.filter(isMonetaryCard).forEach(renderCard);
   } else {
-    Cards.forEach(renderCard);
+    cards.forEach(renderCard);
   }
+}
+
+var start = function() {
+  firebase.database()
+    .ref('/cards')
+    .once('value')
+    .then(function (snapshot) {
+      const cards = [];
+      snapshot.forEach(function (snapshotChild) {
+        cards.push(snapshotChild.val());
+      });
+
+      renderCards(cards);
+    });
 }
 
 $(document).on("change", "#donation_type", handleFilterChange);
 $(document).on("change", "#location", handleFilterChange);
-$(document).ready(renderCards);
+$(document).ready(start);
 $(document).ready(populateFilters);
 $(document).ready(filterCardFromQueryParams);
