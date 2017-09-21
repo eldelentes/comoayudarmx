@@ -43,6 +43,8 @@ var languagesModule = (function() {
 			volunteer_official: "Daños y derrumbes, Centros de Acopio, Alberges Oficiales Sismo CDMX",
 			volunteer_form1: "Publicar Forma de Ayuda",
 			volunteer_form2: "Envía la información del método de ayuda con toda la información pertinente como: A quién se ayuda, Desde dónde\n                se puede ayudar, que tipo de ayuda necesitan. desde los siguientes medios de contacto:",
+			sitemap_title: "Mapa de sitio",
+			footer_contact: "Contacto",
 		},
 		en: {
 			text_close: "Close",
@@ -82,6 +84,8 @@ var languagesModule = (function() {
 			volunteer_official: "Damaged and collapsed buildings, collection centers, and Official Sismo CDMX shelters",
 			volunteer_form1: "Publish new Help Resource",
 			volunteer_form2: "Send us information about the new Help Resource with all the applicable information: Target audience receiving help,\n target location, the kind of aid being provided. You can send us the information using the following methods:",
+			sitemap_title: "Sitemap",
+			footer_contact: "Contact",
 		},
 	};
 	
