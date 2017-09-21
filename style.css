@@ -173,12 +173,12 @@ body {
 .card__location h3{
 	padding: 0.5em 0;
 	text-decoration: underline;
-	font-size: 1em;
+	font-size: 1em;.button,.mainNav a{text-decoration:none;font-weight:500}
+	margin: 0 !important;
 }
 
 .card__info .fa {
 	font-size: 14px;
-	padding-right: 1em;
 	color: rgba(0,0,0,0.5);
 }
 
