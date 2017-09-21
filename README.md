@@ -10,7 +10,7 @@ Es un proyecto que sirve como repositorio de información para ayudar a recopila
 
 Actualmente éxisten 3 formas de participar.
 
-- Por la emergencia, el sitio web esta hecho solamente con HTML Y CSS Básico, si eres un desarrollador/programador que quiera ayudar a construir una plataforma más en forma (Con un backend automatizado) por favor contactame en twitter [@eldelentes](https://twitter.com/eldelentes) o por correo eldelentes@gmail.com
+- Por la emergencia, el sitio web esta hecho solamente con HTML Y CSS Básico, si eres un desarrollador/programador que quiera ayudar a con features nuevos por favor revise los issues y pr existentes.
 
 - Ayuda agregando tarjetas con información en el sitio, solamente es necesario hacer copy y paste del markup del paso 2 con información que encuentres en twitter (Busca #comoayudar o @comoayudarmx).
 
