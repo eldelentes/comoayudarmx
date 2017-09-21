@@ -156,34 +156,37 @@ var getCards = function() {
     return entry['gsx$' + propName] && entry['gsx$' + propName]['$t']
   }
 
+  var formatType = function(type) {
+    var types = type.split(',');
+
+    return types.map(function (type) {
+      return type.trim();
+    });
+  }
+
+  var isApprovedCard = function (card) {
+    return card.approved === 'TRUE';
+  }
+
+  var buildCard = function(entry) {
+    return {
+      timespamp: getEntryProperty(entry, 'timestamp'),
+      title: getEntryProperty(entry, 'formadeayuda'),
+      description: getEntryProperty(entry, 'informaciónadicionaldeayuda'),
+      type: formatType(getEntryProperty(entry, 'tipodedonación')),
+      location: getEntryProperty(entry, 'puedesayudardesde'),
+      link: getEntryProperty(entry, 'fuentedeinformaciónlink'),
+      adicional: getEntryProperty(entry, 'informaciónadicional'),
+      approved: getEntryProperty(entry, 'approved')
+    }
+  }
+
   $.get(
     'https://spreadsheets.google.com/feeds/list/1zAFK1sSjIaHurnKzLx-e3GJZNmZ9QWfFSlIZLyYk8IE/1/public/values?alt=json',
     function (data) {
-
-      var cards = [];
-
-      data.feed.entry.forEach(function(entry) {
-        var card = {
-          timespamp: getEntryProperty(entry, 'timestamp'),
-          title: getEntryProperty(entry, 'formadeayuda'),
-          description: getEntryProperty(entry, 'informaciónadicionaldeayuda'),
-          type: getEntryProperty(entry, 'tipodedonación').split(','),
-          location: getEntryProperty(entry, 'puedesayudardesde'),
-          link: getEntryProperty(entry, 'fuentedeinformaciónlink'),
-          adicional: getEntryProperty(entry, 'informaciónadicional'),
-          approved: getEntryProperty(entry, 'approved')
-        }
-
-        card.type = card.type.map(function(type) {
-          return type.trim();
-        });
-
-        if (card.approved === 'TRUE') {
-          cards.push(card);
-        }
-
-        start(cards);
-      });
+      start(
+        data.feed.entry.map(buildCard).filter(isApprovedCard)
+      );
     },
   );
 }
