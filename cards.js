@@ -144,5 +144,9 @@
   {title: "Cd. Juárez Technology Hub", description: "Lugares donde se estarán recaudando víveres", type: "Víveres", location: "Cd. Juárez", link: "https://www.facebook.com/TechnologyHUBjuarez/posts/1477822115644612"},
   {title: "Cd. Juárez Universidad de Durango", description: "Lugares donde se estarán recaudando víveres", type: "Víveres", location: "Cd. Juárez", link: "https://www.facebook.com/UDJuarez/posts/1694360343909080"},
   {title: "Canaco Servytur Carmen", description: "Canaco Servytur Carmen está recibiendo en su Centro de Acopio Alimentos, Artículos de limpieza y Artículos de Aseo personal. Ciudad del Carmen.", type: "Víveres/Varios", location: "Campeche", link: "https://www.facebook.com/canacocarmen/posts/1292502890859804?pnref=story"},
+<<<<<<< HEAD
   {title: "Mi Casa Es Puebla", description: "Centro de Acopio en Passaic, Nueva Jersey", type: "Varios", location: "Passaic, New Jersey, EE.UU", link: "https://www.facebook.com/Mi-Casa-Es-Puebla-1367100523306955/"},
+=======
+  {title: "Centro de Acopio Saltillo", description: "Centro de Acopio para artículos de limpieza, alimentos, higiene personal, medicamentos y otros.", type: ["Víveres", "Medicamentos", "Higiene personal", "Ropa"], location: "Saltillo", link: "https://www.facebook.com/tranavi/posts/1471947282894158"},   
+>>>>>>> e9265a44d9b01a14d11f5abce84598c9423ea8a5
  ];
