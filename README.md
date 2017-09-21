@@ -84,3 +84,7 @@ Si tienes alguna otra idea de como colaborar por favor contactame.
 - [Carlos medina](https://www.medinnna.com/)
 
 - [Jorge Téllez](https://www.twitter.com/novohispano)
+
+- [Alejandro Escobedo](https://www.twitter.com/aalkz)
+
+- [Mario Rodríguez](https://www.twitter.com/mariusbc)
