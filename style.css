@@ -571,3 +571,7 @@ input.check-toggle-round-flat:checked + label:after {
   font-size: .9em;
 	text-transform: uppercase;
 }
+
+.chosen-search-input {
+    color: #000;
+}
