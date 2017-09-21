@@ -32,30 +32,41 @@
         <div class="container">
             <h2 class="logo"><a href="index.html">¿Como Ayudar?</a></h2>
             <nav class="mainNav">
-                <a class="modal__link" href="#" data-modal="about">Acerca de</a>
-                <a class="hide-mobile" href="contactos.html">Contactos de Emergencia</a>
-                <a class="hide-mobile" href="voluntarios.html">Voluntarios</a>
-                <a href="world.html">English</a>
-                <a class="hide-mobile" href="https://github.com/eldelentes/comoayudarmx" target="_blank">Contribuir <i class="fa fa-github"></i></a>
+                <a class="modal__link" href="#" data-modal="about" data-lang="nav_about">Acerca de</a>
+                <a class="hide-mobile" href="contactos.html" data-lang="nav_contact">Contactos de Emergencia</a>
+                <a class="hide-mobile" href="voluntarios.html" data-lang="nav_volunteer">Voluntarios</a>
+                <a href="world.html">World Help</a>
+                <a class="hide-mobile" href="https://github.com/eldelentes/comoayudarmx" target="_blank"><span data-lang="nav_contribuir">Contribuir</span> <i class="fa fa-github"></i></a>
             </nav>
         </div>
     </header>
     <section class="intro">
         <div>
-            <h2 class="intro__title">Ayuda Sismo 19 de Septiembre</h2>
+            <h2 class="intro__title"><span data-lang="intro_titulo">Ayuda Sismo</span><br /><span data-lang="intro_date">7 y 19 de Septiembre</span></h2>
             <h4 class="intro__location"><i class="fa fa-globe"></i>CDMX, Puebla, Morelos, Tlaxcala, Oaxaca, Guerrero y Chiapas</h4>
             <div class="buttons">
-                <a class="button" href="#cards">¿Cómo ayudar?</a>
-                <a class="button modal__link" href="#" data-modal="new">Públicar <i class="fa fa-edit"></i></a>
+                <a class="button" href="#cards" data-lang="intro_button1">¿Cómo ayudar?</a>
+                <a class="button modal__link" href="#" data-modal="new"><span data-lang="intro_button2">Publicar</span> <i class="fa fa-edit"></i></a>
             </div>
+            <!-- Could be useful if more languages are added, but lacks styling -->
+        <!-- <div class="language__controls">
+          <label for="es"><input id="es" name="language" type="radio" value="es" onchange="languagesModule.loadLang('es')" checked>Español</label>
+          <label for="en"><input id="en" name="language" type="radio" value="en" onchange="languagesModule.loadLang('en')">English</label>
+        </div> -->
+        <div class="switch">
+            <input id="language-toggle" class="check-toggle check-toggle-round-flat" onchange="languagesModule.toggleLang()" type="checkbox">
+            <label for="language-toggle"></label>
+            <span class="on">Español</span>
+            <span class="off">English</span>
+        </div>
         </div>
     </section>
     <section class="cards" id="cards">
         <div class="cards__intro">
-            <h3>¿Cómo ayudar a los afectados del Sismo?</h3>
-            <p>A continuación encontrarás diferentes mapas, con la ubicación de centros de acopio, centros de voluntarios, zonas más afectadas
+            <h3 data-lang="card_intro1">¿Cómo ayudar a los afectados del Sismo?</h3>
+            <p data-lang="volunteer_text1">A continuación encontrarás diferentes mapas, con la ubicación de centros de acopio, centros de voluntarios, zonas más afectadas
                 del sismo.</p>
-            <p>Si conoces alguna otra forma de ayudar <a class="modal__link" data-modal="new" href="#">Contáctanos</a></p>
+            <p><span data-lang="card_intro3">Si conoces alguna otra forma de ayudar</span> <a class="modal__link" data-modal="new" href="#" data-lang="text_contact_us">Contáctanos</a></p>
         </div>
 
 
@@ -68,14 +79,16 @@
     <section class="modal" data-modal="new">
         <a href="#" class="modal__close">Cerrar</a>
         <div class="modal__container">
-            <h2>Públicar Forma de Ayuda</h2>
-            <p>Envía la información del método de ayuda con toda la información pertinente como: A quién se ayuda, Desde dónde
+            <h2 data-lang="volunteer_form1">Publicar Forma de Ayuda</h2>
+            <p data-lang="volunteer_form2">Envía la información del método de ayuda con toda la información pertinente como: A quién se ayuda, Desde dónde
                 se puede ayudar, que tipo de ayuda necesitan. desde los siguientes medios de contacto:</p>
-            <a href="https://twitter.com/comoayudarmx" target="_blank" class="modal__button"><i class="fa fa-twitter"></i>@comoayudarmx</a>            o <a class="modal__email" href="mailto:comoayudarmx@gmail.com">comoayudarmx@gmail.com</a>
+            <a href="https://twitter.com/comoayudarmx" target="_blank" class="modal__button"><i class="fa fa-twitter"></i>@comoayudarmx</a> <span data-lang="text_or">o</span> <a class="modal__email" href="mailto:comoayudarmx@gmail.com">comoayudarmx@gmail.com</a>
         </div>
     </section>
 
     <script src="modals.js" type="text/javascript"></script>
+    <script src="languages.js" type="text/javascript"></script>
+    
 
     <!-- Global Site Tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-106793072-1"></script>
