@@ -112,58 +112,29 @@ var renderCards = function(cardsFromService) {
 
 
   var renderIconType= function(type){
-    var code='info-circle';
-
-    switch(type){
-     case"Víveres":
-     case"Especie":
-       code='cutlery';
-        break;
-      case"Monetario":
-      case"Monetaria":
-        code='money';
-        break;
-      case"Albergue":
-      case"Albergues":
-        code='bed';
-        break;
-      case"Trabajo Voluntario":
-        code='users';
-        break;
-      case"Equipo de auxilio médico":
-      case"Medicamentos":
-        code='medkit';
-        break;
-      case"Artículos de limpieza":
-      case"Artículos de aseo personal":
-      case"Limpieza":
-        code='paint-brush';
-        break;
-      case"Equipo de rescate":
-        code='life-ring';
-        break;
-      case"Asesoría":
-      case"Asesoría profesional":
-        code='user-circle';
-        break;
-      case"Herramientas":
-        code='wrench';
-        break;
-      case"Sangre":
-        code='tint';
-        break;
-      case"Veterinario":
-        code='paw';
-        break;
-      case"Transporte":
-        code='truck';
-        break;
-      case"Ropa":
-        code='shopping-bag';
-        break;
-     default:
-    }
-    return '<i class="fa fa-'+code+'"></i>';
+    var code={
+"Víveres":'cutlery',
+"Especie":'cutlery',
+"Monetario":'money',
+"Monetaria":'money',
+"Albergue":'bed',
+"Albergues":'bed',
+"Trabajo Voluntario":'users',
+"Equipo de auxilio médico":'medkit',
+"Medicamentos":'medkit',
+"Artículos de limpieza":'paint-brush',
+"Artículos de aseo personal":'paint-brush',
+"Limpieza":'paint-brush',
+"Equipo de rescate":'life-ring',
+"Asesoría":'user-circle',
+"Asesoría profesional":'user-circle',
+"Herramientas":'wrench',
+"Sangre":'tint',
+"Veterinario":'paw',
+"Transporte":'truck',
+"Ropa":'shopping-bag'
+};
+    return '<i class="fa fa-'+code[type]+'"></i>&nbsp;';
 
   };
 
