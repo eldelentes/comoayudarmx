@@ -80,3 +80,5 @@ Si tienes alguna otra idea de como colaborar por favor contactame.
 - [Mario Rodríguez](https://www.twitter.com/mariusbc)
 
 - [Sebastián Osorio](https://github.com/sirgalleto)
+
+- [Agustín Leñero](https://github.com/agush22)
