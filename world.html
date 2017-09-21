@@ -8,7 +8,7 @@
     <meta name="twitter:card" content="summary">
     <meta name="twitter:site" content="@comoayudarmx">
     <meta name="twitter:title" content="Help those affected by the earthquake in Mexico.">
-    <meta name="twitter:description" content="Find different organizations, collection centers or other helping methods to assist those affected by the earthquake in Mexicoo or earthquake rescuers.">
+    <meta name="twitter:description" content="Find different organizations, collection centers or other helping methods to assist those affected by the earthquake in Mexico or earthquake rescuers.">
     <meta name="twitter:image" content="http://javierivero.com/twitter.png">
 
     <!-- Open Graph data -->
@@ -25,6 +25,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript" src="lib/chosen/chosen.jquery.min.js" ></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700|Roboto:400,500" rel="stylesheet">
 
@@ -32,23 +34,33 @@
 
   </head>
   <body>
-    <header class="mainHeader">
+      <nav class="navbar navbar-default navbar-fixed-top">
       <div class="container">
-        <h2 class="logo">¿Como Ayudar?</h2>
-        <nav class="mainNav">
-          <a href="world.html" data-modal="contactos">Home</a>
-          <a class="modal__link" href="#" data-modal="about">About</a>
-          <a class="hide-mobile" href="index.html">Español</a>
-          <a href="https://github.com/eldelentes/comoayudarmx" target="_blank">Contribute <i class="fa fa-github"></i></a>
-        </nav>
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html">¿Cómo ayudar?</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="world.html" data-modal="contactos">Home</a></li>
+            <li><a class="modal__link" href="#" data-modal="about">About</a></li>
+            <li><a href="index.html">Español</a></li>
+            <li><a href="https://github.com/eldelentes/comoayudarmx" target="_blank">Contribute <i class="fa fa-github"></i></a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
       </div>
-    </header>
+    </nav>
     <section class="intro">
       <div>
-        <h2 class="intro__title">Help Needed for Mexico Earthquake<br>Sep 19, 2017</h2>
-        <h4 class="intro__location"><i class="fa fa-globe"></i>CDMX, Puebla</h4>
+        <h2 class="intro__title">Help Needed for Mexico Earthquake<br>Sep 7 and 19 and, 2017</h2>
+        <h4 class="intro__location"><i class="fa fa-globe"></i>CDMX, Puebla, Morelos, Tlaxcala, Oaxaca, Guerrero & Chiapas</h4>
         <div class="buttons">
-          <a class="button" href="#cards">¿How Can You Help?</a>
+          <a class="button" href="#cards">How Can You Help?</a>
           <a class="button modal__link" href="#" data-modal="new">Publish <i class="fa fa-edit"></i></a>
         </div>
       </div>
@@ -94,7 +106,7 @@
         <p>If you are a developer and want to help, please check our repo on <a href="https://github.com/eldelentes/comoayudarmx"><i class="fa fa-github"></i>Github</a></p>
         <hr>
         <p> If you wish to add a Helping Source, please contact us here:</p>
-        <a href="https://twitter.com/comoayudarmx" target="_blank" class="modal__button"><i class="fa fa-twitter"></i>@comoayudarmx</a> o <a class="modal__email" href="mailto:comoayudarmx@gmail.com">comoayudarmx@gmail.com</a>
+        <a href="https://twitter.com/comoayudarmx" target="_blank" class="modal__button"><i class="fa fa-twitter"></i>@comoayudarmx</a> or <a class="modal__email" href="mailto:comoayudarmx@gmail.com">comoayudarmx@gmail.com</a>
       </div>
     </section>
 
@@ -102,8 +114,8 @@
       <a href="#" class="modal__close">Close</a>
       <div class="modal__container">
         <h2>Publish a Helping Source</h2>
-        <p>Send us the information about a Helping Source with all the applicable information: Who are you helping, location, type of help, A quién se ayuda. You can send us the information using the following methods:</p>
-        <a href="https://twitter.com/comoayudarmx" target="_blank" class="modal__button"><i class="fa fa-twitter"></i>@comoayudarmx</a> o <a class="modal__email" href="mailto:comoayudarmx@gmail.com">comoayudarmx@gmail.com</a>
+        <p>Send us the information about a Helping Source with all the applicable information: Who are you helping, location, type of help. You can send us the information using the following methods:</p>
+        <a href="https://twitter.com/comoayudarmx" target="_blank" class="modal__button"><i class="fa fa-twitter"></i>@comoayudarmx</a> or <a class="modal__email" href="mailto:comoayudarmx@gmail.com">comoayudarmx@gmail.com</a>
       </div>
     </section>
 
