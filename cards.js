@@ -133,4 +133,5 @@
   {title: "Acopio - Montessori Learning Center", description: "Lugares donde se estarán recaudando víveres, articulos de hiege personal, pañales, leche en polvo.", type: "Víveres", location: "El Paso, Texas", link: "https://www.facebook.com/www.elpasochannel.tv/posts/987812528028304"},
   {title: "Cd. Juárez Technology Hub", description: "Lugares donde se estarán recaudando víveres", type: "Víveres", location: "Cd. Juárez", link: "https://www.facebook.com/TechnologyHUBjuarez/posts/1477822115644612"},
   {title: "Cd. Juárez Universidad de Durango", description: "Lugares donde se estarán recaudando víveres", type: "Víveres", location: "Cd. Juárez", link: "https://www.facebook.com/UDJuarez/posts/1694360343909080"},
+  {title: "Canaco Servytur Carmen", description: "Canaco Servytur Carmen está recibiendo en su Centro de Acopio Alimentos, Artículos de limpieza y Artículos de Aseo personal. Ciudad del Carmen.", type: "Víveres/Varios", location: "Campeche", link: "https://www.facebook.com/canacocarmen/posts/1292502890859804?pnref=story"},
  ];
