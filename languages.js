@@ -16,7 +16,7 @@ var languagesModule = (function() {
 			intro_titulo: "Ayuda Sismo",
 			intro_date: "7 y 19 de Septiembre, 2017",
 			intro_button1: "¿Cómo ayudar?",
-			intro_button2: "Publicar",
+			intro_button2: "Enviar información",
 			card_intro1: "¿Cómo ayudar a los afectados del Sismo?",
 			card_intro2: "A continuación encontrarás diferentes organizaciones, centros de acopio o formas de ayudar a los afectados o rescatistas del sismo.",
 			card_intro3: "Si conoces alguna otra forma de ayudar",
