@@ -312,6 +312,7 @@ body {
 	font-size: .8em;
 	text-transform: uppercase;
 	margin-top: auto;
+	margin-bottom: -1px;
 	transition: all ease 0.2s;
 }
 
