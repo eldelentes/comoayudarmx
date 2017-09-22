@@ -69,8 +69,17 @@ var filterCards = function(state) {
 
 var populateFilters = function(e) {
   var populateFilter = function(selectorInCard, filterSelector) {
-    $(selectorInCard).each(function() {
+
+    // Sort donations and locations
+    var arr = $(selectorInCard).sort(function(a, b){
+      if($(a).text() < $(b).text()) return -1;
+      if($(a).text() > $(b).text()) return 1;
+      return 0;
+    })
+
+    $(arr).each(function() {
       var option = $(this).text();
+      if (!option.trim().length) return;
       var $select = $(filterSelector);
       var $option = $("<option>" + option + "</option>");
 
@@ -119,28 +128,26 @@ var renderCards = function(cardsFromService) {
 
 
   var renderIconType= function(type){
-    var code={
-"Víveres":'cutlery',
-"Especie":'cutlery',
-"Monetario":'money',
-"Monetaria":'money',
-"Albergue":'bed',
-"Albergues":'bed',
-"Trabajo Voluntario":'users',
-"Equipo de auxilio médico":'medkit',
-"Medicamentos":'medkit',
-"Artículos de limpieza":'paint-brush',
-"Artículos de aseo personal":'paint-brush',
-"Limpieza":'paint-brush',
-"Equipo de rescate":'life-ring',
-"Asesoría":'user-circle',
-"Asesoría profesional":'user-circle',
-"Herramientas":'wrench',
-"Sangre":'tint',
-"Veterinario":'paw',
-"Transporte":'truck',
-"Ropa":'shopping-bag'
-};
+    var code = {
+      "Artículos de limpieza":'paint-brush',
+      "Artículos de aseo personal":'paint-brush',
+      "Albergues":'bed',
+      "Asesoría":'user-circle',
+      "Asesoría profesional":'user-circle',
+      "Especie":'cutlery',
+      "Equipo de auxilio médico":'medkit',
+      "Equipo de rescate":'life-ring',
+      "Herramientas":'wrench',
+      "Limpieza":'paint-brush',
+      "Medicamentos":'medkit',
+      "Monetaria":'money',
+      "Ropa":'shopping-bag',
+      "Sangre":'tint',
+      "Trabajo Voluntario":'users',
+      "Transporte":'truck',
+      "Veterinario":'paw',
+      "Víveres":'cutlery'
+    };
     return '<i class="fa fa-'+code[type]+'"></i>&nbsp;';
 
   };
