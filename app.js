@@ -81,7 +81,9 @@ var populateFilters = function(e) {
   $('select#location').chosen()
 }
 
-var renderCards = function() {
+var renderCards = function(cardsFromService) {
+  Cards = Cards.concat(cardsFromService);
+
   var template = $("#card_template").html();
   var monetaryType = "Monetaria";
 
@@ -108,12 +110,40 @@ var renderCards = function() {
     }
   }
 
+
+  var renderIconType= function(type){
+    var code={
+"Víveres":'cutlery',
+"Especie":'cutlery',
+"Monetario":'money',
+"Monetaria":'money',
+"Albergue":'bed',
+"Albergues":'bed',
+"Trabajo Voluntario":'users',
+"Equipo de auxilio médico":'medkit',
+"Medicamentos":'medkit',
+"Artículos de limpieza":'paint-brush',
+"Artículos de aseo personal":'paint-brush',
+"Limpieza":'paint-brush',
+"Equipo de rescate":'life-ring',
+"Asesoría":'user-circle',
+"Asesoría profesional":'user-circle',
+"Herramientas":'wrench',
+"Sangre":'tint',
+"Veterinario":'paw',
+"Transporte":'truck',
+"Ropa":'shopping-bag'
+};
+    return '<i class="fa fa-'+code[type]+'"></i>&nbsp;';
+
+  };
+
   var renderCardTypes = function($card, types) {
     var template = $card.find(".card__type h3").clone();
+    template.find('i').remove();
     $card.find(".card__type h3").remove();
-
     types.forEach(function(type) {
-      $card.find(".card__type").append(template.clone().append("<span>" + translateMonetaryType(type) + "</span>"));
+      $card.find(".card__type").append(template.clone().append(renderIconType(type)+"<span>" + translateMonetaryType(type) + "</span>"));
     });
   }
 
@@ -143,8 +173,52 @@ var renderCards = function() {
   }
 }
 
+var start = function(cards) {
+  renderCards(cards);
+  populateFilters();
+  filterCardFromQueryParams();
+}
+
+var getCards = function() {
+  var getEntryProperty = function(entry, propName) {
+    return entry['gsx$' + propName] && entry['gsx$' + propName]['$t']
+  }
+
+  var formatType = function(type) {
+    var types = type.split(',');
+
+    return types.map(function (type) {
+      return type.trim();
+    });
+  }
+
+  var isApprovedCard = function (card) {
+    return card.approved === 'TRUE';
+  }
+
+  var buildCard = function(entry) {
+    return {
+      timespamp: getEntryProperty(entry, 'timestamp'),
+      title: getEntryProperty(entry, 'formadeayuda'),
+      description: getEntryProperty(entry, 'informaciónadicionaldeayuda'),
+      type: formatType(getEntryProperty(entry, 'tipodedonación')),
+      location: getEntryProperty(entry, 'puedesayudardesde'),
+      link: getEntryProperty(entry, 'fuentedeinformaciónlink'),
+      adicional: getEntryProperty(entry, 'informaciónadicional'),
+      approved: getEntryProperty(entry, 'approved')
+    }
+  }
+
+  $.get(
+    'https://spreadsheets.google.com/feeds/list/1zAFK1sSjIaHurnKzLx-e3GJZNmZ9QWfFSlIZLyYk8IE/1/public/values?alt=json',
+    function (data) {
+      start(
+        data.feed.entry.map(buildCard).filter(isApprovedCard)
+      );
+    }
+  );
+}
+
 $(document).on("change", "#donation_type", handleFilterChange);
 $(document).on("change", "#location", handleFilterChange);
-$(document).ready(renderCards);
-$(document).ready(populateFilters);
-$(document).ready(filterCardFromQueryParams);
+$(document).ready(getCards);
