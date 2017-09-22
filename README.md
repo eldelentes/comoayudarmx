@@ -37,7 +37,7 @@ Actualmente existen 3 formas de participar.
      </div>
   </div>
   <!-- Link al contacto, imágen, correo o información -->
-  <a class="card__button" target="__blank" href="http://www.proteccioncivil.cdmx.gob.mx/">Más Información</a>
+  <a class="card__button" target="_blank" href="http://www.proteccioncivil.cdmx.gob.mx/">Más Información</a>
 </article>
 
 ```
