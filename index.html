@@ -62,6 +62,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <ul class="nav navbar-nav navbar-right">
             <li><a data-lang="nav_contact" href="contactos.html">Contactos de Emergencia</a></li>
             <li><a data-lang="nav_volunteer" href="voluntarios.html">Voluntarios</a></li>
+            <li><a data-lang="nav_about" class="modal__link" href="#" data-modal="formulary-add-collection-center">Registrar centro de acopio</a></li>
             <li><a data-lang="nav_about" class="modal__link" href="#" data-modal="about">Acerca de</a></li>
           </ul>
         </div><!--/.nav-collapse -->
@@ -196,6 +197,28 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
       	</div>
     </section>
+    <section class="modal" id="modal-formulary-add-collection-center" data-modal="formulary-add-collection-center">
+      <a href="#" class="modal__close" data-lang="text_close">Cerrar</a>
+      <div class="modal__container">
+
+        <h2 data-lang="modal1_title">Registra un centro de acopio</h2>
+
+        <p data-lang="modal1_text1">Llena el siguiente formulario con la información adecuada para registrar un centro de acopio.</p>
+
+
+        <hr>
+        <section class="container">
+          <form id="formulary-collection-center">
+            <p><input type="text" name="nombre" placeholder="Escribe el nombre del centro de acopio"/></p>
+            <p><input type="text" name="direccion" placeholder="Escribe la dirección completa del centro de acopio (Calle # Colonia Ciudad/Delegación Estado)"/></p>
+            <p><input type="number" name="lat" placeholder="Escribe la latitud"/></p>
+            <p><input type="number" name="lng" placeholder="Escribe la longitud"/></p>
+            <a class="card__button" id="send-collection-center">Enviar centro de acopio</a>
+          </form>
+        </section>
+
+      </div>
+    </section>
 
     <section class="modal" data-modal="new">
       <a href="#" class="modal__close" data-lang="text_close">Cerrar</a>
@@ -209,6 +232,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </section>
 
     <script src="cards.js" type="text/javascript"></script>
+    <script src="lib/utils/global.js" type="text/javascript"></script>
     <script src="app.js" type="text/javascript"></script>
     <script src="languages.js" type="text/javascript"></script>
     <script src="modals.js" type="text/javascript"></script>

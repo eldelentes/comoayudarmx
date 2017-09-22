@@ -222,3 +222,32 @@ var getCards = function() {
 $(document).on("change", "#donation_type", handleFilterChange);
 $(document).on("change", "#location", handleFilterChange);
 $(document).ready(getCards);
+
+function sendCollectionCenterToApi(){
+  var information={};
+  var is_valid=true;
+  $("form#formulary-collection-center :input").each(function(){
+   //var input = $(this); // This is the jquery object of the input, do what you will
+   information[this.getAttribute("name")]=this.value;
+   if(this.value.length==0){
+     is_valid=false;
+     return false;
+   }
+  });
+  if(is_valid){
+    $.ajax({
+      url:Global.ACOPIO_API.AWS+Global.ACOPIO_API.ACTION.ACOPIOS_ALL,
+      method:"post",
+      data:information,
+    }).done(function(result){
+      alert("Envío del centro de acopio enviado de manera exitosa");
+      $("section#modal-formulary-add-collection-center").removeClass('show');
+    }).fail(function(result){
+      alert("Hubo un fallo en el envío del centro de acopio");
+    })
+  }else{
+    alert("Todos los campos son obligatorios");
+  }
+}
+
+$(document).on("click","#send-collection-center",sendCollectionCenterToApi);
