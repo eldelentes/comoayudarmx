@@ -21,6 +21,30 @@
     <meta property="og:image" content="facebook.jpg" />
     <meta property="og:description" content="Ayuda a los afectados del sismo. Información de cómo ayudar." />
 
+    <!-- Disable tap highlight on IE -->
+    <meta name="msapplication-tap-highlight" content="no">
+
+    <!-- Web Application Manifest -->
+    <link rel="manifest" href="manifest.json">
+
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="Cómo Ayudar MX">
+    <link rel="icon" sizes="192x192" href="img/touch/chrome-touch-icon-192x192.png">
+
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Cómo Ayudar MX">
+    <link rel="apple-touch-icon" href="img/touch/apple-touch-icon.png">
+
+    <!-- Tile icon for Win8 (144x144 + tile color) -->
+    <meta name="msapplication-TileImage" content="img/touch/ms-touch-icon-144x144-precomposed.png">
+    <meta name="msapplication-TileColor" content="#f73535">
+
+    <!-- Color the status bar on mobile devices -->
+    <meta name="theme-color" content="#f73535">
+    
     <!-- Styles -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -51,7 +75,7 @@
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
             <li><a href="contactos.html">Contactos de Emergencia</a></li>
-            <li><a href="voluntarios.html">Voluntarios</a></li>
+            <li><a href="mapas.html">Mapas</a></li>
             <li><a class="modal__link" href="index.html" data-modal="about">Acerca de</a></li>
           </ul>
         </div><!--/.nav-collapse -->
@@ -96,18 +120,18 @@
           <!-- Agrega una pequeña descripción -->
           <div class="card__info">
              <div class="card__type">
-               <h4>Teléfono de Emergencia:</h4>
+               <h4 data-lang="emergency_phone">Teléfono:</h4>
                <!-- Especifica si la ayuda es en especie, monetaria, ayuda, etc. -->
                <h3><a href="tel:5683-2222"><i class="fa fa-phone"></i>5683-2222 </a></h3>
              </div>
              <div class="card__location">
-               <h4>Puedes contactar desde:</h4>
+               <h4 data-lang="emergency_where">Puedes contactar desde:</h4>
                <!-- Especifica si se puede ayudar desde una parte o en todo México -->
                <h3><i class="fa fa-globe"></i>CDMX</h3>
              </div>
           </div>
           <!-- Link al contacto, imágen, correo o información -->
-          <a class="card__button" target="__blank" href="http://www.proteccioncivil.cdmx.gob.mx/">Más Información</a>
+          <a class="card__button" target="__blank" data-lang="more_info" href="http://www.proteccioncivil.cdmx.gob.mx/">Más Información</a>
         </article>
 
         <article class="card">
@@ -115,18 +139,18 @@
           <!-- Agrega una pequeña descripción -->
           <div class="card__info">
              <div class="card__type">
-               <h4>Teléfono de Emergencia:</h4>
+               <h4 data-lang="emergency_phone">Teléfono:</h4>
                <!-- Especifica si la ayuda es en especie, monetaria, ayuda, etc. -->
                <h3><a href="tel:911"><i class="fa fa-phone"></i>911</a></h3>
              </div>
              <div class="card__location">
-               <h4>Puedes contactar desde:</h4>
+               <h4 data-lang="emergency_where">Puedes contactar desde:</h4>
                <!-- Especifica si se puede ayudar desde una parte o en todo México -->
                <h3><i class="fa fa-globe"></i>Todo México</h3>
              </div>
           </div>
           <!-- Link al contacto, imágen, correo o información -->
-          <a class="card__button" target="__blank" href="https://www.gob.mx/911">Más Información</a>
+          <a class="card__button" target="__blank" data-lang="more_info" href="https://www.gob.mx/911">Más Información</a>
         </article>
 
         <article class="card">
@@ -134,18 +158,18 @@
           <!-- Agrega una pequeña descripción -->
           <div class="card__info">
              <div class="card__type">
-               <h4>Teléfono de Emergencia:</h4>
+               <h4 data-lang="emergency_phone">Teléfono:</h4>
                <!-- Especifica si la ayuda es en especie, monetaria, ayuda, etc. -->
                <h3><a href="tel:5658-1111"><i class="fa fa-phone"></i>5658-1111</a></h3>
              </div>
              <div class="card__location">
-               <h4>Puedes contactar desde:</h4>
+               <h4 data-lang="emergency_where">Puedes contactar desde:</h4>
                <!-- Especifica si se puede ayudar desde una parte o en todo México -->
                <h3><i class="fa fa-globe"></i>CDMX</h3>
              </div>
           </div>
           <!-- Link al contacto, imágen, correo o información -->
-          <a class="card__button" target="__blank" href="http://locatel.cdmx.gob.mx/">Más Información</a>
+          <a class="card__button" target="__blank" data-lang="more_info" href="http://locatel.cdmx.gob.mx/">Más Información</a>
         </article>
 
         <article class="card">
@@ -153,9 +177,85 @@
           <!-- Agrega una pequeña descripción -->
           <div class="card__info">
              <div class="card__type">
-               <h4>Teléfono de Emergencia:</h4>
+               <h4 data-lang="emergency_phone">Teléfono:</h4>
                <!-- Especifica si la ayuda es en especie, monetaria, ayuda, etc. -->
                <h3><a href="tel:018006232323 "><i class="fa fa-phone"></i>01.800.623.2323</a></h3>
+             </div>
+             <div class="card__location">
+               <h4 data-lang="emergency_where">Puedes contactar desde:</h4>
+               <!-- Especifica si se puede ayudar desde una parte o en todo México -->
+               <h3><i class="fa fa-globe"></i>Todo México</h3>
+             </div>
+          </div>
+          <!-- Link al contacto, imágen, correo o información -->
+          <a class="card__button" target="__blank" data-lang="more_info" href="https://twitter.com/Tu_IMSS/status/910354479207337984">Más Información</a>
+        </article>
+
+        <article class="card">
+          <h2 class="card__title">Cruz Roja</h2>
+          <!-- Agrega una pequeña descripción -->
+          <div class="card__info">
+             <div class="card__type">
+               <h4 data-lang="emergency_phone">Teléfono:</h4>
+               <!-- Especifica si la ayuda es en especie, monetaria, ayuda, etc. -->
+               <h3><a href="tel:(55)5557-5757 "><i class="fa fa-phone"></i>(55)5557-5757</a></h3>
+             </div>
+             <div class="card__location">
+               <h4 data-lang="emergency_where">Puedes contactar desde:</h4>
+               <!-- Especifica si se puede ayudar desde una parte o en todo México -->
+               <h3><i class="fa fa-globe"></i>CDMX</h3>
+             </div>
+          </div>
+          <!-- Link al contacto, imágen, correo o información -->
+          <a class="card__button" target="__blank" data-lang="more_info" href="https://twitter.com/Tu_IMSS/status/910354479207337984">Más Información</a>
+        </article>
+
+        <article class="card">
+          <h2 class="card__title">Veterinarios</h2>
+          <!-- Agrega una pequeña descripción -->
+          <div class="card__info">
+             <div class="card__type">
+               <h4 data-lang="emergency_phone">Teléfono:</h4>
+               <!-- Especifica si la ayuda es en especie, monetaria, ayuda, etc. -->
+               <h3><a href="https://twitter.com/LiteraturayMas_/status/910331708112748544"><i class="fa fa-phone"></i>Info aqui</a></h3>
+             </div>
+             <div class="card__location">
+               <h4 data-lang="emergency_where">Puedes contactar desde:</h4>
+               <!-- Especifica si se puede ayudar desde una parte o en todo México -->
+               <h3><i class="fa fa-globe"></i>CDMX, Puebla, Toluca, EdoMex</h3>
+             </div>
+          </div>
+          <!-- Link al contacto, imágen, correo o información -->
+          <a class="card__button" target="__blank" data-lang="more_info" href="https://twitter.com/LiteraturayMas_/status/910331708112748544">Más Información</a>
+        </article>
+
+        <article class="card">
+          <h2 class="card__title">Fugas de Agua</h2>
+          <!-- Agrega una pequeña descripción -->
+          <div class="card__info">
+             <div class="card__type">
+               <h4 data-lang="emergency_phone">Teléfono:</h4>
+               <!-- Especifica si la ayuda es en especie, monetaria, ayuda, etc. -->
+               <h3><a href="tel:56543210"><i class="fa fa-phone"></i>56-54-32-10 </a></h3>
+             </div>
+             <div class="card__location">
+               <h4 data-lang="emergency_where">Puedes contactar desde:</h4>
+               <!-- Especifica si se puede ayudar desde una parte o en todo México -->
+               <h3><i class="fa fa-globe"></i>CDMX</h3>
+             </div>
+          </div>
+          <!-- Link al contacto, imágen, correo o información -->
+          <a class="card__button" target="__blank" data-lang="more_info" href="https://www.facebook.com/notes/secretar%C3%ADa-del-medio-ambiente/n%C3%BAmeros-telef%C3%B3nicos-para-el-reporte-de-desperdicio-fugas-y-derrames-de-agua-en-e/10150592346384588/">Más Información</a>
+        </article>
+
+        <article class="card">
+          <h2 class="card__title">Fugas de Gas</h2>
+          <!-- Agrega una pequeña descripción -->
+          <div class="card__info">
+             <div class="card__type">
+               <h4>Teléfono de Emergencia:</h4>
+               <!-- Especifica si la ayuda es en especie, monetaria, ayuda, etc. -->
+               <h3><a href="tel:018000914000"><i class="fa fa-phone"></i>01-800-091-4000</a></h3>
              </div>
              <div class="card__location">
                <h4>Puedes contactar desde:</h4>
@@ -164,64 +264,7 @@
              </div>
           </div>
           <!-- Link al contacto, imágen, correo o información -->
-          <a class="card__button" target="__blank" href="https://twitter.com/Tu_IMSS/status/910354479207337984">Más Información</a>
-        </article>
-
-        <article class="card">
-          <h2 class="card__title">Cruz Roja</h2>
-          <!-- Agrega una pequeña descripción -->
-          <div class="card__info">
-             <div class="card__type">
-               <h4>Teléfono de Emergencia:</h4>
-               <!-- Especifica si la ayuda es en especie, monetaria, ayuda, etc. -->
-               <h3><a href="tel:(55)5557-5757 "><i class="fa fa-phone"></i>(55)5557-5757</a></h3>
-             </div>
-             <div class="card__location">
-               <h4>Puedes contactar desde:</h4>
-               <!-- Especifica si se puede ayudar desde una parte o en todo México -->
-               <h3><i class="fa fa-globe"></i>CDMX</h3>
-             </div>
-          </div>
-          <!-- Link al contacto, imágen, correo o información -->
-          <a class="card__button" target="__blank" href="https://twitter.com/Tu_IMSS/status/910354479207337984">Más Información</a>
-        </article>
-
-        <article class="card">
-          <h2 class="card__title">Veterinarios</h2>
-          <!-- Agrega una pequeña descripción -->
-          <div class="card__info">
-             <div class="card__type">
-               <h4>Teléfono de Emergencia:</h4>
-               <!-- Especifica si la ayuda es en especie, monetaria, ayuda, etc. -->
-               <h3><a href="https://twitter.com/LiteraturayMas_/status/910331708112748544"><i class="fa fa-phone"></i>Info aqui</a></h3>
-             </div>
-             <div class="card__location">
-               <h4>Puedes contactar desde:</h4>
-               <!-- Especifica si se puede ayudar desde una parte o en todo México -->
-               <h3><i class="fa fa-globe"></i>CDMX, Puebla, Toluca, EdoMex</h3>
-             </div>
-          </div>
-          <!-- Link al contacto, imágen, correo o información -->
-          <a class="card__button" target="__blank" href="https://twitter.com/LiteraturayMas_/status/910331708112748544">Más Información</a>
-        </article>
-
-        <article class="card">
-          <h2 class="card__title">Fugas de Agua</h2>
-          <!-- Agrega una pequeña descripción -->
-          <div class="card__info">
-             <div class="card__type">
-               <h4>Teléfono de Emergencia:</h4>
-               <!-- Especifica si la ayuda es en especie, monetaria, ayuda, etc. -->
-               <h3><a href="tel:56543210"><i class="fa fa-phone"></i>56-54-32-10 </a></h3>
-             </div>
-             <div class="card__location">
-               <h4>Puedes contactar desde:</h4>
-               <!-- Especifica si se puede ayudar desde una parte o en todo México -->
-               <h3><i class="fa fa-globe"></i>CDMX</h3>
-             </div>
-          </div>
-          <!-- Link al contacto, imágen, correo o información -->
-          <a class="card__button" target="__blank" href="https://www.facebook.com/notes/secretar%C3%ADa-del-medio-ambiente/n%C3%BAmeros-telef%C3%B3nicos-para-el-reporte-de-desperdicio-fugas-y-derrames-de-agua-en-e/10150592346384588/">Más Información</a>
+          <a class="card__button" target="__blank" href="http://www.gasnaturalfenosa.com.mx/mx/hogar/servicio+al+cliente/telefonos+de+atencion/1285346045083/urgencias.html">Más Información</a>
         </article>
 
         <article class="card">
@@ -229,7 +272,7 @@
           <!-- Agrega una pequeña descripción -->
           <div class="card__info">
              <div class="card__type">
-               <h4>Teléfono de Emergencia:</h4>
+               <h4 data-lang="emergency_phone">Teléfono:</h4>
                <!-- Especifica si la ayuda es en especie, monetaria, ayuda, etc. -->
                <h3>
                  <a href="tel:(222) 236-51-02"><i class="fa fa-phone"></i>(222) 236-51-02</a><br>
@@ -237,13 +280,13 @@
                </h3>
              </div>
              <div class="card__location">
-               <h4>Puedes contactar desde:</h4>
+               <h4 data-lang="emergency_where">Puedes contactar desde:</h4>
                <!-- Especifica si se puede ayudar desde una parte o en todo México -->
                <h3><i class="fa fa-globe"></i>Puebla</h3>
              </div>
           </div>
           <!-- Link al contacto, imágen, correo o información -->
-          <a class="card__button" target="__blank" href="https://www.cruzrojamexicana.org.mx/delegaciones">Más Información</a>
+          <a class="card__button" target="__blank" data-lang="more_info" href="https://www.cruzrojamexicana.org.mx/delegaciones">Más Información</a>
         </article>
       </div>
     </section>
