@@ -1,0 +1,25 @@
+{
+  "version": "1.0.0",
+  "name": "Como Ayudar",
+  "launch_path": "/index.html",
+  "description": "Repositorio de información para ayudar a los afectados del sismo.",
+  "icons": {
+    "128": "/img/touch/icon-128x128.png"
+  },
+  "developer": {
+    "name": "Eduardo Higareda",
+    "url": "https://twitter.com/eldelentes"
+  },
+  "installs_allowed_from": [
+    "*"
+  ],
+  "default_locale": "en",
+  "permissions": {
+  },
+  "locales": {
+    "en": {
+      "name": "Help Needed for Mexico Earthquake",
+      "description": "This site is a volunteer project created in an effort to centralize all useful information regarding assistance and distribution of goods to help those affected by the most recent earthquakes in Mexico"
+    }
+  }
+}
