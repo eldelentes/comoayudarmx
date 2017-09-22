@@ -130,8 +130,8 @@ var languagesModule = (function() {
 			}
 		})
 
-		updateHistory();
 		currentLang = chosenLang;
+		updateHistory();
 	}
 
 	function publicLoadLanguage(chosenLang) {
@@ -150,10 +150,11 @@ var languagesModule = (function() {
 
 	// Copied from app.js, but without card filtering
 	function updateHistory() {
-		var type = document.getElementById("donation_type").value,
-		location = document.getElementById("location").value,
-		lang = currentLang,
-		state = {};
+		// Parameters are sfer to get from URL than select element
+		var type = getUrlParameter('type'),
+			location = getUrlParameter('location'),
+			lang = currentLang,
+			state = {};
 		
 		// Populate state only with existing values
 		if (type) { state.type = type };
