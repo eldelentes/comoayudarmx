@@ -51,7 +51,7 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700|Roboto:400,500" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="lib/chosen/chosen.css">
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="style.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="icon" href="favicon.png" type="image/x-icon" />
 
     <!-- Scripts -->
@@ -68,6 +68,18 @@
       })(window,document,'script','dataLayer','GTM-MC9D59G');
     </script>
     <!-- End Google Tag Manager -->
+    
+    <!-- Facebook Script -->
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.10&appId=1921070531546641";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+
+    <!-- End Facebook Script -->
 
   </head>
   <body>
@@ -110,6 +122,24 @@
   				<a class="button send_info" target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSf_kylBvkVQXaJmBAILdpjKCsl6lERlhtnhFfB1_22g43sz4g/viewform" data-modal="new">
             <span data-lang="intro_button2">Enviar información</span> <i class="fa fa-edit"></i>
           </a>
+        </div>
+        <div class="social__buttons">
+          <div class="row">
+            <div class="col-md-12">
+              <ul class="social__btns">
+                <li>
+                  <a title="/CómoAyudarMX" target="_blank" data-href="https://comoayudar.mx" data-toggle="tooltip" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fcomoayudar.mx%2F&amp;src=sdkpreparse" rel="external" class="btn btn-nm btn-default btn--facebook">
+                    <i class="fa fa-facebook-official"></i> <span>Comparte en <strong>Facebook</strong></span>
+                  </a>
+                </li>
+                <li class="">
+                  <a title="@comoayudarmx" data-toggle="tooltip" href="https://twitter.com/share" data-size="large" data-text="¡Descubre cómo puedes ayudar!" data-url="https://comoayudar.mx" data-via="comoayudarmx" data-related="twitterapi, twitter" rel="external" class="twitter-share-button btn btn-nm btn-default btn--twitter">
+                    <i class="fa fa-twitter-square"></i> <span>Comparte en <strong>Twitter</strong></span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
 
         <!-- Could be useful if more languages are added, but lacks styling -->

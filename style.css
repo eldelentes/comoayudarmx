@@ -680,3 +680,40 @@ input.check-toggle-round-flat:checked + label:after {
 	transition: all ease-in 0.1s;
 	color: #fff;
 }
+
+
+/* social btns */
+.social__buttons {
+    margin-top: 5vh;
+}
+
+.social__btns {
+	display: inline-flex;
+}
+
+.social__btns li {
+	padding: 0 20px;
+}
+
+.social__btns li a {
+	display: block;
+	border:none;
+	color: #191827;
+	font-size: 1em;
+	background-color: #fff;
+	position: relative;
+	padding: 16px 16px;
+}
+
+.social__btns li a i {
+	margin-right: 4px;
+	position: relative;
+	z-index: 3;
+}
+
+.social__btns li a span {
+	position: relative;
+	z-index: 2;
+}
+
+
