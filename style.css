@@ -312,7 +312,13 @@ body {
 	font-size: .8em;
 	text-transform: uppercase;
 	margin-top: auto;
-	transition: all ease-in 0.2s;
+	transition: all ease 0.2s;
+}
+
+.card__button:hover {
+	color: white;
+	text-decoration: none;
+	background: #e22f2f;
 }
 
 .modal {
