@@ -147,7 +147,7 @@ body {
 	padding: 1em 0;
 }
 
-#cards_container {
+#cards_container, #collection_centers_container {
 	display: -webkit-box;
 	display: -webkit-flex;
 	display: -ms-flexbox;
@@ -161,7 +161,7 @@ body {
 	        justify-content: space-between;
 }
 
-#cards_container::before, #cards_container::after {
+#cards_container::before, #cards_container::after, #collection_centers_container::before, , #collection_centers_container::after {
 	content: none;
 }
 
@@ -450,7 +450,7 @@ input[type="radio"] {
 	top: 6em;
 	right: 5%;
 }
-  
+
 .switch > span {
 	position: absolute;
 	top: 0.9em;

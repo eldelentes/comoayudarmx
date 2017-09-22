@@ -179,6 +179,25 @@ var start = function(cards) {
   filterCardFromQueryParams();
 }
 
+var renderCollectionCard=function(card){
+  var template = $("#collection_center_card_template").html();
+  var $card = $(template);
+  $card.find(".card__title").text(card.nombre);
+  $card.find(".card__desc").text(card.direccion);
+  if(card.geopos!=null){
+    var btn=$card.find(".collection_center_card_button_show_map");
+    $(btn).show();
+    btn.data("latlng",card.geopos.lat+","+card.geopos.lng);
+  }
+  $("#collection_centers_container").append($card);
+}
+
+var startCollectionCentersCards = function(cards) {
+  cards.forEach(function(card){
+    renderCollectionCard(card);
+  })
+}
+
 var getCards = function() {
   var getEntryProperty = function(entry, propName) {
     return entry['gsx$' + propName] && entry['gsx$' + propName]['$t']
@@ -219,6 +238,23 @@ var getCards = function() {
   );
 }
 
+var getCollectionCenters=function(){
+  $.get(
+    Global.ACOPIO_API.AWS+Global.ACOPIO_API.ACTION.ACOPIOS_ALL,
+    function (data) {
+      startCollectionCentersCards(data);
+    }
+  );
+}
+
 $(document).on("change", "#donation_type", handleFilterChange);
 $(document).on("change", "#location", handleFilterChange);
-$(document).ready(getCards);
+$("a#show_collection_centers_div").click(function(evt){
+  $("#collection_centers_container")[evt.target.dataset.actionstate]();
+  evt.target.dataset.actionstate= (evt.target.dataset.actionstate=="show") ? "hide" : "show";
+  evt.target.innerHTML=(evt.target.dataset.actionstate=="show" ? "Mostrar los centros de acopio" : "Ocultar los centros de acopio");
+})
+$(document).ready(function(){
+  getCards();
+  getCollectionCenters();
+})

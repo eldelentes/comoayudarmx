@@ -113,6 +113,25 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           </div>
         </div>
       </div>
+      <div class="container">
+        <a class="card__button" data-actionstate="show" data-lang="show_collection_centers_div" id="show_collection_centers_div" data-latlng="">Mostrar los centros de acopio</a>
+      </div>
+      <div id="collection_centers_container" class="container" style="display:none;">
+        <h3 class="container">Centros de acopio</h3>
+        <template id="collection_center_card_template">
+          <article class="card">
+            <h2 class="card__title"></h2>
+            <div class="card__badges"></div>
+            <!-- Agrega una pequeña descripción -->
+            <p class="card__desc"></p>
+            <div class="card__info">
+            </div>
+            <!-- Link al contacto, imágen, correo o información -->
+            <a class="collection_center_card_button_show_map card__button" data-lang="collection_center_card_show_map" data-latlng="" style="display:none;">Mostrar ubicación del centro de acopio</a>
+            <a class="card__button" target="__blank" href="" data-lang="more_info">Más Información</a>
+          </article>
+        </template>
+      </div>
       <div id="cards_container" class="container">
         <!-- Aquí se agregan las tarjetas -->
         <!-- Por favor, no modifiques el markup/html de las tarjetas, solamente remplaza la información. -->
@@ -209,6 +228,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </section>
 
     <script src="cards.js" type="text/javascript"></script>
+    <script src="lib/utils/global.js" type="text/javascript"></script>
     <script src="app.js" type="text/javascript"></script>
     <script src="languages.js" type="text/javascript"></script>
     <script src="modals.js" type="text/javascript"></script>
