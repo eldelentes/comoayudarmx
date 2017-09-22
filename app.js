@@ -62,8 +62,17 @@ var filterCards = function(state) {
 
 var populateFilters = function(e) {
   var populateFilter = function(selectorInCard, filterSelector) {
-    $(selectorInCard).each(function() {
+
+    // Sort donations and locations
+    var arr = $(selectorInCard).sort(function(a, b){
+      if($(a).text() < $(b).text()) return -1;
+      if($(a).text() > $(b).text()) return 1;
+      return 0;
+    })
+
+    $(arr).each(function() {
       var option = $(this).text();
+      if (!option.trim().length) return;
       var $select = $(filterSelector);
       var $option = $("<option>" + option + "</option>");
 
