@@ -32,10 +32,12 @@ body {
 	transition: all ease-in 0.2s;
 }
 
-.button:hover {
+.button.send_info:hover {
 	color: #F73535;
 	text-decoration: none;
-	font-size: 1.2em;
+	-webkit-transform: scale(1.05);
+	-ms-transform: scale(1.05);
+	transform: scale(1.05);
 }
 
 .mainHeader {
@@ -159,6 +161,7 @@ body {
 	-webkit-justify-content: space-between;
 	    -ms-flex-pack: justify;
 	        justify-content: space-between;
+	padding: 2em 0;
 }
 
 #cards_container::before, #cards_container::after {
@@ -190,8 +193,8 @@ body {
 
 .card {
 	background: #fff;
-	-webkit-box-shadow: 0 1em 2em rgba(0,0,0,0.1);
-	        box-shadow: 0 1em 2em rgba(0,0,0,0.1);
+	-webkit-box-shadow: 0 1.2em 1.2em -.5em rgba(0, 0, 0, .4);
+	        box-shadow: 0 1.2em 1.2em -.5em rgba(0, 0, 0, .4);
 	padding: 2em 1.5em 0;
 	-webkit-border-radius: .3em;
 	        border-radius: .3em;
@@ -208,7 +211,16 @@ body {
 	width: 30%;
 	margin: .3em;
 	margin-bottom: 40px;
-	vertical-align: top
+	vertical-align: top;
+	transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.card:hover {
+	-webkit-transform: scale(1.05);
+	-ms-transform: scale(1.05);
+	transform: scale(1.05);
+	-webkit-box-shadow: 0 1.5em 1.5em -1em rgba(0, 0, 0, .4);
+					box-shadow: 0 1.5em 1.5em -1em rgba(0, 0, 0, .4);
 }
 
 .card__title {
@@ -300,15 +312,13 @@ body {
 	font-size: .8em;
 	text-transform: uppercase;
 	margin-top: auto;
-	transition: all ease-in 0.2s;
+	transition: all ease 0.2s;
 }
 
 .card__button:hover {
-	background: #F54C4C;
+	color: white;
 	text-decoration: none;
-	color: #fff;
-	font-size: 0.9em;
-
+	background: #e22f2f;
 }
 
 .modal {
