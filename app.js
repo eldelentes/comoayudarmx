@@ -215,7 +215,7 @@ var getCards = function() {
       start(
         data.feed.entry.map(buildCard).filter(isApprovedCard)
       );
-    },
+    }
   );
 }
 
