@@ -25,14 +25,17 @@ body {
 	        border-radius: 0.3em;
 	padding: 1em 1.5em;
 	color: #000;
-	font-size: .8em;
+	font-size: 1em;
 	font-weight: 500;
 	letter-spacing: 1px;
 	text-transform: uppercase;
+	transition: all ease-in 0.2s;
 }
 
 .button:hover {
 	color: #F73535;
+	text-decoration: none;
+	font-size: 1.2em;
 }
 
 .mainHeader {
@@ -100,7 +103,7 @@ body {
 
 .intro__title {
 	color: #fff;
-	font-size: 3em;
+	font-size: 4em;
 	margin: 0;
 }
 
@@ -297,10 +300,15 @@ body {
 	font-size: .8em;
 	text-transform: uppercase;
 	margin-top: auto;
+	transition: all ease-in 0.2s;
 }
 
 .card__button:hover {
 	background: #F54C4C;
+	text-decoration: none;
+	color: #fff;
+	font-size: 0.9em;
+
 }
 
 .modal {
@@ -570,6 +578,9 @@ input.check-toggle-round-flat:checked + label:after {
 		width: 90%;
 		margin: 0.5em 0;
 	}
+	.button:hover {
+		font-size: initial;
+	}
 
 	.modal__container {
 		width: 85%;
@@ -640,4 +651,22 @@ input.check-toggle-round-flat:checked + label:after {
 
 .chosen-search-input {
     color: #000;
+}
+
+.footer {
+	background: #191827;
+	border-top: 1px solid rgba(0,0,0,0.2);
+	-webkit-box-shadow: 0em 0.5em 1em rgba(0,0,0,0.1);
+	        box-shadow: 0em 0.5em 1em rgba(0,0,0,0.1);
+	text-align: center;
+	color: #fff;
+	outline: 0;
+	min-height: 10vh;
+}
+.footer-content {
+	padding: 10px;
+}
+.footer-content a {
+	transition: all ease-in 0.1s;
+	color: #fff;
 }
