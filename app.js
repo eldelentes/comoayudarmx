@@ -1,7 +1,14 @@
 var handleFilterChange = function(e){
-  var type = $("#donation_type").val();
-  var location = $("#location").val();
-  var state = {type: type, location: location};
+  var type = $("#donation_type").val(),
+      location = $("#location").val(),
+      lang = languagesModule && languagesModule.getCurrentLang(),
+      state = {};
+
+  // Populate state only with existing values
+  if (type) { state.type = type };
+  if (location) { state.location = location };
+  if (lang && lang != 'es') { state.lang = lang };
+
   filterCards(state);
   history.replaceState(state, "", "?" + $.param(state));
 }

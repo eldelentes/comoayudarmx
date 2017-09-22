@@ -1,8 +1,9 @@
 var languagesModule = (function() {
-	var defaultLang = "es",
-		currentLang,
+	var defaultLang = currentLang = "es",
+		currentLangDefs,
 		currentTag,
-		spanishOn = true;
+		spanishOn = true,
+		toggleButton = document.getElementById('language-toggle');
 	
 	var languageDefinitions = {
 		es: {
@@ -95,7 +96,7 @@ var languagesModule = (function() {
 		},
 	};
 
-	currentLang = languageDefinitions[defaultLang];
+	currentLangDefs = languageDefinitions[currentLang];
 	
 	window.onload = function changeLangOnLoad() {
 		if (typeof getUrlParameter === 'function') {
@@ -103,13 +104,13 @@ var languagesModule = (function() {
 			if (languageDefinitions[lang] && lang !== 'es') {
 				spanishOn = false;
 				loadLanguage(lang);
-				document.getElementById('language-toggle').checked = true;
+				toggleButton.checked = true;
 			}
 		}
 	}
 	
 	function chooseLang(chosenLang) {
-		currentLang = languageDefinitions[chosenLang];
+		currentLangDefs = languageDefinitions[chosenLang];
 	}
 	
 	function loadLanguage(chosenLang) {
@@ -119,7 +120,7 @@ var languagesModule = (function() {
 	
 		textElements.forEach(function (item, index) {
 			currentTag = item.getAttribute('data-lang');
-			content = currentLang[currentTag];
+			content = currentLangDefs[currentTag];
 	
 			if (currentTag === 'hide') {
 				(chosenLang === 'es' ? item.classList.remove('hide-lang') : item.classList.add('hide-lang'));
@@ -128,6 +129,9 @@ var languagesModule = (function() {
 				item.textContent = content;
 			}
 		})
+
+		updateHistory();
+		currentLang = chosenLang;
 	}
 
 	function publicLoadLanguage(chosenLang) {
@@ -135,13 +139,35 @@ var languagesModule = (function() {
 	}
 
 	function toggleLang() {
-		console.log('hey');
 		spanishOn = !spanishOn;
-		(spanishOn ? loadLanguage('es') : loadLanguage('en'));
+		(spanishOn ? currentLang = 'es' : currentLang = 'en');
+		loadLanguage(currentLang) ;
+	}
+
+	function getCurrentLang() {
+		return currentLang;
+	}
+
+	// Copied from app.js, but without card filtering
+	function updateHistory() {
+		var type = document.getElementById("donation_type").value,
+		location = document.getElementById("location").value,
+		lang = currentLang,
+		state = {};
+		
+		// Populate state only with existing values
+		if (type) { state.type = type };
+		if (location) { state.location = location };
+		if (lang && lang != 'es') { state.lang = lang };
+		
+		// ENHANCEMENT: filter cards automagically to Global if window loads with different language
+		// filterCards(state);
+		history.replaceState(state, "", "?" + $.param(state));
 	}
 
 	return {
 		loadLang: publicLoadLanguage,
-		toggleLang: toggleLang
+		toggleLang: toggleLang,
+		getCurrentLang: getCurrentLang
 	}
 })();
