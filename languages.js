@@ -1,8 +1,9 @@
 var languagesModule = (function() {
-	var defaultLang = "es",
-		currentLang,
+	var defaultLang = currentLang = "es",
+		currentLangDefs,
 		currentTag,
-		spanishOn = true;
+		spanishOn = true,
+		toggleButton = document.getElementById('language-toggle');
 	
 	var languageDefinitions = {
 		es: {
@@ -24,7 +25,7 @@ var languagesModule = (function() {
 			filter_type: "Tipo de donación",
 			filter_type_select: "Selecciona una opción",
 			filter_all: "Todas",
-			filter_location: "Locación",
+			filter_location: "Ubicación",
 			filter_location_select: "Selecciona una opción",
 			card_type: "Tipo de donación:",
 			card_location: "Puedes ayudar desde:",
@@ -59,7 +60,7 @@ var languagesModule = (function() {
 			nav_volunteer: "Volunteers",
 			nav_contribuir: "Contribute",
 			intro_titulo: "Help Needed for Mexico Earthquake",
-			intro_date: "How to help the affected of the earthquake?",
+			intro_date: "How to help those affected by the earthquake?",
 			intro_button1: "How Can You Help?",
 			intro_button2: "Send information",
 			card_intro1: "How to help people affected by the earthquakes?",
@@ -94,11 +95,22 @@ var languagesModule = (function() {
 			footer_contact: "Contact",
 		},
 	};
+
+	currentLangDefs = languageDefinitions[currentLang];
 	
-	currentLang = languageDefinitions[defaultLang];
+	window.onload = function changeLangOnLoad() {
+		if (typeof getUrlParameter === 'function') {
+			var lang = getUrlParameter('lang');
+			if (languageDefinitions[lang] && lang !== 'es') {
+				spanishOn = false;
+				loadLanguage(lang);
+				toggleButton.checked = true;
+			}
+		}
+	}
 	
 	function chooseLang(chosenLang) {
-		currentLang = languageDefinitions[chosenLang];
+		currentLangDefs = languageDefinitions[chosenLang];
 	}
 	
 	function loadLanguage(chosenLang) {
@@ -108,7 +120,7 @@ var languagesModule = (function() {
 	
 		textElements.forEach(function (item, index) {
 			currentTag = item.getAttribute('data-lang');
-			content = currentLang[currentTag];
+			content = currentLangDefs[currentTag];
 	
 			if (currentTag === 'hide') {
 				(chosenLang === 'es' ? item.classList.remove('hide-lang') : item.classList.add('hide-lang'));
@@ -117,6 +129,9 @@ var languagesModule = (function() {
 				item.textContent = content;
 			}
 		})
+
+		currentLang = chosenLang;
+		updateHistory();
 	}
 
 	function publicLoadLanguage(chosenLang) {
@@ -124,13 +139,36 @@ var languagesModule = (function() {
 	}
 
 	function toggleLang() {
-		console.log('hey');
 		spanishOn = !spanishOn;
-		(spanishOn ? loadLanguage('es') : loadLanguage('en'));
+		(spanishOn ? currentLang = 'es' : currentLang = 'en');
+		loadLanguage(currentLang) ;
+	}
+
+	function getCurrentLang() {
+		return currentLang;
+	}
+
+	// Copied from app.js, but without card filtering
+	function updateHistory() {
+		// Parameters are sfer to get from URL than select element
+		var type = getUrlParameter('type'),
+			location = getUrlParameter('location'),
+			lang = currentLang,
+			state = {};
+		
+		// Populate state only with existing values
+		if (type) { state.type = type };
+		if (location) { state.location = location };
+		if (lang && lang != 'es') { state.lang = lang };
+		
+		// ENHANCEMENT: filter cards automagically to Global if window loads with different language
+		// filterCards(state);
+		history.replaceState(state, "", "?" + $.param(state));
 	}
 
 	return {
 		loadLang: publicLoadLanguage,
-		toggleLang: toggleLang
+		toggleLang: toggleLang,
+		getCurrentLang: getCurrentLang
 	}
 })();
