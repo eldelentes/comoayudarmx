@@ -1,8 +1,9 @@
 var languagesModule = (function() {
-	var defaultLang = "es",
-		currentLang,
+	var defaultLang = currentLang = "es",
+		currentLangDefs,
 		currentTag,
-		spanishOn = true;
+		spanishOn = true,
+		toggleButton = document.getElementById('language-toggle');
 	
 	var languageDefinitions = {
 		es: {
@@ -24,7 +25,7 @@ var languagesModule = (function() {
 			filter_type: "Tipo de donación",
 			filter_type_select: "Selecciona una opción",
 			filter_all: "Todas",
-			filter_location: "Locación",
+			filter_location: "Ubicación",
 			filter_location_select: "Selecciona una opción",
 			card_type: "Tipo de donación:",
 			card_location: "Puedes ayudar desde:",
@@ -35,6 +36,7 @@ var languagesModule = (function() {
 			modal1_text1: "Este proyecto sin fines de lucro busca crear un repositorio de información para centralizar el apoyo y la rápida distribución de ayuda.",
 			modal1_text2: "Si deseas ayudar y tienes conocimientos de programación colabora con nosotros en",
 			modal1_text3: " Sí lo que deseas es agregar un método de ayuda por favor envíanos la información pertinente a:",
+			modal1_text4: "Para contacto directo con nosotros envíanos un correo a",
 			modal2_title: "Publicar Forma de Ayuda",
 			modal2_text: "Envía la información del método de ayuda con toda la información pertinente como: A quién se ayuda, desde dónde se puede ayudar, qué tipo de ayuda necesitan llenando la siguiente forma:",
 			modal2_formtext: " Enviar registro de ayuda",
@@ -48,6 +50,7 @@ var languagesModule = (function() {
 			volunteer_form2: "Envía la información del método de ayuda con toda la información pertinente como: A quién se ayuda, Desde dónde\n                se puede ayudar, que tipo de ayuda necesitan. desde los siguientes medios de contacto:",
 			sitemap_title: "Mapa de sitio",
 			footer_contact: "Contacto",
+			visualize_in_waze: "Visualiza estos centros de acopio en Waze buscando \"Ayuda\""
 		},
 		en: {
 			text_close: "Close",
@@ -59,7 +62,7 @@ var languagesModule = (function() {
 			nav_volunteer: "Volunteers",
 			nav_contribuir: "Contribute",
 			intro_titulo: "Help Needed for Mexico Earthquake",
-			intro_date: "How to help the affected of the earthquake?",
+			intro_date: "How to help those affected by the earthquake?",
 			intro_button1: "How Can You Help?",
 			intro_button2: "Send information",
 			card_intro1: "How to help people affected by the earthquakes?",
@@ -79,6 +82,7 @@ var languagesModule = (function() {
 			modal1_text1: "This site is a volunteer project created in an effort to centralize all useful information regarding assistance and distribution of goods to help those affected by the most recent earthquakes in Mexico.",
 			modal1_text2: "If you are a developer and want to help, please check our repo on",
 			modal1_text3: " If you wish to add a new Help Resource like a WebSite, please contact us here:",
+			modal1_text4: "For direct contact with us send us and email to",
 			modal2_title: "Publish new Help Resource",
 			modal2_text: "Send us information about the new Help Resource with all the applicable information: Target audience receiving help, target location, the kind of aid being provided. You can send us the information using the following methods:",
 			modal2_formtext: " Send Help Resouce information",
@@ -92,13 +96,25 @@ var languagesModule = (function() {
 			volunteer_form2: "Send us information about the new Help Resource with all the applicable information: Target audience receiving help,\n target location, the kind of aid being provided. You can send us the information using the following methods:",
 			sitemap_title: "Sitemap",
 			footer_contact: "Contact",
+			visualize_in_waze: "Visualize these collection centers in Waze by searching \"Ayuda\""
 		},
 	};
+
+	currentLangDefs = languageDefinitions[currentLang];
 	
-	currentLang = languageDefinitions[defaultLang];
+	window.onload = function changeLangOnLoad() {
+		if (typeof getUrlParameter === 'function') {
+			var lang = getUrlParameter('lang');
+			if (languageDefinitions[lang] && lang !== 'es') {
+				spanishOn = false;
+				loadLanguage(lang);
+				toggleButton.checked = true;
+			}
+		}
+	}
 	
 	function chooseLang(chosenLang) {
-		currentLang = languageDefinitions[chosenLang];
+		currentLangDefs = languageDefinitions[chosenLang];
 	}
 	
 	function loadLanguage(chosenLang) {
@@ -108,7 +124,7 @@ var languagesModule = (function() {
 	
 		textElements.forEach(function (item, index) {
 			currentTag = item.getAttribute('data-lang');
-			content = currentLang[currentTag];
+			content = currentLangDefs[currentTag];
 	
 			if (currentTag === 'hide') {
 				(chosenLang === 'es' ? item.classList.remove('hide-lang') : item.classList.add('hide-lang'));
@@ -117,6 +133,9 @@ var languagesModule = (function() {
 				item.textContent = content;
 			}
 		})
+
+		currentLang = chosenLang;
+		updateHistory();
 	}
 
 	function publicLoadLanguage(chosenLang) {
@@ -124,13 +143,36 @@ var languagesModule = (function() {
 	}
 
 	function toggleLang() {
-		console.log('hey');
 		spanishOn = !spanishOn;
-		(spanishOn ? loadLanguage('es') : loadLanguage('en'));
+		(spanishOn ? currentLang = 'es' : currentLang = 'en');
+		loadLanguage(currentLang) ;
+	}
+
+	function getCurrentLang() {
+		return currentLang;
+	}
+
+	// Copied from app.js, but without card filtering
+	function updateHistory() {
+		// Parameters are sfer to get from URL than select element
+		var type = getUrlParameter('type'),
+			location = getUrlParameter('location'),
+			lang = currentLang,
+			state = {};
+		
+		// Populate state only with existing values
+		if (type) { state.type = type };
+		if (location) { state.location = location };
+		if (lang && lang != 'es') { state.lang = lang };
+		
+		// ENHANCEMENT: filter cards automagically to Global if window loads with different language
+		// filterCards(state);
+		history.replaceState(state, "", "?" + $.param(state));
 	}
 
 	return {
 		loadLang: publicLoadLanguage,
-		toggleLang: toggleLang
+		toggleLang: toggleLang,
+		getCurrentLang: getCurrentLang
 	}
 })();

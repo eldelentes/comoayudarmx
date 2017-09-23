@@ -4,8 +4,8 @@
     <title>Cómo Ayudar MX | Información de Voluntariado y Derrumbes.</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Repositorio de información para ayudar a los afectados del sismo." />
-
+    <meta name="description" content="Repositorio de información verificada y actualizada para apoyar a las víctimas del terremoto en México del 19 de Septiembre." />
+    
     <!-- Twitter Card data -->
     <meta name="twitter:card" content="summary">
     <meta name="twitter:site" content="@comoayudarmx">
@@ -16,10 +16,35 @@
     <!-- Open Graph data -->
     <meta property="og:title" content="Ayuda a los afectados del sismo." />
     <meta property="og:type" content="web" />
+    <meta property="og:site_name" content="Cómo Ayudar MX" />
     <meta property="og:url" content="http://comoayudar.mx/" />
     <meta property="og:image" content="facebook.jpg" />
     <meta property="og:description" content="Ayuda a los afectados del sismo. Información de cómo ayudar." />
 
+    <!-- Disable tap highlight on IE -->
+    <meta name="msapplication-tap-highlight" content="no">
+
+    <!-- Web Application Manifest -->
+    <link rel="manifest" href="manifest.json">
+
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="Cómo Ayudar MX">
+    <link rel="icon" sizes="192x192" href="img/touch/chrome-touch-icon-192x192.png">
+
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Cómo Ayudar MX">
+    <link rel="apple-touch-icon" href="img/touch/apple-touch-icon.png">
+
+    <!-- Tile icon for Win8 (144x144 + tile color) -->
+    <meta name="msapplication-TileImage" content="img/touch/ms-touch-icon-144x144-precomposed.png">
+    <meta name="msapplication-TileColor" content="#f73535">
+
+    <!-- Color the status bar on mobile devices -->
+    <meta name="theme-color" content="#f73535">
+    
     <!-- Styles -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -51,7 +76,7 @@
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
             <li><a data-lang="nav_contact" href="contactos.html">Contactos de Emergencia</a></li>
-            <li><a data-lang="nav_volunteer" href="voluntarios.html">Voluntarios</a></li>
+            <li><a href="mapas.html">Mapas</a></li>
             <li><a data-lang="nav_about" class="modal__link" href="#" data-modal="about">Acerca de</a></li>
           </ul>
         </div><!--/.nav-collapse -->
@@ -85,10 +110,18 @@
     </section>
 
     <section class="cards" id="cards">
-        
+        <div id="cards_container" class="container">
+	    <iframe src="http://google.org/crisismap/a/gmail.com/v19s?hl=es&llbox=19.5427%2C19.294%2C-98.8653%2C-99.3597&t=ROADMAP&layers=2%2C1&embedded=true" width="100%" height="580"></iframe>
+	    </div>
+	    
         <div id="cards_container" class="container">
             <iframe src="https://www.google.com/maps/d/embed?mid=13B_gbt3e5RWk_6xQoQ15xxhGOFs" width="100%" height="580"></iframe>
         </div>
+	    
+	    <div id="cards_container" class="container">
+            <iframe src="http://google.org/crisismap/google.com/puebla-mexico-earthquake-es?hl=es-MX&llbox=22.327%2C15.789%2C-92.538%2C-103.788&t=ROADMAP&layers=6%2C7%2C44%2C49%2C15%2C11%2C2%2C30%2C1%2C31%2C32%2C24" width="100%" height="580"></iframe>
+        </div>
+	    
     </section>
 
 <section class="modal" data-modal="about">
