@@ -87,3 +87,5 @@ Si tienes alguna otra idea de como colaborar por favor contáctame.
 - [Mario Rodríguez](https://www.twitter.com/mariusbc)
 
 - [Sebastián Osorio](https://github.com/sirgalleto)
+
+- [Gerardo Cataño](https://github.com/GerardoCatano)
