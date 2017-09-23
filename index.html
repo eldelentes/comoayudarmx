@@ -113,15 +113,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           </div>
         </div>
       </div>
-      <div class="container">
-        <a class="card__button" data-actionstate="show" data-lang="show_collection_centers_div" id="show_collection_centers_div" data-latlng="">Mostrar los centros de acopio</a>
-      </div>
-      <div id="collection_centers_container" class="container" style="display:none;">
-        <h3 class="container">Centros de acopio</h3>
+      <div id="collection_centers_container" class="container">
         <template id="collection_center_card_template">
           <article class="card">
             <h2 class="card__title"></h2>
-            <div class="card__badges"></div>
+            <div class="card__badges">
+              <span class="badge-verified"><i class="fa fa-check"></i>Fuente Acopio API</span>
+            </div>
             <!-- Agrega una pequeña descripción -->
             <p class="card__desc"></p>
             <div class="card__info">

@@ -240,7 +240,7 @@ var getCards = function() {
 
 var getCollectionCenters=function(){
   $.get(
-    Global.ACOPIO_API.AWS+Global.ACOPIO_API.ACTION.ACOPIOS_ALL,
+    Global.ACOPIO_API.BALTERBYTE+Global.ACOPIO_API.ACTION.ACOPIOS_ALL,
     function (data) {
       startCollectionCentersCards(data);
     }
@@ -249,11 +249,6 @@ var getCollectionCenters=function(){
 
 $(document).on("change", "#donation_type", handleFilterChange);
 $(document).on("change", "#location", handleFilterChange);
-$("a#show_collection_centers_div").click(function(evt){
-  $("#collection_centers_container")[evt.target.dataset.actionstate]();
-  evt.target.dataset.actionstate= (evt.target.dataset.actionstate=="show") ? "hide" : "show";
-  evt.target.innerHTML=(evt.target.dataset.actionstate=="show" ? "Mostrar los centros de acopio" : "Ocultar los centros de acopio");
-})
 $(document).ready(function(){
   getCards();
   getCollectionCenters();
