@@ -240,15 +240,24 @@ $(document).ready(getCards);
 function sendCollectionCenterToApi(){
   var information={};
   var is_valid=true;
+
+  var haveLatLngDetected=function(){
+    return gmap.getLatlng()!=null;
+  }
+  if(haveLatLngDetected()){
+    $("form#formulary-collection-center :input[name='lat']").val(gmap.getLatlng().lat());// Se obtiene la lat después de haber hecho clic en el mapa
+    $("form#formulary-collection-center :input[name='lng']").val(gmap.getLatlng().lng());// Se obtiene la lng después de haber hecho clic en el mapa
+  }
   $("form#formulary-collection-center :input").each(function(){
-   //var input = $(this); // This is the jquery object of the input, do what you will
    information[this.getAttribute("name")]=this.value;
    if(this.value.length==0){
      is_valid=false;
      return false;
    }
   });
+
   if(is_valid){
+    alert("Fue valido");
     $.ajax({
       url:Global.ACOPIO_API.AWS+Global.ACOPIO_API.ACTION.ACOPIOS_ALL,
       method:"post",
@@ -260,8 +269,45 @@ function sendCollectionCenterToApi(){
       alert("Hubo un fallo en el envío del centro de acopio");
     })
   }else{
-    alert("Todos los campos son obligatorios");
+    if(haveLatLngDetected())
+      alert("Todos los campos son obligatorios");
+    else
+      alert("Debes indicar la ubicación del centro de acopio");
   }
 }
 
 $(document).on("click","#send-collection-center",sendCollectionCenterToApi);
+
+function GMapAPI(){
+  var map;
+  //latitud y longitud obtenidos al hacer clic en el mapa.
+  var latlng;
+  var init=function(){
+    map = new google.maps.Map(document.getElementById('map_form_add_collection_center'), {
+      center: {lat: 19.38265207852893, lng: -99.0472412109375},
+      zoom: 7
+    });
+    var marker;
+    google.maps.event.addListener(map, "click", function (e) {
+      latlng = e.latLng;
+      if(marker!=null){
+        marker.setMap(null);
+      }
+      marker=new google.maps.Marker({
+          position: latlng,
+          map: map
+        });
+    });
+  }
+  init();
+  var getLatlng=function(){
+    return latlng;
+  }
+  return{
+    getLatlng:getLatlng
+  }
+}
+var gmap; // Instancia de GMapAPI
+function startMap(){
+  gmap=new GMapAPI();
+}

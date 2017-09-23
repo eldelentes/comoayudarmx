@@ -20,7 +20,7 @@
     <meta property="og:url" content="http://comoayudar.mx/" />
     <meta property="og:image" content="facebook.jpg" />
     <meta property="og:description" content="Ayuda a los afectados del sismo. Información de cómo ayudar." />
-    
+
     <!-- Disable tap highlight on IE -->
     <meta name="msapplication-tap-highlight" content="no">
 
@@ -232,20 +232,27 @@
     </section>
     <section class="modal" id="modal-formulary-add-collection-center" data-modal="formulary-add-collection-center">
       <a href="#" class="modal__close" data-lang="text_close">Cerrar</a>
-      <div class="modal__container">
+      <div class="modal__container modal__container__form__add__collection">
 
-        <h2 data-lang="modal1_title">Registra un centro de acopio</h2>
+        <h2 data-lang="modal2_title">Registra un centro de acopio</h2>
 
         <p data-lang="modal1_text1">Llena el siguiente formulario con la información adecuada para registrar un centro de acopio.</p>
-
+        <p data-lang="modal2_text2">Indica la ubicación del centro de acopio gracias al mapa, solo es necesario hacer clic en en mapa donde este el centro de acopio. Es obligatorio enviar la ubicación del centro de acopio</p>
 
         <hr>
         <section class="container">
           <form id="formulary-collection-center">
-            <p><input type="text" name="nombre" placeholder="Escribe el nombre del centro de acopio"/></p>
-            <p><input type="text" name="direccion" placeholder="Escribe la dirección completa del centro de acopio (Calle # Colonia Ciudad/Delegación Estado)"/></p>
-            <p><input type="number" name="lat" placeholder="Escribe la latitud"/></p>
-            <p><input type="number" name="lng" placeholder="Escribe la longitud"/></p>
+            <div class="row">
+              <div class="col-md-6">
+                <p><input type="text" class="form-control" name="nombre" placeholder="Escribe el nombre del centro de acopio"/></p>
+                <p><input type="text" class="form-control" name="direccion" placeholder="Escribe la dirección completa del centro de acopio (Calle # Colonia Ciudad/Delegación Estado)"/></p>
+                <input type="hidden" name="lat"/>
+                <input type="hidden" name="lng"/>
+              </div>
+              <div class="col-md-6">
+                 <div id="map_form_add_collection_center" style="height:300px;"></div>
+              </div>
+            </div>
             <a class="card__button" id="send-collection-center">Enviar centro de acopio</a>
           </form>
         </section>
@@ -264,9 +271,12 @@
       </div>
     </section>
 
+
     <script src="cards.js" type="text/javascript"></script>
     <script src="lib/utils/global.js" type="text/javascript"></script>
     <script src="app.js" type="text/javascript"></script>
+    <!-- Google Map API -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAVIgKzmmR6xg6ynozBcYwNrseTOyB78X0&callback=startMap" async defer></script>
     <script src="languages.js" type="text/javascript"></script>
     <script src="modals.js" type="text/javascript"></script>
     <script src="sw.js" type="text/javascript"></script>
