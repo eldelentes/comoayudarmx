@@ -413,12 +413,15 @@ body {
 
 .filter label {
 	margin-right: 15px;
-	font-size: .8em;
+	font-size: 1.2em;
 	text-transform: uppercase;
 }
 
+.filter .chosen-container-single .chosen-default{background: #fff;}
+.filter .chosen-container-single .chosen-single span{font-size: 14px;color: #000}
+
 .filters select {
-	font-size: 1.2em;
+	font-size: 1.4em;
 }
 
 .map-container {

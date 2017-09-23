@@ -74,7 +74,7 @@ Si tienes alguna otra idea de como colaborar por favor contáctame.
 
 - [Pedro Garza](https://github.com/PedroASGarza)
 
-- [Alfrobinson](https://github.com/alfrobinson)
+- [Alfredo Robinson](https://github.com/alfrobinson)
 
 - [Carlos medina](https://www.medinnna.com/)
 
