@@ -2,19 +2,24 @@
 
 ---
 
-### ¿Qué es Cómo Ayudar?
+## ¿Qué es Cómo Ayudar?
 
-Es un proyecto que sirve como repositorio de información para ayudar a recopilar la información de asosiaciones, entidades, organizaciones, centros de acopio o cualquier forma de ayuda en caso de desastres naturales.
+Es un proyecto que sirve como repositorio de información para ayudar a recopilar la información de asociaciones, entidades, organizaciones, centros de acopio o cualquier forma de ayuda en caso de desastres naturales.
 
-### ¿Cómo puedo participar?
+## ¿Cómo puedo participar?
 
 Actualmente existen 3 formas de participar.
 
-- Entra [aquí](https://docs.google.com/forms/d/e/1FAIpQLSf_kylBvkVQXaJmBAILdpjKCsl6lERlhtnhFfB1_22g43sz4g/viewform) y llena la información necesaria, fíjate primero que no vayas a duplicar información ya existente.
+### Enviando información
+Entra [aquí](https://docs.google.com/forms/d/e/1FAIpQLSf_kylBvkVQXaJmBAILdpjKCsl6lERlhtnhFfB1_22g43sz4g/viewform) y llena la información necesaria, fíjate primero que no vayas a duplicar información ya existente.
 
-- Por la emergencia, el sitio web esta hecho solamente con HTML Y CSS Básico, si eres un desarrollador/programador que quiera ayudar a con features nuevos por favor revise los issues y pr existentes.
+### Con código
+Por la emergencia, el sitio web esta hecho solamente con HTML Y CSS Básico, si eres un desarrollador/programador que quiera ayudar a con features nuevos por favor revise los issues y pr existentes.
 
-- Ayuda agregando tarjetas con información de contactos de emergencia relevantes, siguiendo los siguientes pasos y reemplazando los datos por los de la entidad de atención ciudadana que quieras agregar.
+Si agregas funcionalidades, por favor agrega la descripción de tus textos en inglés y en español en `languages.js` y el atributo `data-lang`.
+
+### Agregando contactos
+Ayuda agregando tarjetas con información de contactos de emergencia relevantes, siguiendo los siguientes pasos y reemplazando los datos por los de la entidad de atención ciudadana que quieras agregar.
 
 1.- Clona el proyecto y crea una branch.
 
@@ -50,7 +55,7 @@ Si tienes alguna otra idea de como colaborar por favor contactame.
 
 ---
 
-### Colaboradores
+## Colaboradores
 - [@eldelentes](https://twitter.com/eldelentes)
 
 - [Héctor Morales](https://github.com/HectorMg)
