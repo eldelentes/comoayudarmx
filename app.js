@@ -219,6 +219,7 @@ var getCards = function() {
       location: getEntryProperty(entry, 'puedesayudardesde'),
       link: getEntryProperty(entry, 'fuentedeinformaciónlink'),
       adicional: getEntryProperty(entry, 'informaciónadicional'),
+      verified: getEntryProperty(entry, 'verified'),
       approved: getEntryProperty(entry, 'approved')
     }
   }
