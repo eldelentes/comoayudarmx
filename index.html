@@ -4,7 +4,7 @@
     <title>Cómo Ayudar MX | Información para ayudar.</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Repositorio de información para ayudar a los afectados del sismo." />
+    <meta name="description" content="Repositorio de información verificada y actualizada para apoyar a las víctimas del terremoto en México del 19 de Septiembre."/>
 
     <!-- Twitter Card data -->
     <meta name="twitter:card" content="summary">
@@ -16,9 +16,34 @@
     <!-- Open Graph data -->
     <meta property="og:title" content="Ayuda a los afectados del sismo." />
     <meta property="og:type" content="web" />
+    <meta property="og:site_name" content="Cómo Ayudar MX" />
     <meta property="og:url" content="http://comoayudar.mx/" />
     <meta property="og:image" content="facebook.jpg" />
     <meta property="og:description" content="Ayuda a los afectados del sismo. Información de cómo ayudar." />
+    
+    <!-- Disable tap highlight on IE -->
+    <meta name="msapplication-tap-highlight" content="no">
+
+    <!-- Web Application Manifest -->
+    <link rel="manifest" href="manifest.json">
+
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="Cómo Ayudar MX">
+    <link rel="icon" sizes="192x192" href="img/touch/chrome-touch-icon-192x192.png">
+
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Cómo Ayudar MX">
+    <link rel="apple-touch-icon" href="img/touch/apple-touch-icon.png">
+
+    <!-- Tile icon for Win8 (144x144 + tile color) -->
+    <meta name="msapplication-TileImage" content="img/touch/ms-touch-icon-144x144-precomposed.png">
+    <meta name="msapplication-TileColor" content="#f73535">
+
+    <!-- Color the status bar on mobile devices -->
+    <meta name="theme-color" content="#f73535">
 
     <!-- Styles -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
@@ -33,20 +58,25 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript" src="lib/chosen/chosen.jquery.min.js" ></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-MC9D59G');</script>
-<!-- End Google Tag Manager -->
+
+    <!-- Google Tag Manager -->
+    <script>
+      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MC9D59G');
+    </script>
+    <!-- End Google Tag Manager -->
 
   </head>
   <body>
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MC9D59G"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
+    <!-- Google Tag Manager (noscript) -->
+    <noscript>
+      <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MC9D59G" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
     <nav class="navbar navbar-default navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
@@ -61,8 +91,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
             <li><a data-lang="nav_contact" href="contactos.html">Contactos de Emergencia</a></li>
-            <li><a data-lang="nav_volunteer" href="voluntarios.html">Voluntarios</a></li>
             <li><a data-lang="nav_about" class="modal__link" href="#" data-modal="formulary-add-collection-center">Registrar centro de acopio</a></li>
+            <li><a data-lang="nav_volunteer" href="mapas.html">Mapas</a></li>
             <li><a data-lang="nav_about" class="modal__link" href="#" data-modal="about">Acerca de</a></li>
           </ul>
         </div><!--/.nav-collapse -->
@@ -72,11 +102,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div>
         <h1 class="intro__title">
 	        <span data-lang="intro_date">¿CÓMO AYUDAR A LOS AFECTADOS DEL SISMO?</span><br />
-	    </h1><br>
-	        <p style="color:white" data-lang="card_intro2">A continuación encontrarás diferentes formas de ayudar a los afectados y rescatistas del sismo del 7 y 19 de Septiembre, 2017</p>
-            <div class="buttons">
-
-				<a class="button" target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSf_kylBvkVQXaJmBAILdpjKCsl6lERlhtnhFfB1_22g43sz4g/viewform" data-modal="new"><span data-lang="intro_button2">Enviar información</span> <i class="fa fa-edit"></i></a>
+  	    </h1>
+        <br>
+        <p style="color:white" data-lang="card_intro2">
+          A continuación encontrarás diferentes formas de ayudar a los afectados y rescatistas del sismo del 7 y 19 de Septiembre, 2017
+        </p>
+        <div class="buttons">
+  				<a class="button send_info" target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSf_kylBvkVQXaJmBAILdpjKCsl6lERlhtnhFfB1_22g43sz4g/viewform" data-modal="new">
+            <span data-lang="intro_button2">Enviar información</span> <i class="fa fa-edit"></i>
+          </a>
+		<br><br>
+          <p style="color:white" ><a style="color:white" href="https://www.waze.com/es-419/download?from=get"><span data-lang="visualize_in_waze">Visualiza estos centros de acopio en Waze buscando "Ayuda"</span><img src="https://png.icons8.com/waze/color/24" title="Waze" width="24" height="24"></a></p>
         </div>
 
         <!-- Could be useful if more languages are added, but lacks styling -->
@@ -136,7 +172,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                </div>
             </div>
             <!-- Link al contacto, imágen, correo o información -->
-            <a class="card__button" target="__blank" href="" data-lang="more_info">Más Información</a>
+            <a class="card__button" target="_blank" href="" data-lang="more_info">Más Información</a>
           </article>
         </template>
       </div>
@@ -149,19 +185,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <section class="footer">
       <div class="container">
         <div class="row">
-          <div class="col-md-4 footer-content">
-            <!-- -->
-          </div>
-          <div class="col-md-4 footer-content">
+          <div class="col-md-6 col-sm-6 footer-content">
             <h3 data-lang="sitemap_title">Mapa de sitio</h3>
               <ul>
-              <li><a href="http://comoayudar.mx/">¿Cómo ayudar?</a></li>
+              <li><a data-lang="nav_how" href="http://comoayudar.mx/">¿Cómo ayudar?</a></li>
               <li><a data-lang="nav_contact" href="contactos.html">Contactos de Emergencia</a></li>
               <li><a data-lang="nav_volunteer" href="voluntarios.html">Voluntarios</a></li>
               <li><a data-lang="nav_about" class="modal__link" href="#" data-modal="about">Acerca de</a></li>
             </ul>
           </div>
-          <div class="col-md-4 footer-content">
+          <div class="col-md-6 col-sm-6 footer-content">
             <h3 data-lang="footer_contact">Contacto</h3>
             <p><a href="mailto:comoayudarmx@gmail.com"><i class="fa fa-envelope"></i> comoayudarmx@gmail.com</a></p>
             <p><a href="https://twitter.com/comoayudarmx"><i class="fa fa-twitter"></i> @comoayudarmx </a></p>
@@ -187,7 +220,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </p>
         <hr>
         <p>
-        Para contacto directo con nosotros envíanos un correo a <a class="modal__email" href="mailto:comoayudarmx@gmail.com">comoayudarmx@gmail.com</a>
+		<span data-lang="modal1_text4">Para contacto directo con nosotros envíanos un correo a</span> <a class="modal__email" href="mailto:comoayudarmx@gmail.com">comoayudarmx@gmail.com</a>
         </p>
 
         <p>
