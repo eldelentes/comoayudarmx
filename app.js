@@ -233,7 +233,8 @@ var getCards = function() {
       link: getEntryProperty(entry, 'fuentedeinformaciónlink'),
       adicional: getEntryProperty(entry, 'informaciónadicional'),
       verified: getEntryProperty(entry, 'verified'),
-      approved: getEntryProperty(entry, 'approved')
+      approved: getEntryProperty(entry, 'approved'),
+      fixed: getEntryProperty(entry, 'fixed') || null,
     }
   }
 
