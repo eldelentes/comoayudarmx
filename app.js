@@ -98,8 +98,15 @@ var populateFilters = function(e) {
 }
 
 var renderCards = function(cardsFromService) {
-  Cards = Cards.concat(cardsFromService);
-
+  Cards = Cards.map(function(card){
+    card.timestamp = new Date(card.timestamp).getTime();
+    return card;
+  })
+  Cards = Cards.concat(cardsFromService).sort(function(a,b){
+    if(a.timestamp < b.timestamp) return 1;
+    if(a.timestamp > b.timestamp) return -1;
+    return 0;
+  });
   var template = $("#card_template").html();
   var monetaryType = "Monetaria";
 
@@ -212,7 +219,7 @@ var getCards = function() {
 
   var buildCard = function(entry) {
     return {
-      timespamp: getEntryProperty(entry, 'timestamp'),
+      timestamp: new Date(getEntryProperty(entry, 'timestamp')).getTime(),
       title: getEntryProperty(entry, 'formadeayuda'),
       description: getEntryProperty(entry, 'informaciónadicionaldeayuda'),
       type: formatType(getEntryProperty(entry, 'tipodedonación')),
@@ -226,9 +233,9 @@ var getCards = function() {
   $.get(
     'https://spreadsheets.google.com/feeds/list/1zAFK1sSjIaHurnKzLx-e3GJZNmZ9QWfFSlIZLyYk8IE/1/public/values?alt=json',
     function (data) {
-      start(
-        data.feed.entry.map(buildCard).filter(isApprovedCard)
-      );
+      var tmp = data.feed.entry.map(buildCard).filter(isApprovedCard);
+      console.log(tmp);
+      start(tmp);
     }
   );
 }
