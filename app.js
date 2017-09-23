@@ -98,7 +98,7 @@ var populateFilters = function(e) {
 }
 
 var renderCards = function(cardsFromService) {
-  Cards = Cards.concat(cardsFromService);
+  Cards = cardsFromService;
 
   var template = $("#card_template").html();
   var monetaryType = "Monetaria";
