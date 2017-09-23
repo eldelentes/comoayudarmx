@@ -190,7 +190,14 @@ var renderCards = function(cardsFromService) {
   if (isWorldPage()) {
     Cards.filter(isMonetaryCard).forEach(renderCard);
   } else {
-    Cards.forEach(renderCard);
+    var fixedCards = Cards.filter(function(card) {
+      return card.hasOwnProperty('fixed') && card.fixed == true;
+    });
+    var notFixed = Cards.filter(function(card) {
+      return !card.hasOwnProperty('fixed');
+    })
+    fixedCards.forEach(renderCard);
+    notFixed.forEach(renderCard);
   }
 }
 
@@ -233,13 +240,11 @@ var getCards = function() {
   $.get(
     'https://spreadsheets.google.com/feeds/list/1zAFK1sSjIaHurnKzLx-e3GJZNmZ9QWfFSlIZLyYk8IE/1/public/values?alt=json',
     function (data) {
-      var tmp = data.feed.entry.map(buildCard).filter(isApprovedCard);
-      console.log(tmp);
-      start(tmp);
+      start(data.feed.entry.map(buildCard).filter(isApprovedCard));
     }
   );
 }
 
-$(document).on("change", "#donation_type", handleFilterChange);
-$(document).on("change", "#location", handleFilterChange);
+$("#donation_type").on("change", handleFilterChange);
+$("#location").on("change", handleFilterChange);
 $(document).ready(getCards);
