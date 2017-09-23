@@ -49,6 +49,7 @@ var languagesModule = (function() {
 			volunteer_form2: "Envía la información del método de ayuda con toda la información pertinente como: A quién se ayuda, Desde dónde\n                se puede ayudar, que tipo de ayuda necesitan. desde los siguientes medios de contacto:",
 			sitemap_title: "Mapa de sitio",
 			footer_contact: "Contacto",
+			visualize_in_waze: "Visualiza estos centros de acopio en Waze buscando \"Ayuda\""
 		},
 		en: {
 			text_close: "Close",
@@ -93,6 +94,7 @@ var languagesModule = (function() {
 			volunteer_form2: "Send us information about the new Help Resource with all the applicable information: Target audience receiving help,\n target location, the kind of aid being provided. You can send us the information using the following methods:",
 			sitemap_title: "Sitemap",
 			footer_contact: "Contact",
+			visualize_in_waze: "Visualize these collection centers in Waze by searching \"Ayuda\""
 		},
 	};
 
