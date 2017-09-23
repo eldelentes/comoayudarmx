@@ -36,6 +36,7 @@ var languagesModule = (function() {
 			modal1_text1: "Este proyecto sin fines de lucro busca crear un repositorio de información para centralizar el apoyo y la rápida distribución de ayuda.",
 			modal1_text2: "Si deseas ayudar y tienes conocimientos de programación colabora con nosotros en",
 			modal1_text3: " Sí lo que deseas es agregar un método de ayuda por favor envíanos la información pertinente a:",
+			modal1_text4: "Para contacto directo con nosotros envíanos un correo a",
 			modal2_title: "Publicar Forma de Ayuda",
 			modal2_text: "Envía la información del método de ayuda con toda la información pertinente como: A quién se ayuda, desde dónde se puede ayudar, qué tipo de ayuda necesitan llenando la siguiente forma:",
 			modal2_formtext: " Enviar registro de ayuda",
@@ -49,6 +50,7 @@ var languagesModule = (function() {
 			volunteer_form2: "Envía la información del método de ayuda con toda la información pertinente como: A quién se ayuda, Desde dónde\n                se puede ayudar, que tipo de ayuda necesitan. desde los siguientes medios de contacto:",
 			sitemap_title: "Mapa de sitio",
 			footer_contact: "Contacto",
+			visualize_in_waze: "Visualiza estos centros de acopio en Waze buscando \"Ayuda\""
 		},
 		en: {
 			text_close: "Close",
@@ -80,6 +82,7 @@ var languagesModule = (function() {
 			modal1_text1: "This site is a volunteer project created in an effort to centralize all useful information regarding assistance and distribution of goods to help those affected by the most recent earthquakes in Mexico.",
 			modal1_text2: "If you are a developer and want to help, please check our repo on",
 			modal1_text3: " If you wish to add a new Help Resource like a WebSite, please contact us here:",
+			modal1_text4: "For direct contact with us send us and email to",
 			modal2_title: "Publish new Help Resource",
 			modal2_text: "Send us information about the new Help Resource with all the applicable information: Target audience receiving help, target location, the kind of aid being provided. You can send us the information using the following methods:",
 			modal2_formtext: " Send Help Resouce information",
@@ -93,6 +96,7 @@ var languagesModule = (function() {
 			volunteer_form2: "Send us information about the new Help Resource with all the applicable information: Target audience receiving help,\n target location, the kind of aid being provided. You can send us the information using the following methods:",
 			sitemap_title: "Sitemap",
 			footer_contact: "Contact",
+			visualize_in_waze: "Visualize these collection centers in Waze by searching \"Ayuda\""
 		},
 	};
 
