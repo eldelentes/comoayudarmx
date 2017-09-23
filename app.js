@@ -100,6 +100,22 @@ var populateFilters = function(e) {
 var renderCards = function(cardsFromService) {
   Cards = cardsFromService;
 
+  Cards.sort(function(a, b) {
+    if(Boolean(a.verified)) {
+      return -1;
+    }
+
+    if(Boolean(b.verified)) {
+      return 1;
+    }
+
+    return new Date(a.timespamp) - new Date(b.timespamp)
+  });
+
+  Cards.forEach(function(card) {
+    console.log(new Date(card.timespamp) + ' ' + card.verified);
+  });
+
   var template = $("#card_template").html();
   var monetaryType = "Monetaria";
 
@@ -125,7 +141,6 @@ var renderCards = function(cardsFromService) {
       return type;
     }
   }
-
 
   var renderIconType= function(type){
     var code = {
@@ -219,6 +234,7 @@ var getCards = function() {
       location: getEntryProperty(entry, 'puedesayudardesde'),
       link: getEntryProperty(entry, 'fuentedeinformaciónlink'),
       adicional: getEntryProperty(entry, 'informaciónadicional'),
+      verified: getEntryProperty(entry, 'verified'),
       approved: getEntryProperty(entry, 'approved')
     }
   }
