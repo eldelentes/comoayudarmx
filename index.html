@@ -91,6 +91,7 @@
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
             <li><a data-lang="nav_contact" href="contactos.html">Contactos de Emergencia</a></li>
+            <li><a data-lang="nav_about" class="modal__link" href="#" data-modal="formulary-add-collection-center">Registrar centro de acopio</a></li>
             <li><a data-lang="nav_volunteer" href="mapas.html">Mapas</a></li>
             <li><a data-lang="nav_about" class="modal__link" href="#" data-modal="about">Acerca de</a></li>
           </ul>
@@ -229,6 +230,35 @@
 
       	</div>
     </section>
+    <section class="modal" id="modal-formulary-add-collection-center" data-modal="formulary-add-collection-center">
+      <a href="#" class="modal__close" data-lang="text_close">Cerrar</a>
+      <div class="modal__container modal__container__form__add__collection">
+
+        <h2 data-lang="modal2_title">Registra un centro de acopio</h2>
+
+        <p data-lang="modal1_text1">Llena el siguiente formulario con la información adecuada para registrar un centro de acopio.</p>
+        <p data-lang="modal2_text2">Indica la ubicación del centro de acopio gracias al mapa, solo es necesario hacer clic en en mapa donde este el centro de acopio. Es obligatorio enviar la ubicación del centro de acopio</p>
+
+        <hr>
+        <section class="container">
+          <form id="formulary-collection-center">
+            <div class="row">
+              <div class="col-md-6">
+                <p><input type="text" class="form-control" name="nombre" placeholder="Escribe el nombre del centro de acopio"/></p>
+                <p><input type="text" class="form-control" name="direccion" placeholder="Escribe la dirección completa del centro de acopio (Calle # Colonia Ciudad/Delegación Estado)"/></p>
+                <input type="hidden" name="lat"/>
+                <input type="hidden" name="lng"/>
+              </div>
+              <div class="col-md-6">
+                 <div id="map_form_add_collection_center" style="height:300px;"></div>
+              </div>
+            </div>
+            <a class="card__button" id="send-collection-center">Enviar centro de acopio</a>
+          </form>
+        </section>
+
+      </div>
+    </section>
 
     <section class="modal" data-modal="new">
       <a href="#" class="modal__close" data-lang="text_close">Cerrar</a>
@@ -241,7 +271,10 @@
       </div>
     </section>
 
+    <script src="lib/utils/global.js" type="text/javascript"></script>
     <script src="app.js" type="text/javascript"></script>
+    <!-- Google Map API -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAVIgKzmmR6xg6ynozBcYwNrseTOyB78X0&callback=startMap" async defer></script>
     <script src="languages.js" type="text/javascript"></script>
     <script src="modals.js" type="text/javascript"></script>
     <script src="sw.js" type="text/javascript"></script>
