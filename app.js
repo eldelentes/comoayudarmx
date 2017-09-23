@@ -189,7 +189,7 @@ var renderCollectionCard=function(card){
     $(btn).show();
     btn.data("latlng",card.geopos.lat+","+card.geopos.lng);
   }
-  $("#collection_centers_container").append($card);
+  $("#cards_container").append($card);
 }
 
 var startCollectionCentersCards = function(cards) {
