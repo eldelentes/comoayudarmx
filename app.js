@@ -98,7 +98,13 @@ var populateFilters = function(e) {
 }
 
 var renderCards = function(cardsFromService) {
-  Cards = cardsFromService;
+
+  Cards = cardsFromService.sort(function(a,b){
+    if(a.timestamp < b.timestamp) return 1;
+    if(a.timestamp > b.timestamp) return -1;
+    return 0;
+  });
+
 
   var template = $("#card_template").html();
   var monetaryType = "Monetaria";
@@ -183,7 +189,14 @@ var renderCards = function(cardsFromService) {
   if (isWorldPage()) {
     Cards.filter(isMonetaryCard).forEach(renderCard);
   } else {
-    Cards.forEach(renderCard);
+    var fixedCards = Cards.filter(function(card) {
+      return card.hasOwnProperty('fixed') && card.fixed == true;
+    });
+    var notFixed = Cards.filter(function(card) {
+      return !card.hasOwnProperty('fixed');
+    })
+    fixedCards.forEach(renderCard);
+    notFixed.forEach(renderCard);
   }
 }
 
@@ -212,7 +225,7 @@ var getCards = function() {
 
   var buildCard = function(entry) {
     return {
-      timespamp: getEntryProperty(entry, 'timestamp'),
+      timestamp: new Date(getEntryProperty(entry, 'timestamp')).getTime(),
       title: getEntryProperty(entry, 'formadeayuda'),
       description: getEntryProperty(entry, 'informaciónadicionaldeayuda'),
       type: formatType(getEntryProperty(entry, 'tipodedonación')),
@@ -220,20 +233,19 @@ var getCards = function() {
       link: getEntryProperty(entry, 'fuentedeinformaciónlink'),
       adicional: getEntryProperty(entry, 'informaciónadicional'),
       verified: getEntryProperty(entry, 'verified'),
-      approved: getEntryProperty(entry, 'approved')
+      approved: getEntryProperty(entry, 'approved'),
+      fixed: getEntryProperty(entry, 'fixed') || null,
     }
   }
 
   $.get(
     'https://spreadsheets.google.com/feeds/list/1zAFK1sSjIaHurnKzLx-e3GJZNmZ9QWfFSlIZLyYk8IE/1/public/values?alt=json',
     function (data) {
-      start(
-        data.feed.entry.map(buildCard).filter(isApprovedCard)
-      );
+      start(data.feed.entry.map(buildCard).filter(isApprovedCard));
     }
   );
 }
 
-$(document).on("change", "#donation_type", handleFilterChange);
-$(document).on("change", "#location", handleFilterChange);
+$("#donation_type").on("change", handleFilterChange);
+$("#location").on("change", handleFilterChange);
 $(document).ready(getCards);
