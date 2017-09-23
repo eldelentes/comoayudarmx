@@ -97,23 +97,26 @@ var populateFilters = function(e) {
   $('select#location').chosen()
 }
 
-var renderCards = function(cardsFromService) {
-  Cards = cardsFromService;
+var renderCards = function(Cards) {
 
   Cards.sort(function(a, b) {
-    if(Boolean(a.verified)) {
-      return -1;
+    // validating verified as priority
+    if (!(a.verified && b.verified)) {
+      if (a.verified) {
+        return -1;
+      }
+
+      if (b.verified) {
+        return 1;
+      }
     }
 
-    if(Boolean(b.verified)) {
-      return 1;
-    }
-
-    return new Date(a.timespamp) - new Date(b.timespamp)
+    // Has priority if is newer
+    return b.timespamp - a.timespamp;
   });
 
-  Cards.forEach(function(card) {
-    console.log(new Date(card.timespamp) + ' ' + card.verified);
+  Cards.forEach((card) => {
+    console.log(card.timespamp, card.verified);
   });
 
   var template = $("#card_template").html();
@@ -222,20 +225,20 @@ var getCards = function() {
   }
 
   var isApprovedCard = function (card) {
-    return card.approved === 'TRUE';
+    return card.approved;
   }
 
   var buildCard = function(entry) {
     return {
-      timespamp: getEntryProperty(entry, 'timestamp'),
+      timespamp: new Date(getEntryProperty(entry, 'timestamp')),
       title: getEntryProperty(entry, 'formadeayuda'),
       description: getEntryProperty(entry, 'informaciónadicionaldeayuda'),
       type: formatType(getEntryProperty(entry, 'tipodedonación')),
       location: getEntryProperty(entry, 'puedesayudardesde'),
       link: getEntryProperty(entry, 'fuentedeinformaciónlink'),
       adicional: getEntryProperty(entry, 'informaciónadicional'),
-      verified: getEntryProperty(entry, 'verified'),
-      approved: getEntryProperty(entry, 'approved')
+      verified: Boolean(getEntryProperty(entry, 'verified')),
+      approved: getEntryProperty(entry, 'approved') === 'TRUE' ? true : false
     }
   }
 
