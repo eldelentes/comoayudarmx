@@ -115,10 +115,6 @@ var renderCards = function(Cards) {
     return b.timespamp - a.timespamp;
   });
 
-  Cards.forEach((card) => {
-    console.log(card.timespamp, card.verified);
-  });
-
   var template = $("#card_template").html();
   var monetaryType = "Monetaria";
 
