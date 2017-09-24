@@ -557,6 +557,8 @@ input.check-toggle-round-flat:checked + label:after {
 	margin-left: 40%;
 }
 
+#tweets-section{padding-top: 82px;}
+
 @media screen and (max-width: 1024px) {
 	.card {
 		width: 45%;
