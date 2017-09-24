@@ -422,6 +422,8 @@ body {
 
 .filters select {
 	font-size: 1.4em;
+	background: #fff;
+	color: #000;
 }
 
 .map-container {
