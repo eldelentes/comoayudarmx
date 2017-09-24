@@ -77,55 +77,15 @@
           <ul class="nav navbar-nav navbar-right">
             <li><a data-lang="nav_contact" href="contactos.html">Contactos de Emergencia</a></li>
             <li><a href="mapas.html">Mapas</a></li>
-            <li><a href="tweets.html">Tweets</a></li>                        
+            <li><a href="tweets.html">Tweets</a></li>            
             <li><a data-lang="nav_about" class="modal__link" href="#" data-modal="about">Acerca de</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
     </nav>
-    <section class="intro">
-      <div>
-        <h1 class="intro__title">
-	        <span data-lang="intro_date">¿CÓMO AYUDAR A LOS AFECTADOS DEL SISMO?</span><br />
-	    </h1><br>
-	        <p style="color:white" data-lang="card_intro2">A continuación encontrarás diferentes formas de ayudar a los afectados y rescatistas del sismo del 7 y 19 de Septiembre</p>
-            <div class="buttons">
-				
-				<a class="button" href="https://docs.google.com/forms/d/e/1FAIpQLSf_kylBvkVQXaJmBAILdpjKCsl6lERlhtnhFfB1_22g43sz4g/viewform" data-modal="new"><span data-lang="intro_button2">Enviar información</span> <i class="fa fa-edit"></i></a>
-        </div>
-        
-        
-       
-        <!-- Could be useful if more languages are added, but lacks styling -->
-        <!-- <div class="language__controls">
-          <label for="es"><input id="es" name="language" type="radio" value="es" onchange="languagesModule.loadLang('es')" checked>Español</label>
-          <label for="en"><input id="en" name="language" type="radio" value="en" onchange="languagesModule.loadLang('en')">English</label>
-        </div> -->
-        <div class="switch">
-          <input id="language-toggle" class="check-toggle check-toggle-round-flat" onchange="languagesModule.toggleLang()" type="checkbox">
-          <label for="language-toggle"></label>
-          <span class="on">ES</span>
-          <span class="off">EN</span>
-        </div>
-      </div>
-    </section>
 
-    <section class="cards" id="cards">
-      
-        <div id="cards_container" class="container">
-          <h2 data-lang="title_map_v19s">Información verificada en tiempo real #Verificado19s</h2>
-        <iframe src="http://google.org/crisismap/a/gmail.com/v19s?hl=es&llbox=20.046%2C18.625%2C-96.888%2C-101.093&t=ROADMAP&layers=1%2C7%2C6%2C4%2C5%2C3%2C8&embedded=true" width="100%" height="580"></iframe>
-	    </div>
-	    
-        <div id="cards_container" class="container">
-            <iframe src="https://www.google.com/maps/d/embed?mid=13B_gbt3e5RWk_6xQoQ15xxhGOFs" width="100%" height="580"></iframe>
-        </div>
-	    
-	    <div id="cards_container" class="container">
-          <h2 data-lang="title_map_dangerzones">Tránsito y zonas de peligro</h2>
-          <iframe src="http://google.org/crisismap/google.com/puebla-mexico-earthquake-es?hl=es-MX&llbox=22.327%2C15.789%2C-92.538%2C-103.788&t=ROADMAP&layers=6%2C7%2C44%2C49%2C15%2C11%2C2%2C30%2C1%2C31%2C32%2C24" width="100%" height="580"></iframe>
-        </div>
-	    
+    <section id="tweets-section">
+      <script id="twine-script" src="//apps.twinesocial.com/embed?app=comoayudarmx&showNav=yes"></script>
     </section>
 
 <section class="modal" data-modal="about">
