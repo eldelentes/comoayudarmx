@@ -220,8 +220,19 @@ var renderCollectionCard=function(card){
   $("#cards_container").append($card);
 }
 
+/*
+  * Verificando si la información obtenida del Acopio API es valida
+  * Se encontro un problema donde como nombre venía Invalido, observando que en ese caso tanto dirección como Geopos.lat/Geopos.lng
+  * estaban vacios, se concluyo que teniendo al menos uno de los 2 casos como verdadero, la carta aparecería como Invalido.
+  * El problema se corrige desde el backend de Acopio API pero como corrección se realiza un método para identificar si es valido o no
+  * a través de su atributo dirección.
+*/
+function isAValidCard(card){
+  return card.direccion.length>0;
+}
+
 var startCollectionCentersCards = function(cards) {
-  cards.forEach(function(card){
+  cards.filter(isAValidCard).forEach(function(card){
     renderCollectionCard(card);
   })
 }
