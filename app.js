@@ -239,7 +239,7 @@ var getCards = function() {
   }
 
   $.get(
-    'https://spreadsheets.google.com/feeds/list/1zAFK1sSjIaHurnKzLx-e3GJZNmZ9QWfFSlIZLyYk8IE/1/public/values?alt=json',
+    'https://spreadsheets.google.com/feeds/list/1zAFK1sSjIaHurnKzLx-e3GJZNmZ9QWfFSlIZLyYk8IE/olipwxe/public/values?alt=json',
     function (data) {
       start(
         data.feed.entry.map(buildCard).filter(isApprovedCard)
