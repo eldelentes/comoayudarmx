@@ -89,3 +89,5 @@ Si tienes alguna otra idea de como colaborar por favor contáctame.
 - [Sebastián Osorio](https://github.com/sirgalleto)
 
 - [Gerardo Cataño](https://github.com/GerardoCatano)
+
+- [Miguel Garcia](https://twitter.com/imikedd)
