@@ -137,6 +137,8 @@ var languagesModule = (function() {
 				item.textContent = content;
 			}
 		})
+		
+		translateCards(chosenLang);
 
 		currentLang = chosenLang;
 		updateHistory();
@@ -154,6 +156,22 @@ var languagesModule = (function() {
 
 	function getCurrentLang() {
 		return currentLang;
+	}
+	
+	function translateCards(chosenLang) {
+		cardTextElements = document.querySelectorAll(".card__title, .card__desc, .badge-verified");
+		// Doesn't select ".card__type span, .card__location span" to avoid breaking tag filters
+		translateUrl = "https://translate.googleapis.com/translate_a/single?client=gtx"
+    		+ "&sl=es&tl=" + chosenLang + "&dt=t&q=";
+		cardTextElements.forEach(function (item) {
+			$.ajax({
+				url: translateUrl + item.textContent,
+				success: function(data) {
+					item.textContent = data[0][0][0];
+				}
+			});
+			
+		});
 	}
 
 	// Copied from app.js, but without card filtering
@@ -177,6 +195,7 @@ var languagesModule = (function() {
 	return {
 		loadLang: publicLoadLanguage,
 		toggleLang: toggleLang,
-		getCurrentLang: getCurrentLang
+		getCurrentLang: getCurrentLang,
+		translateCards: translateCards
 	}
 })();
