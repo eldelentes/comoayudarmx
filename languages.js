@@ -61,6 +61,8 @@ var languagesModule = (function() {
 			nav_about: "About",
 			nav_how: "How to help?",
 			nav_contact: "Emergency Contacts",
+      nav_maps: 'Maps',
+      nav_tweets: 'Tweets',
 			nav_volunteer: "Volunteers",
 			nav_contribuir: "Contribute",
 			intro_titulo: "Help Needed for Mexico Earthquake",
