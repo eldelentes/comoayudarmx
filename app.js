@@ -238,38 +238,44 @@ var startCollectionCentersCards = function(cards) {
 }
 
 var getCards = function() {
-  var getEntryProperty = function(entry, propName) {
-    return entry['gsx$' + propName] && entry['gsx$' + propName]['$t']
+
+    var URL='https://spreadsheets.google.com/feeds/list/1zAFK1sSjIaHurnKzLx-e3GJZNmZ9QWfFSlIZLyYk8IE/1/public/values?alt=json&max-results=6&start-index=1';
+    fetchDataScrollFromSpreadSheet(URL);
+}
+
+function formatType(type) {
+  var types = type.split(',');
+
+  return types.map(function (type) {
+    return type.trim();
+  });
+}
+
+function isApprovedCard(card) {
+  return card.approved;
+}
+
+function getEntryProperty(entry, propName) {
+  return entry['gsx$' + propName] && entry['gsx$' + propName]['$t']
+}
+
+function buildCard(entry) {
+  return {
+    timespamp: new Date(getEntryProperty(entry, 'timestamp')),
+    title: getEntryProperty(entry, 'formadeayuda'),
+    description: getEntryProperty(entry, 'informaciónadicionaldeayuda'),
+    type: formatType(getEntryProperty(entry, 'tipodedonación')),
+    location: getEntryProperty(entry, 'puedesayudardesde'),
+    link: getEntryProperty(entry, 'fuentedeinformaciónlink'),
+    adicional: getEntryProperty(entry, 'informaciónadicional'),
+    verified: Boolean(getEntryProperty(entry, 'verified')),
+    approved: getEntryProperty(entry, 'approved') === 'TRUE' ? true : false
   }
+}
 
-  var formatType = function(type) {
-    var types = type.split(',');
-
-    return types.map(function (type) {
-      return type.trim();
-    });
-  }
-
-  var isApprovedCard = function (card) {
-    return card.approved;
-  }
-
-  var buildCard = function(entry) {
-    return {
-      timespamp: new Date(getEntryProperty(entry, 'timestamp')),
-      title: getEntryProperty(entry, 'formadeayuda'),
-      description: getEntryProperty(entry, 'informaciónadicionaldeayuda'),
-      type: formatType(getEntryProperty(entry, 'tipodedonación')),
-      location: getEntryProperty(entry, 'puedesayudardesde'),
-      link: getEntryProperty(entry, 'fuentedeinformaciónlink'),
-      adicional: getEntryProperty(entry, 'informaciónadicional'),
-      verified: Boolean(getEntryProperty(entry, 'verified')),
-      approved: getEntryProperty(entry, 'approved') === 'TRUE' ? true : false
-    }
-  }
-
+function fetchDataScrollFromSpreadSheet(URL,params){
   $.get(
-    'https://spreadsheets.google.com/feeds/list/1zAFK1sSjIaHurnKzLx-e3GJZNmZ9QWfFSlIZLyYk8IE/1/public/values?alt=json',
+    URL,
     function (data) {
       start(
         data.feed.entry.map(buildCard).filter(isApprovedCard)
@@ -293,6 +299,10 @@ var getCollectionCenters=function(){
   });
 }
 
+/*
+  * Función para administrar el estado y eventos de scroll para crear el llamado cada vez que se llega al fondo del sitio.
+  * La detección del scroll, se hace en el evento onready que esta en el fondo de este fichero.
+*/
 var InfiniteScroll=function(config){
   var configuration=config;
   var callback,scrollFn;
@@ -316,16 +326,25 @@ $(document).ready(function(){
   getCards();
   getCollectionCenters();
   var window_ob=$(window);
+  var URL='https://spreadsheets.google.com/feeds/list/1zAFK1sSjIaHurnKzLx-e3GJZNmZ9QWfFSlIZLyYk8IE/1/public/values?alt=json&max-results={LIMIT}&start-index={OFFSET}';
   var inf_scroll=new InfiniteScroll({URL:Global.ACOPIO_API.BALTERBYTE+Global.ACOPIO_API.ACTION.ACOPIOS_ALL,filter:{"limit":6,"offset":0}});
+  var inf_scroll_google_spreadsheet=new InfiniteScroll({URL:URL,filter:{"limit":6,"offset":1}});
   inf_scroll.addScrollFn(function(url,params){
     fetchDataScrollFromAcopioAPI(url,params,function(data){
       startCollectionCentersCards(data);
     });
   });
 
+  inf_scroll_google_spreadsheet.addScrollFn(function(url,params){
+    // Se necesita reemplazar los parámetros en la ruta, intente enviar los parámetros por cabecera pero no funciono.
+    var URL='https://spreadsheets.google.com/feeds/list/1zAFK1sSjIaHurnKzLx-e3GJZNmZ9QWfFSlIZLyYk8IE/1/public/values?alt=json&max-results={LIMIT}&start-index={OFFSET}'.replace("{LIMIT}",params.filter.limit).replace("{OFFSET}",params.filter.offset);
+    fetchDataScrollFromSpreadSheet(URL,params);
+  })
+
   window_ob.scroll(function(){
     if ($(document).height() - window_ob.height() == window_ob.scrollTop()) {
       inf_scroll.next();
+      inf_scroll_google_spreadsheet.next();
     }
   });
 })
