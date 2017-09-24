@@ -44,7 +44,7 @@
 
     <!-- Color the status bar on mobile devices -->
     <meta name="theme-color" content="#f73535">
-    
+
     <!-- Styles -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -53,7 +53,7 @@
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="style.min.css">
     <link rel="icon" href="favicon.png" type="image/x-icon" />
-    
+
     <!-- Scripts -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript" src="lib/chosen/chosen.jquery.min.js" ></script>
@@ -76,6 +76,7 @@
           <ul class="nav navbar-nav navbar-right">
             <li><a href="contactos.html">Contactos de Emergencia</a></li>
             <li><a href="mapas.html">Mapas</a></li>
+            <li><a href="tweets.html">Tweets</a></li>
             <li><a class="modal__link" href="index.html" data-modal="about">Acerca de</a></li>
           </ul>
         </div><!--/.nav-collapse -->
@@ -88,12 +89,12 @@
 	    </h1><br>
 	        <p style="color:white" data-lang="card_intro2">A continuación encontrarás diferentes formas de ayudar a los afectados y rescatistas del sismo del 7 y 19 de Septiembre</p>
             <div class="buttons">
-				
+
 				<a class="button" href="https://docs.google.com/forms/d/e/1FAIpQLSf_kylBvkVQXaJmBAILdpjKCsl6lERlhtnhFfB1_22g43sz4g/viewform" data-modal="new"><span data-lang="intro_button2">Enviar información</span> <i class="fa fa-edit"></i></a>
         </div>
-        
-        
-       
+
+
+
         <!-- Could be useful if more languages are added, but lacks styling -->
         <!-- <div class="language__controls">
           <label for="es"><input id="es" name="language" type="radio" value="es" onchange="languagesModule.loadLang('es')" checked>Español</label>
@@ -110,7 +111,7 @@
 
 
     <section class="cards" id="cards">
-      
+
       <div id="cards_container" class="container">
         <!-- Aquí se agregan las tarjetas -->
         <!-- Por favor, no modifiques el markup/html de las tarjetas, solamente remplaza la información. -->
@@ -291,31 +292,53 @@
       </div>
     </section>
 
+    <section class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 col-sm-6 footer-content">
+            <h3 data-lang="sitemap_title">Mapa de sitio</h3>
+              <ul>
+              <li><a data-lang="nav_how" href="http://comoayudar.mx/">¿Cómo ayudar?</a></li>
+              <li><a data-lang="nav_contact" href="contactos.html">Contactos de Emergencia</a></li>
+              <li><a data-lang="nav_maps" href="mapas.html">Mapas</a></li>
+              <li><a data-lang="nav_tweets" href="tweets.html">Tweets</a></li>
+              <li><a data-lang="nav_about" class="modal__link" href="#" data-modal="about">Acerca de</a></li>
+            </ul>
+          </div>
+          <div class="col-md-6 col-sm-6 footer-content">
+            <h3 data-lang="footer_contact">Contacto</h3>
+            <p><a href="mailto:comoayudarmx@gmail.com"><i class="fa fa-envelope"></i> comoayudarmx@gmail.com</a></p>
+            <p><a href="https://twitter.com/comoayudarmx"><i class="fa fa-twitter"></i> @comoayudarmx </a></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section class="modal" data-modal="about">
       <a href="#" class="modal__close">Cerrar</a>
       <div class="modal__container">
-	      
+
         <h2 data-lang="modal1_title">Acerca de Como Ayudar</h2>
-        
+
         <p data-lang="modal1_text1">Este sitio colaborativo ciudadano sin fines de lucro busca crear un repositorio de información para centralizar el apoyo y la rápida distribución de ayuda.</p>
-        
-        
+
+
         <hr>
-        
-        <p data-lang="modal1_text3"> Sí lo que deseas es agregar un método de ayuda por favor envíanos la información pertinente a nuestro twitter 
+
+        <p data-lang="modal1_text3"> Sí lo que deseas es agregar un método de ayuda por favor envíanos la información pertinente a nuestro twitter
 	        <a href="https://twitter.com/comoayudarmx" target="_blank" >@comoayudarmx</a> o <a href="https://docs.google.com/forms/d/e/1FAIpQLSf_kylBvkVQXaJmBAILdpjKCsl6lERlhtnhFfB1_22g43sz4g/viewform">llena el formulario de contacto</a>
-	    
+
         </p>
         <hr>
         <p>
         Para contacto directo con nosotros envíanos un correo a <a class="modal__email" href="mailto:comoayudarmx@gmail.com">comoayudarmx@gmail.com</a>
         </p>
-        
+
         <p>
 	        <span data-lang="modal1_text2">Si deseas ayudar y tienes conocimientos de programación colabora con nosotros en</span>
 	        <a href="https://github.com/eldelentes/comoayudarmx"><i class="fa fa-github"></i>Github</a>
 	    </p>
-        
+
       	</div>
     </section>
 
@@ -330,7 +353,7 @@
 
     <script src="modals.js" type="text/javascript"></script>
     <script src="languages.js" type="text/javascript"></script>
-    
+
     <!-- Global Site Tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-106793072-1"></script>
     <script>
@@ -346,11 +369,11 @@
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
       })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-    
+
       ga('create', 'UA-106793072-1', 'auto');
       ga('require', 'displayfeatures');
       ga('send', 'pageview');
-    
+
     </script>
   </body>
 </html>

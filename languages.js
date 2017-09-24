@@ -11,8 +11,10 @@ var languagesModule = (function() {
 			text_or: "O desde los siguientes medios de contacto:",
 			text_contact_us: "Contáctanos",
 			nav_about: "Acerca de",
-			nav_how: "¿Cómo ayudar",
+			nav_how: "¿Cómo ayudar?",
 			nav_contact: "Contactos de Emergencia",
+      nav_maps: 'Mapas',
+      nav_tweets: 'Tweets',
 			nav_volunteer: "Voluntarios",
 			nav_contribuir: "Contribuir",
 			intro_titulo: "Ayuda Sismo",
@@ -50,7 +52,9 @@ var languagesModule = (function() {
 			volunteer_form2: "Envía la información del método de ayuda con toda la información pertinente como: A quién se ayuda, Desde dónde\n                se puede ayudar, que tipo de ayuda necesitan. desde los siguientes medios de contacto:",
 			sitemap_title: "Mapa de sitio",
 			footer_contact: "Contacto",
-			visualize_in_waze: "Visualiza estos centros de acopio en Waze buscando \"Ayuda\""
+			visualize_in_waze: "Visualiza estos centros de acopio en Waze buscando \"Ayuda\"",
+			title_map_v19s: "Información verificada en tiempo real #Verificado19s",
+			title_map_dangerzones: "Tránsito y zonas de peligro"
 		},
 		en: {
 			text_close: "Close",
@@ -59,6 +63,8 @@ var languagesModule = (function() {
 			nav_about: "About",
 			nav_how: "How to help?",
 			nav_contact: "Emergency Contacts",
+      nav_maps: 'Maps',
+      nav_tweets: 'Tweets',
 			nav_volunteer: "Volunteers",
 			nav_contribuir: "Contribute",
 			intro_titulo: "Help Needed for Mexico Earthquake",
@@ -96,7 +102,9 @@ var languagesModule = (function() {
 			volunteer_form2: "Send us information about the new Help Resource with all the applicable information: Target audience receiving help,\n target location, the kind of aid being provided. You can send us the information using the following methods:",
 			sitemap_title: "Sitemap",
 			footer_contact: "Contact",
-			visualize_in_waze: "Visualize these collection centers in Waze by searching \"Ayuda\""
+			visualize_in_waze: "Visualize these collection centers in Waze by searching \"Ayuda\"",
+			title_map_v19s: "Real time verified information #Verificado19s",
+			title_map_dangerzones: "Transit and danger zones"
 		},
 	};
 
@@ -133,6 +141,8 @@ var languagesModule = (function() {
 				item.textContent = content;
 			}
 		})
+		
+		translateCards(chosenLang);
 
 		currentLang = chosenLang;
 		updateHistory();
@@ -150,6 +160,22 @@ var languagesModule = (function() {
 
 	function getCurrentLang() {
 		return currentLang;
+	}
+	
+	function translateCards(chosenLang) {
+		cardTextElements = document.querySelectorAll(".card__title, .card__desc, .badge-verified");
+		// Doesn't select ".card__type span, .card__location span" to avoid breaking tag filters
+		translateUrl = "https://translate.googleapis.com/translate_a/single?client=gtx"
+    		+ "&sl=es&tl=" + chosenLang + "&dt=t&q=";
+		cardTextElements.forEach(function (item) {
+			$.ajax({
+				url: translateUrl + item.textContent,
+				success: function(data) {
+					item.textContent = data[0][0][0];
+				}
+			});
+			
+		});
 	}
 
 	// Copied from app.js, but without card filtering
@@ -173,6 +199,7 @@ var languagesModule = (function() {
 	return {
 		loadLang: publicLoadLanguage,
 		toggleLang: toggleLang,
-		getCurrentLang: getCurrentLang
+		getCurrentLang: getCurrentLang,
+		translateCards: translateCards
 	}
 })();

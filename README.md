@@ -25,7 +25,7 @@ Ayuda agregando tarjetas con información de contactos de emergencia relevantes,
 
 2.- Copia y pega el siguiente div con la información correspondiente en la página de `contactos.html`.
 
-```
+```html
 <article class="card">
   <h2 class="card__title">Protección Civil CDMX</h2>
   <!-- Agrega una pequeña descripción -->
@@ -87,3 +87,7 @@ Si tienes alguna otra idea de como colaborar por favor contáctame.
 - [Mario Rodríguez](https://www.twitter.com/mariusbc)
 
 - [Sebastián Osorio](https://github.com/sirgalleto)
+
+- [Gerardo Cataño](https://github.com/GerardoCatano)
+
+- [Miguel Garcia](https://twitter.com/imikedd)
