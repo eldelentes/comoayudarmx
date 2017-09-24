@@ -244,6 +244,9 @@ var getCards = function() {
       start(
         data.feed.entry.map(buildCard).filter(isApprovedCard)
       );
+      
+      lang = languagesModule && languagesModule.getCurrentLang();
+      if (lang && lang != 'es') { languagesModule.translateCards(lang) };
     }
   );
 }
