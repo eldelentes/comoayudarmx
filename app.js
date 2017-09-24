@@ -253,13 +253,36 @@ var getCards = function() {
   );
 }
 
+var fetchDataScrollFromAcopioAPI=function(url,params,callback){
+  $.ajax({
+    url:url,
+    data:params
+  }).done(function(data){
+    callback(data);
+  })
+}
+
 var getCollectionCenters=function(){
-  $.get(
-    Global.ACOPIO_API.BALTERBYTE+Global.ACOPIO_API.ACTION.ACOPIOS_ALL,
-    function (data) {
-      startCollectionCentersCards(data);
-    }
-  );
+  fetchDataScrollFromAcopioAPI(Global.ACOPIO_API.BALTERBYTE+Global.ACOPIO_API.ACTION.ACOPIOS_ALL,{filter:{"limit":6,"offset":0}},function(data){
+    startCollectionCentersCards(data);
+  });
+}
+
+var InfiniteScroll=function(config){
+  var configuration=config;
+  var callback,scrollFn;
+
+  var next=function(){
+    configuration.filter.offset+=1;
+    scrollFn(configuration.URL,configuration);
+  }
+  var addScrollFn=function(fn){
+    scrollFn=fn;
+  }
+  return{
+    addScrollFn:addScrollFn,
+    next:next
+  }
 }
 
 $(document).on("change", "#donation_type", handleFilterChange);
@@ -267,4 +290,17 @@ $(document).on("change", "#location", handleFilterChange);
 $(document).ready(function(){
   getCards();
   getCollectionCenters();
+  var window_ob=$(window);
+  var inf_scroll=new InfiniteScroll({URL:Global.ACOPIO_API.BALTERBYTE+Global.ACOPIO_API.ACTION.ACOPIOS_ALL,filter:{"limit":6,"offset":0}});
+  inf_scroll.addScrollFn(function(url,params){
+    fetchDataScrollFromAcopioAPI(url,params,function(data){
+      startCollectionCentersCards(data);
+    });
+  });
+
+  window_ob.scroll(function(){
+    if ($(document).height() - window_ob.height() == window_ob.scrollTop()) {
+      inf_scroll.next();
+    }
+  });
 })
