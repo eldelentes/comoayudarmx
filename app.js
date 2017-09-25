@@ -1,7 +1,14 @@
 var handleFilterChange = function(e){
-  var type = $("#donation_type").val();
-  var location = $("#location").val();
-  var state = {type: type, location: location};
+  var type = $("#donation_type").val(),
+      location = $("#location").val(),
+      lang = languagesModule && languagesModule.getCurrentLang(),
+      state = {};
+
+  // Populate state only with existing values
+  if (type) { state.type = type };
+  if (location) { state.location = location };
+  if (lang && lang != 'es') { state.lang = lang };
+
   filterCards(state);
   history.replaceState(state, "", "?" + $.param(state));
 }
@@ -90,8 +97,23 @@ var populateFilters = function(e) {
   $('select#location').chosen()
 }
 
-var renderCards = function(cardsFromService) {
-  Cards = Cards.concat(cardsFromService);
+var renderCards = function(Cards) {
+
+  Cards.sort(function(a, b) {
+    // validating verified as priority
+    if (!(a.verified && b.verified)) {
+      if (a.verified) {
+        return -1;
+      }
+
+      if (b.verified) {
+        return 1;
+      }
+    }
+
+    // Has priority if is newer
+    return b.timespamp - a.timespamp;
+  });
 
   var template = $("#card_template").html();
   var monetaryType = "Monetaria";
@@ -118,7 +140,6 @@ var renderCards = function(cardsFromService) {
       return type;
     }
   }
-
 
   var renderIconType= function(type){
     var code = {
@@ -200,28 +221,32 @@ var getCards = function() {
   }
 
   var isApprovedCard = function (card) {
-    return card.approved === 'TRUE';
+    return card.approved;
   }
 
   var buildCard = function(entry) {
     return {
-      timespamp: getEntryProperty(entry, 'timestamp'),
+      timespamp: new Date(getEntryProperty(entry, 'timestamp')),
       title: getEntryProperty(entry, 'formadeayuda'),
       description: getEntryProperty(entry, 'informaciónadicionaldeayuda'),
       type: formatType(getEntryProperty(entry, 'tipodedonación')),
       location: getEntryProperty(entry, 'puedesayudardesde'),
       link: getEntryProperty(entry, 'fuentedeinformaciónlink'),
       adicional: getEntryProperty(entry, 'informaciónadicional'),
-      approved: getEntryProperty(entry, 'approved')
+      verified: Boolean(getEntryProperty(entry, 'verified')),
+      approved: getEntryProperty(entry, 'approved') === 'TRUE' ? true : false
     }
   }
 
   $.get(
-    'https://spreadsheets.google.com/feeds/list/1zAFK1sSjIaHurnKzLx-e3GJZNmZ9QWfFSlIZLyYk8IE/1/public/values?alt=json',
+    'https://spreadsheets.google.com/feeds/list/1zAFK1sSjIaHurnKzLx-e3GJZNmZ9QWfFSlIZLyYk8IE/olipwxe/public/values?alt=json',
     function (data) {
       start(
         data.feed.entry.map(buildCard).filter(isApprovedCard)
       );
+      
+      lang = languagesModule && languagesModule.getCurrentLang();
+      if (lang && lang != 'es') { languagesModule.translateCards(lang) };
     }
   );
 }

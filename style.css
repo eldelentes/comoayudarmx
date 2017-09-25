@@ -413,12 +413,17 @@ body {
 
 .filter label {
 	margin-right: 15px;
-	font-size: .8em;
+	font-size: 1.2em;
 	text-transform: uppercase;
 }
 
+.filter .chosen-container-single .chosen-default{background: #fff;}
+.filter .chosen-container-single .chosen-single span{font-size: 14px;color: #000}
+
 .filters select {
-	font-size: 1.2em;
+	font-size: 1.4em;
+	background: #fff;
+	color: #000;
 }
 
 .map-container {
@@ -551,6 +556,8 @@ input.check-toggle-round-flat + label:after {
 input.check-toggle-round-flat:checked + label:after {
 	margin-left: 40%;
 }
+
+#tweets-section{padding-top: 82px;}
 
 @media screen and (max-width: 1024px) {
 	.card {

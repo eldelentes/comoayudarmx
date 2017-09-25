@@ -1,4 +1,5 @@
-﻿Cards = [
+﻿// This file is not longer used but save for preserve the information
+Cards = [
   //{title: "Donación Topos", description: "Los Topos son una asociación de rescatistas indepe…tencilios necesarios para el rescate de personas.", type: "Monetaria", location: "Global", link: "https://twitter.com/topos/status/908000616575680512"},
   {title: "Donación Topos", description: "Los Topos son una asociación de rescatistas independientes. Tu ayuda provee de los utensilios necesarios para el rescate de personas.", type: "Monetaria", location: "Global", link: "https://twitter.com/sopitas/status/910347033038528512"},
   {title: "Donación Cruz Roja", description: "Dona a la Cruz Roja. Ellos brindan servicio médico gratuito.", type: "Monetaria", location: "Global", link: "https://www.paypal.me/cruzrojamexicana", verified: true},

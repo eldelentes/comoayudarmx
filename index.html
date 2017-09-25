@@ -20,7 +20,7 @@
     <meta property="og:url" content="http://comoayudar.mx/" />
     <meta property="og:image" content="facebook.jpg" />
     <meta property="og:description" content="Ayuda a los afectados del sismo. Información de cómo ayudar." />
-    
+
     <!-- Disable tap highlight on IE -->
     <meta name="msapplication-tap-highlight" content="no">
 
@@ -104,6 +104,7 @@
           <ul class="nav navbar-nav navbar-right">
             <li><a data-lang="nav_contact" href="contactos.html">Contactos de Emergencia</a></li>
             <li><a data-lang="nav_volunteer" href="mapas.html">Mapas</a></li>
+            <li><a href="tweets.html">Tweets</a></li>                        
             <li><a data-lang="nav_about" class="modal__link" href="#" data-modal="about">Acerca de</a></li>
           </ul>
         </div><!--/.nav-collapse -->
@@ -122,6 +123,8 @@
   				<a class="button send_info" target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSf_kylBvkVQXaJmBAILdpjKCsl6lERlhtnhFfB1_22g43sz4g/viewform" data-modal="new">
             <span data-lang="intro_button2">Enviar información</span> <i class="fa fa-edit"></i>
           </a>
+		<br><br>
+          <p style="color:white" ><a style="color:white" href="https://www.waze.com/es-419/download?from=get"><span data-lang="visualize_in_waze">Visualiza estos centros de acopio en Waze buscando "Ayuda"</span><img src="https://png.icons8.com/waze/color/24" title="Waze" width="24" height="24"></a></p>
         </div>
         <div class="social__buttons">
           <div class="row">
@@ -162,7 +165,7 @@
         <div class="container">
           <div class="filter">
             <label for="donation_type" data-lang="filter_type">Tipo de donación</label>
-            <select class="filter" id="donation_type">
+            <select class="filter" id="donation_type" data-placeholder="Selecciona una opción">
               <option selected disabled data-lang="filter_type_select">Selecciona una opción</option>
               <option value="all" data-lang="filter_all">Todas</option>
             </select>
@@ -170,7 +173,7 @@
 
           <div class="filter">
             <label for="location" data-lang="filter_location">Locación</label>
-            <select class="filter" id="location">
+            <select class="filter" id="location"  data-placeholder="Selecciona una opción">
               <option selected disabled data-lang="filter_location_select">Selecciona una opción</option>
               <option value="all" data-lang="filter_all">Todas</option>
             </select>
@@ -199,7 +202,7 @@
                </div>
             </div>
             <!-- Link al contacto, imágen, correo o información -->
-            <a class="card__button" target="__blank" href="" data-lang="more_info">Más Información</a>
+            <a class="card__button" target="_blank" href="" data-lang="more_info">Más Información</a>
           </article>
         </template>
       </div>
@@ -217,7 +220,8 @@
               <ul>
               <li><a data-lang="nav_how" href="http://comoayudar.mx/">¿Cómo ayudar?</a></li>
               <li><a data-lang="nav_contact" href="contactos.html">Contactos de Emergencia</a></li>
-              <li><a data-lang="nav_volunteer" href="voluntarios.html">Voluntarios</a></li>
+              <li><a data-lang="nav_maps" href="mapas.html">Mapas</a></li>
+              <li><a data-lang="nav_tweets" href="tweets.html">Tweets</a></li>
               <li><a data-lang="nav_about" class="modal__link" href="#" data-modal="about">Acerca de</a></li>
             </ul>
           </div>
@@ -247,7 +251,7 @@
         </p>
         <hr>
         <p>
-        Para contacto directo con nosotros envíanos un correo a <a class="modal__email" href="mailto:comoayudarmx@gmail.com">comoayudarmx@gmail.com</a>
+		<span data-lang="modal1_text4">Para contacto directo con nosotros envíanos un correo a</span> <a class="modal__email" href="mailto:comoayudarmx@gmail.com">comoayudarmx@gmail.com</a>
         </p>
 
         <p>
@@ -269,7 +273,6 @@
       </div>
     </section>
 
-    <script src="cards.js" type="text/javascript"></script>
     <script src="app.js" type="text/javascript"></script>
     <script src="languages.js" type="text/javascript"></script>
     <script src="modals.js" type="text/javascript"></script>
