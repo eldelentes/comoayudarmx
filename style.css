@@ -5,6 +5,11 @@
 	        box-sizing: border-box;
 }
 
+.row {
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
 body {
 	font-size: 16px;
 	font-family: 'Roboto', sans-serif;
@@ -236,6 +241,7 @@ body {
 	font-size: .9em;
 	line-height: 1.2;
 	margin-bottom: 20px;
+	overflow-wrap: break-word;
 	-webkit-box-flex: 1;
 	-webkit-flex: 1;
 	    -ms-flex: 1;
