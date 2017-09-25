@@ -557,7 +557,13 @@ input.check-toggle-round-flat:checked + label:after {
 	margin-left: 40%;
 }
 
-#tweets-section{padding-top: 82px;}
+#tweets-section {
+  padding-top: 82px;
+}
+
+#privacidad {
+  padding-top: 82px;
+}
 
 @media screen and (max-width: 1024px) {
 	.card {
