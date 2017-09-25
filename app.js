@@ -1,7 +1,14 @@
 var handleFilterChange = function(e){
-  var type = $("#donation_type").val();
-  var location = $("#location").val();
-  var state = {type: type, location: location};
+  var type = $("#donation_type").val(),
+      location = $("#location").val(),
+      lang = languagesModule && languagesModule.getCurrentLang(),
+      state = {};
+
+  // Populate state only with existing values
+  if (type) { state.type = type };
+  if (location) { state.location = location };
+  if (lang && lang != 'es') { state.lang = lang };
+
   filterCards(state);
   history.replaceState(state, "", "?" + $.param(state));
 }
@@ -62,8 +69,17 @@ var filterCards = function(state) {
 
 var populateFilters = function(e) {
   var populateFilter = function(selectorInCard, filterSelector) {
-    $(selectorInCard).each(function() {
+
+    // Sort donations and locations
+    var arr = $(selectorInCard).sort(function(a, b){
+      if($(a).text() < $(b).text()) return -1;
+      if($(a).text() > $(b).text()) return 1;
+      return 0;
+    })
+
+    $(arr).each(function() {
       var option = $(this).text();
+      if (!option.trim().length) return;
       var $select = $(filterSelector);
       var $option = $("<option>" + option + "</option>");
 
@@ -81,7 +97,24 @@ var populateFilters = function(e) {
   $('select#location').chosen()
 }
 
-var renderCards = function() {
+var renderCards = function(Cards) {
+
+  Cards.sort(function(a, b) {
+    // validating verified as priority
+    if (!(a.verified && b.verified)) {
+      if (a.verified) {
+        return -1;
+      }
+
+      if (b.verified) {
+        return 1;
+      }
+    }
+
+    // Has priority if is newer
+    return b.timespamp - a.timespamp;
+  });
+
   var template = $("#card_template").html();
   var monetaryType = "Monetaria";
 
@@ -108,12 +141,37 @@ var renderCards = function() {
     }
   }
 
+  var renderIconType= function(type){
+    var code = {
+      "Artículos de limpieza":'paint-brush',
+      "Artículos de aseo personal":'paint-brush',
+      "Albergues":'bed',
+      "Asesoría":'user-circle',
+      "Asesoría profesional":'user-circle',
+      "Especie":'cutlery',
+      "Equipo de auxilio médico":'medkit',
+      "Equipo de rescate":'life-ring',
+      "Herramientas":'wrench',
+      "Limpieza":'paint-brush',
+      "Medicamentos":'medkit',
+      "Monetaria":'money',
+      "Ropa":'shopping-bag',
+      "Sangre":'tint',
+      "Trabajo Voluntario":'users',
+      "Transporte":'truck',
+      "Veterinario":'paw',
+      "Víveres":'cutlery'
+    };
+    return '<i class="fa fa-'+code[type]+'"></i>&nbsp;';
+
+  };
+
   var renderCardTypes = function($card, types) {
     var template = $card.find(".card__type h3").clone();
+    template.find('i').remove();
     $card.find(".card__type h3").remove();
-
     types.forEach(function(type) {
-      $card.find(".card__type").append(template.clone().append("<span>" + translateMonetaryType(type) + "</span>"));
+      $card.find(".card__type").append(template.clone().append(renderIconType(type)+"<span>" + translateMonetaryType(type) + "</span>"));
     });
   }
 
@@ -143,8 +201,56 @@ var renderCards = function() {
   }
 }
 
+var start = function(cards) {
+  renderCards(cards);
+  populateFilters();
+  filterCardFromQueryParams();
+}
+
+var getCards = function() {
+  var getEntryProperty = function(entry, propName) {
+    return entry['gsx$' + propName] && entry['gsx$' + propName]['$t']
+  }
+
+  var formatType = function(type) {
+    var types = type.split(',');
+
+    return types.map(function (type) {
+      return type.trim();
+    });
+  }
+
+  var isApprovedCard = function (card) {
+    return card.approved;
+  }
+
+  var buildCard = function(entry) {
+    return {
+      timespamp: new Date(getEntryProperty(entry, 'timestamp')),
+      title: getEntryProperty(entry, 'formadeayuda'),
+      description: getEntryProperty(entry, 'informaciónadicionaldeayuda'),
+      type: formatType(getEntryProperty(entry, 'tipodedonación')),
+      location: getEntryProperty(entry, 'puedesayudardesde'),
+      link: getEntryProperty(entry, 'fuentedeinformaciónlink'),
+      adicional: getEntryProperty(entry, 'informaciónadicional'),
+      verified: Boolean(getEntryProperty(entry, 'verified')),
+      approved: getEntryProperty(entry, 'approved') === 'TRUE' ? true : false
+    }
+  }
+
+  $.get(
+    'https://spreadsheets.google.com/feeds/list/1zAFK1sSjIaHurnKzLx-e3GJZNmZ9QWfFSlIZLyYk8IE/olipwxe/public/values?alt=json',
+    function (data) {
+      start(
+        data.feed.entry.map(buildCard).filter(isApprovedCard)
+      );
+      
+      lang = languagesModule && languagesModule.getCurrentLang();
+      if (lang && lang != 'es') { languagesModule.translateCards(lang) };
+    }
+  );
+}
+
 $(document).on("change", "#donation_type", handleFilterChange);
 $(document).on("change", "#location", handleFilterChange);
-$(document).ready(renderCards);
-$(document).ready(populateFilters);
-$(document).ready(filterCardFromQueryParams);
+$(document).ready(getCards);
