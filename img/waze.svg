@@ -1,0 +1,11 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 48 48" style="enable-background:new 0 0 48 48;" xml:space="preserve" width="24" height="24">
+<path style="fill:#37474F;" d="M27,38C9.065,38,5.218,33.154,3.575,31.084C3.211,30.654,3,30.083,3,29.5C3,28.122,4.121,27,5.5,27  C6.365,27,9,27,9,22.083V21.5C9,12.402,17.075,5,27,5s18,7.402,18,16.5S36.925,38,27,38z"/>
+<path style="fill:#ECEFF1;" d="M27,36c8.822,0,16-6.505,16-14.5S35.822,7,27,7s-16,6.505-16,14.5v0.583C11,28.326,7.153,29,5.5,29  C5.225,29,5,29.224,5,29.5c0,0.115,0.041,0.222,0.122,0.317C6.604,31.684,10.031,36,27,36z"/>
+<circle style="fill:#37474F;" cx="32" cy="18" r="2"/>
+<circle style="fill:#37474F;" cx="22" cy="18" r="2"/>
+<path style="fill:none;stroke:#37474F;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;" d="  M33,23.5c0,0-0.75,4.5-6,4.5s-6-4.5-6-4.5"/>
+<circle style="fill:#37474F;" cx="16.5" cy="38.5" r="4.5"/>
+<circle style="fill:#607D8B;" cx="16.5" cy="38.5" r="1.5"/>
+<circle style="fill:#37474F;" cx="32.5" cy="38.5" r="4.5"/>
+<circle style="fill:#607D8B;" cx="32.5" cy="38.5" r="1.5"/>
+</svg>
