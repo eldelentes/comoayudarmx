@@ -13,8 +13,8 @@ var languagesModule = (function() {
 			nav_about: "Acerca de",
 			nav_how: "¿Cómo ayudar?",
 			nav_contact: "Contactos de Emergencia",
-      nav_maps: 'Mapas',
-      nav_tweets: 'Tweets',
+		    nav_maps: 'Mapas',
+		    nav_tweets: 'Tweets',
 			nav_volunteer: "Voluntarios",
 			nav_contribuir: "Contribuir",
 			intro_titulo: "Ayuda Sismo",
@@ -63,8 +63,8 @@ var languagesModule = (function() {
 			nav_about: "About",
 			nav_how: "How to help?",
 			nav_contact: "Emergency Contacts",
-      nav_maps: 'Maps',
-      nav_tweets: 'Tweets',
+		    nav_maps: 'Maps',
+		    nav_tweets: 'Tweets',
 			nav_volunteer: "Volunteers",
 			nav_contribuir: "Contribute",
 			intro_titulo: "Help Needed for Mexico Earthquake",
@@ -104,7 +104,8 @@ var languagesModule = (function() {
 			footer_contact: "Contact",
 			visualize_in_waze: "Visualize these collection centers in Waze by searching \"Ayuda\"",
 			title_map_v19s: "Real time verified information #Verificado19s",
-			title_map_dangerzones: "Transit and danger zones"
+			title_map_dangerzones: "Transit and danger zones",
+			title_map_houses: "Properties for rent for people affected by the earthquake"
 		},
 	};
 
