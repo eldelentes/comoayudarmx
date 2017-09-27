@@ -94,7 +94,7 @@ Si tienes alguna otra idea de como colaborar por favor contáctame.
 
 - [Arturo Jain](https://twitter.com/arturojain)
 
-- [Gabriel Rios](https://twitter.com/D4RTHKRONE)
+- [D4RTHKRONE](https://twitter.com/D4RTHKRONE)
 
 - [Luis Pérez](https://github.com/luispeerez)
 
