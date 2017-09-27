@@ -91,3 +91,7 @@ Si tienes alguna otra idea de como colaborar por favor contáctame.
 - [Gerardo Cataño](https://github.com/GerardoCatano)
 
 - [Miguel Garcia](https://twitter.com/imikedd)
+
+- [Arturo Jain](https://twitter.com/arturojain)
+
+[Aviso de privacidad](http://comoayudar.mx/privacidad.html)
