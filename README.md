@@ -94,4 +94,9 @@ Si tienes alguna otra idea de como colaborar por favor contáctame.
 
 - [Arturo Jain](https://twitter.com/arturojain)
 
+- [D4RTHKRONE](https://twitter.com/D4RTHKRONE)
+
+- [Luis Pérez](https://github.com/luispeerez)
+
+
 [Aviso de privacidad](http://comoayudar.mx/privacidad.html)
